@@ -1,8 +1,10 @@
 com/concert/model/UserTest.class
+com/concert/integration/AuthIntegrationTest.class
 com/concert/controller/AuthControllerTest.class
 com/concert/ConcertBackendTestSuite.class
 com/concert/service/JwtServiceTest.class
 com/concert/service/AuthServiceTest.class
 com/concert/dto/RegisterRequestTest.class
 com/concert/dto/AuthResponseTest.class
+com/concert/repository/UserRepositoryTest.class
 com/concert/dto/LoginRequestTest.class
