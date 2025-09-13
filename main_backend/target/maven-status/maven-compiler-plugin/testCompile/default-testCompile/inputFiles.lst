@@ -1,0 +1,10 @@
+/Users/putinan/development/DevOps/develop/main_backend/src/test/java/com/concert/model/UserTest.java
+/Users/putinan/development/DevOps/develop/main_backend/src/test/java/com/concert/service/AuthServiceTest.java
+/Users/putinan/development/DevOps/develop/main_backend/src/test/java/com/concert/dto/RegisterRequestTest.java
+/Users/putinan/development/DevOps/develop/main_backend/src/test/java/com/concert/dto/LoginRequestTest.java
+/Users/putinan/development/DevOps/develop/main_backend/src/test/java/com/concert/controller/AuthControllerTest.java
+/Users/putinan/development/DevOps/develop/main_backend/src/test/java/com/concert/ConcertBackendTestSuite.java
+/Users/putinan/development/DevOps/develop/main_backend/src/test/java/com/concert/integration/AuthIntegrationTest.java
+/Users/putinan/development/DevOps/develop/main_backend/src/test/java/com/concert/repository/UserRepositoryTest.java
+/Users/putinan/development/DevOps/develop/main_backend/src/test/java/com/concert/dto/AuthResponseTest.java
+/Users/putinan/development/DevOps/develop/main_backend/src/test/java/com/concert/service/JwtServiceTest.java
