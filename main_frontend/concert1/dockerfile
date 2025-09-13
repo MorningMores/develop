@@ -1,0 +1,26 @@
+# Stage 1: Build Nuxt
+FROM node:18 AS build
+
+WORKDIR /app
+
+# copy package.json + lock
+COPY package*.json ./
+RUN npm install
+
+# copy source
+COPY . .
+
+# build nuxt
+RUN npm run build
+
+# Stage 2: Run Nuxt
+FROM node:18-alpine
+
+WORKDIR /app
+
+# copy build output
+COPY --from=build /app/.output ./.output
+
+EXPOSE 3000
+
+CMD ["node", ".output/server/index.mjs"]
