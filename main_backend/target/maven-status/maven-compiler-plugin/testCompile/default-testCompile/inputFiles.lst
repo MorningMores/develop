@@ -4,11 +4,13 @@
 /Users/putinan/development/DevOps/develop/main_backend/src/test/java/com/concert/ConcertBackendTestSuite.java
 /Users/putinan/development/DevOps/develop/main_backend/src/test/java/com/concert/config/DockerTestConfig.java
 /Users/putinan/development/DevOps/develop/main_backend/src/test/java/com/concert/integration/AuthIntegrationTest.java
+/Users/putinan/development/DevOps/develop/main_backend/src/test/java/com/concert/controller/UserControllerTest.java
 /Users/putinan/development/DevOps/develop/main_backend/src/test/java/com/concert/repository/UserRepositoryTest.java
 /Users/putinan/development/DevOps/develop/main_backend/src/test/java/com/concert/dto/AuthResponseTest.java
 /Users/putinan/development/DevOps/develop/main_backend/src/test/java/com/concert/service/JwtServiceTest.java
 /Users/putinan/development/DevOps/develop/main_backend/src/test/java/com/concert/integration/BaseDockerIntegrationTest.java
 /Users/putinan/development/DevOps/develop/main_backend/src/test/java/com/concert/integration/AuthDockerIntegrationTest.java
+/Users/putinan/development/DevOps/develop/main_backend/src/test/java/com/concert/controller/UserControllerDockerTest.java
 /Users/putinan/development/DevOps/develop/main_backend/src/test/java/com/concert/dto/RegisterRequestTest.java
 /Users/putinan/development/DevOps/develop/main_backend/src/test/java/com/concert/controller/AuthControllerTest.java
 /Users/putinan/development/DevOps/develop/main_backend/src/test/java/com/concert/repository/UserRepositoryDockerTest.java

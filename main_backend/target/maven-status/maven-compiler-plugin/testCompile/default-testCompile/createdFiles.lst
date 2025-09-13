@@ -1,11 +1,13 @@
 com/concert/repository/UserRepositoryDockerTest.class
 com/concert/integration/AuthIntegrationTest.class
+com/concert/controller/UserControllerDockerTest.class
 com/concert/ConcertBackendTestSuite.class
 com/concert/integration/BaseDockerIntegrationTest.class
 com/concert/service/JwtServiceTest.class
 com/concert/dto/AuthResponseTest.class
 com/concert/repository/UserRepositoryTest.class
 com/concert/config/DockerTestConfig.class
+com/concert/controller/UserControllerTest.class
 com/concert/model/UserTest.class
 com/concert/controller/AuthControllerTest.class
 com/concert/integration/AuthDockerIntegrationTest.class
