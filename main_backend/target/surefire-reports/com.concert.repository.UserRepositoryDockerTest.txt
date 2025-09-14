@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.concert.repository.UserRepositoryDockerTest
 -------------------------------------------------------------------------------
-Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.758 s - in com.concert.repository.UserRepositoryDockerTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.962 s - in com.concert.repository.UserRepositoryDockerTest
