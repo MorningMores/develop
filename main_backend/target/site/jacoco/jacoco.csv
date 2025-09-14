@@ -2,11 +2,11 @@ GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_
 concert-backend,com.concert.dto,AuthResponse,0,65,0,0,0,25,0,13,0,13
 concert-backend,com.concert.dto,LoginRequest,0,26,0,0,0,11,0,6,0,6
 concert-backend,com.concert.dto,RegisterRequest,0,36,0,0,0,15,0,8,0,8
-concert-backend,com.concert.model,User,32,113,0,0,16,46,8,26,8,26
-concert-backend,com.concert.controller,AuthController,44,36,0,4,12,10,1,6,1,4
+concert-backend,com.concert.model,User,0,145,0,0,0,62,0,34,0,34
+concert-backend,com.concert.controller,AuthController,0,80,0,4,0,22,0,7,0,5
 concert-backend,com.concert.controller,UserController,8,24,0,0,4,6,0,4,0,4
-concert-backend,com.concert.security,JwtAuthenticationFilter,49,14,9,1,9,5,5,2,0,2
+concert-backend,com.concert.security,JwtAuthenticationFilter,0,63,0,10,0,14,0,7,0,2
 concert-backend,com.concert.config,SecurityConfig,0,165,0,0,0,24,0,10,0,10
-concert-backend,com.concert,ConcertBackendApplication,5,3,0,0,2,1,1,1,1,1
-concert-backend,com.concert.service,JwtService,13,106,1,3,4,29,3,12,2,11
-concert-backend,com.concert.service,AuthService,26,122,2,8,5,27,2,7,1,3
+concert-backend,com.concert,ConcertBackendApplication,0,8,0,0,0,3,0,2,0,2
+concert-backend,com.concert.service,JwtService,0,119,1,3,0,33,1,14,0,13
+concert-backend,com.concert.service,AuthService,0,148,0,10,0,32,0,9,0,4

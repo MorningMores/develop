@@ -56,9 +56,9 @@ import java.util.function.Function;
         try {
 <span class="fc" id="L57">            final Date expiration = getExpirationDateFromToken(token);</span>
 <span class="fc" id="L58">            return expiration.before(new Date());</span>
-<span class="nc" id="L59">        } catch (Exception e) {</span>
+<span class="fc" id="L59">        } catch (Exception e) {</span>
             // If we can't parse the token, consider it expired
-<span class="nc" id="L61">            return true;</span>
+<span class="fc" id="L61">            return true;</span>
         }
     }
     
@@ -79,11 +79,11 @@ import java.util.function.Function;
 
     // Alias methods for JwtAuthenticationFilter compatibility
     public String extractUsername(String token) {
-<span class="nc" id="L82">        return getUsernameFromToken(token);</span>
+<span class="fc" id="L82">        return getUsernameFromToken(token);</span>
     }
 
     public Boolean isTokenValid(String token, String username) {
-<span class="nc" id="L86">        return validateToken(token, username);</span>
+<span class="fc" id="L86">        return validateToken(token, username);</span>
     }
 
     // Setter methods for testing
