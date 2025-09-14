@@ -1,5 +1,5 @@
-# Created at 2025-09-14T09:33:52.951
-Thread dump for process (5102@Putinans-MacBook-Pro.local) after 30 seconds shutdown timeout:
+# Created at 2025-09-14T09:44:38.747
+Thread dump for process (6370@Putinans-MacBook-Pro.local) after 30 seconds shutdown timeout:
 "main" 
    java.lang.Thread.State: WAITING
         at java.base@24.0.2/java.lang.Object.wait0(Native Method)
@@ -69,10 +69,10 @@ Thread dump for process (5102@Putinans-MacBook-Pro.local) after 30 seconds shutd
         at java.base@24.0.2/java.lang.Object.wait0(Native Method)
         at java.base@24.0.2/java.lang.Object.wait(Object.java:389)
         at app//org.testcontainers.utility.RyukResourceReaper.lambda$null$1(RyukResourceReaper.java:115)
-        at app//org.testcontainers.utility.RyukResourceReaper$$Lambda/0x00001ffe012651e8.run(Unknown Source)
+        at app//org.testcontainers.utility.RyukResourceReaper$$Lambda/0x000007f0012651e8.run(Unknown Source)
         at app//org.rnorth.ducttape.ratelimits.RateLimiter.doWhenReady(RateLimiter.java:27)
         at app//org.testcontainers.utility.RyukResourceReaper.lambda$maybeStart$2(RyukResourceReaper.java:101)
-        at app//org.testcontainers.utility.RyukResourceReaper$$Lambda/0x00001ffe01264fb0.run(Unknown Source)
+        at app//org.testcontainers.utility.RyukResourceReaper$$Lambda/0x000007f001264fb0.run(Unknown Source)
         at java.base@24.0.2/java.lang.Thread.runWith(Thread.java:1460)
         at java.base@24.0.2/java.lang.Thread.run(Thread.java:1447)
 
@@ -686,8 +686,8 @@ Thread dump for process (5102@Putinans-MacBook-Pro.local) after 30 seconds shutd
         at app//org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryClosing(SessionFactoryObserverForSchemaExport.java:48)
         at app//org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryClosing(SessionFactoryObserverChain.java:48)
         at app//org.hibernate.internal.SessionFactoryImpl.close(SessionFactoryImpl.java:867)
-        at java.base@24.0.2/java.lang.invoke.LambdaForm$DMH/0x00001ffe01084000.invokeInterface(LambdaForm$DMH)
-        at java.base@24.0.2/java.lang.invoke.LambdaForm$MH/0x00001ffe01111400.invoke(LambdaForm$MH)
+        at java.base@24.0.2/java.lang.invoke.LambdaForm$DMH/0x000007f001084000.invokeInterface(LambdaForm$DMH)
+        at java.base@24.0.2/java.lang.invoke.LambdaForm$MH/0x000007f001111400.invoke(LambdaForm$MH)
         at java.base@24.0.2/java.lang.invoke.Invokers$Holder.invokeExact_MT(Invokers$Holder)
         at java.base@24.0.2/jdk.internal.reflect.DirectMethodHandleAccessor.invokeImpl(DirectMethodHandleAccessor.java:154)
         at java.base@24.0.2/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
@@ -706,7 +706,7 @@ Thread dump for process (5102@Putinans-MacBook-Pro.local) after 30 seconds shutd
         at app//org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1086)
         at app//org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1037)
         at app//org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:145)
-        at app//org.springframework.boot.SpringApplicationShutdownHook$$Lambda/0x00001ffe01c9c250.accept(Unknown Source)
+        at app//org.springframework.boot.SpringApplicationShutdownHook$$Lambda/0x000007f001c95330.accept(Unknown Source)
         at java.base@24.0.2/java.lang.Iterable.forEach(Iterable.java:75)
         at app//org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:114)
         at java.base@24.0.2/java.lang.Thread.runWith(Thread.java:1460)

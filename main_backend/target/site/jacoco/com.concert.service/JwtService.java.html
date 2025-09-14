@@ -65,7 +65,7 @@ import java.util.function.Function;
     public Boolean validateToken(String token, String username) {
         try {
 <span class="fc" id="L67">            final String tokenUsername = getUsernameFromToken(token);</span>
-<span class="pc bpc" id="L68" title="1 of 4 branches missed.">            return (tokenUsername.equals(username) &amp;&amp; !isTokenExpired(token));</span>
+<span class="fc bfc" id="L68" title="All 4 branches covered.">            return (tokenUsername.equals(username) &amp;&amp; !isTokenExpired(token));</span>
 <span class="fc" id="L69">        } catch (Exception e) {</span>
             // Token is invalid (expired, malformed, etc.)
 <span class="fc" id="L71">            return false;</span>
