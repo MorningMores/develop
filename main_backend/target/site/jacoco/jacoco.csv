@@ -4,9 +4,9 @@ concert-backend,com.concert.dto,LoginRequest,0,26,0,0,0,11,0,6,0,6
 concert-backend,com.concert.dto,RegisterRequest,0,36,0,0,0,15,0,8,0,8
 concert-backend,com.concert.model,User,0,145,0,0,0,62,0,34,0,34
 concert-backend,com.concert.controller,AuthController,0,80,0,4,0,22,0,7,0,5
-concert-backend,com.concert.controller,UserController,8,24,0,0,4,6,0,4,0,4
+concert-backend,com.concert.controller,UserController,0,32,0,0,0,10,0,4,0,4
 concert-backend,com.concert.security,JwtAuthenticationFilter,0,63,0,10,0,14,0,7,0,2
 concert-backend,com.concert.config,SecurityConfig,0,165,0,0,0,24,0,10,0,10
 concert-backend,com.concert,ConcertBackendApplication,0,8,0,0,0,3,0,2,0,2
-concert-backend,com.concert.service,JwtService,0,119,1,3,0,33,1,14,0,13
+concert-backend,com.concert.service,JwtService,0,119,0,4,0,33,0,15,0,13
 concert-backend,com.concert.service,AuthService,0,148,0,10,0,32,0,9,0,4
