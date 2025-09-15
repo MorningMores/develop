@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { ref } from 'vue'
+
 const pages = ref([
     { text: 'Mapping', value: 'MapTestingPage'},
     { text: 'Homepage', value: '/'},
