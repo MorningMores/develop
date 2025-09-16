@@ -42,9 +42,9 @@ import java.util.ArrayList;
 <span class="fc bfc" id="L42" title="All 4 branches covered.">        if (username != null &amp;&amp; SecurityContextHolder.getContext().getAuthentication() == null) {</span>
 <span class="fc bfc" id="L43" title="All 2 branches covered.">            if (jwtService.isTokenValid(jwt, username)) {</span>
 <span class="fc" id="L44">                UsernamePasswordAuthenticationToken authToken = new UsernamePasswordAuthenticationToken(</span>
-                        username,
-                        null,
-                        new ArrayList&lt;&gt;()
+<span class="fc" id="L45">                        username,</span>
+<span class="fc" id="L46">                        null,</span>
+<span class="fc" id="L47">                        new ArrayList&lt;&gt;()</span>
                 );
 <span class="fc" id="L49">                authToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));</span>
 <span class="fc" id="L50">                SecurityContextHolder.getContext().setAuthentication(authToken);</span>

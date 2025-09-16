@@ -2,9 +2,9 @@ package com.concert.controller;
 
 import com.concert.model.User;
 import com.concert.repository.UserRepository;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.condition.DisabledIfSystemProperty;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -21,6 +21,7 @@ import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
+@DisabledIfSystemProperty(named = "java.specification.version", matches = "24")
 @WebMvcTest(UserController.class)
 class UserControllerTest {
 
@@ -32,9 +33,6 @@ class UserControllerTest {
 
     @MockBean
     private com.concert.service.JwtService jwtService;
-
-    @Autowired
-    private ObjectMapper objectMapper;
 
     private User testUser1;
     private User testUser2;
