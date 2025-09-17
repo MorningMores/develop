@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.concert.integration.AuthDockerIntegrationTest" time="6.444" tests="10" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.concert.integration.AuthDockerIntegrationTest" time="7.478" tests="10" errors="0" skipped="0" failures="0">
   <properties>
-    <property name="surefire.printSummary" value="true"/>
-    <property name="java.specification.version" value="21"/>
+    <property name="java.specification.version" value="24"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
     <property name="java.class.path" value="/Users/putinan/development/DevOps/develop/main_backend/target/test-classes:/Users/putinan/development/DevOps/develop/main_backend/target/classes:/Users/putinan/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.2.0/spring-boot-starter-web-3.2.0.jar:/Users/putinan/.m2/repository/org/springframework/boot/spring-boot-starter/3.2.0/spring-boot-starter-3.2.0.jar:/Users/putinan/.m2/repository/org/springframework/boot/spring-boot/3.2.0/spring-boot-3.2.0.jar:/Users/putinan/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.2.0/spring-boot-autoconfigure-3.2.0.jar:/Users/putinan/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.2.0/spring-boot-starter-logging-3.2.0.jar:/Users/putinan/.m2/repository/ch/qos/logback/logback-classic/1.4.11/logback-classic-1.4.11.jar:/Users/putinan/.m2/repository/ch/qos/logback/logback-core/1.4.11/logback-core-1.4.11.jar:/Users/putinan/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.21.1/log4j-to-slf4j-2.21.1.jar:/Users/putinan/.m2/repository/org/apache/logging/log4j/log4j-api/2.21.1/log4j-api-2.21.1.jar:/Users/putinan/.m2/repository/org/slf4j/jul-to-slf4j/2.0.9/jul-to-slf4j-2.0.9.jar:/Users/putinan/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/Users/putinan/.m2/repository/org/yaml/snakeyaml/2.2/snakeyaml-2.2.jar:/Users/putinan/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.2.0/spring-boot-starter-json-3.2.0.jar:/Users/putinan/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.15.3/jackson-datatype-jdk8-2.15.3.jar:/Users/putinan/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.15.3/jackson-datatype-jsr310-2.15.3.jar:/Users/putinan/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.15.3/jackson-module-parameter-names-2.15.3.jar:/Users/putinan/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.2.0/spring-boot-starter-tomcat-3.2.0.jar:/Users/putinan/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.16/tomcat-embed-core-10.1.16.jar:/Users/putinan/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.16/tomcat-embed-websocket-10.1.16.jar:/Users/putinan/.m2/repository/org/springframework/spring-web/6.1.1/spring-web-6.1.1.jar:/Users/putinan/.m2/repository/org/springframework/spring-beans/6.1.1/spring-beans-6.1.1.jar:/Users/putinan/.m2/repository/org/springframework/spring-webmvc/6.1.1/spring-webmvc-6.1.1.jar:/Users/putinan/.m2/repository/org/springframework/spring-context/6.1.1/spring-context-6.1.1.jar:/Users/putinan/.m2/repository/org/springframework/spring-expression/6.1.1/spring-expression-6.1.1.jar:/Users/putinan/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/3.2.0/spring-boot-starter-data-jpa-3.2.0.jar:/Users/putinan/.m2/repository/org/springframework/boot/spring-boot-starter-aop/3.2.0/spring-boot-starter-aop-3.2.0.jar:/Users/putinan/.m2/repository/org/aspectj/aspectjweaver/1.9.20.1/aspectjweaver-1.9.20.1.jar:/Users/putinan/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.2.0/spring-boot-starter-jdbc-3.2.0.jar:/Users/putinan/.m2/repository/com/zaxxer/HikariCP/5.0.1/HikariCP-5.0.1.jar:/Users/putinan/.m2/repository/org/springframework/spring-jdbc/6.1.1/spring-jdbc-6.1.1.jar:/Users/putinan/.m2/repository/org/hibernate/orm/hibernate-core/6.3.1.Final/hibernate-core-6.3.1.Final.jar:/Users/putinan/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar:/Users/putinan/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/Users/putinan/.m2/repository/org/jboss/logging/jboss-logging/3.5.3.Final/jboss-logging-3.5.3.Final.jar:/Users/putinan/.m2/repository/org/hibernate/common/hibernate-commons-annotations/6.0.6.Final/hibernate-commons-annotations-6.0.6.Final.jar:/Users/putinan/.m2/repository/io/smallrye/jandex/3.1.2/jandex-3.1.2.jar:/Users/putinan/.m2/repository/com/fasterxml/classmate/1.6.0/classmate-1.6.0.jar:/Users/putinan/.m2/repository/net/bytebuddy/byte-buddy/1.14.10/byte-buddy-1.14.10.jar:/Users/putinan/.m2/repository/org/glassfish/jaxb/jaxb-runtime/4.0.4/jaxb-runtime-4.0.4.jar:/Users/putinan/.m2/repository/org/glassfish/jaxb/jaxb-core/4.0.4/jaxb-core-4.0.4.jar:/Users/putinan/.m2/repository/org/eclipse/angus/angus-activation/2.0.1/angus-activation-2.0.1.jar:/Users/putinan/.m2/repository/org/glassfish/jaxb/txw2/4.0.4/txw2-4.0.4.jar:/Users/putinan/.m2/repository/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar:/Users/putinan/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/Users/putinan/.m2/repository/org/antlr/antlr4-runtime/4.10.1/antlr4-runtime-4.10.1.jar:/Users/putinan/.m2/repository/org/springframework/data/spring-data-jpa/3.2.0/spring-data-jpa-3.2.0.jar:/Users/putinan/.m2/repository/org/springframework/data/spring-data-commons/3.2.0/spring-data-commons-3.2.0.jar:/Users/putinan/.m2/repository/org/springframework/spring-orm/6.1.1/spring-orm-6.1.1.jar:/Users/putinan/.m2/repository/org/springframework/spring-tx/6.1.1/spring-tx-6.1.1.jar:/Users/putinan/.m2/repository/org/slf4j/slf4j-api/2.0.9/slf4j-api-2.0.9.jar:/Users/putinan/.m2/repository/org/springframework/spring-aspects/6.1.1/spring-aspects-6.1.1.jar:/Users/putinan/.m2/repository/org/springframework/boot/spring-boot-starter-security/3.2.0/spring-boot-starter-security-3.2.0.jar:/Users/putinan/.m2/repository/org/springframework/spring-aop/6.1.1/spring-aop-6.1.1.jar:/Users/putinan/.m2/repository/org/springframework/security/spring-security-config/6.2.0/spring-security-config-6.2.0.jar:/Users/putinan/.m2/repository/org/springframework/security/spring-security-web/6.2.0/spring-security-web-6.2.0.jar:/Users/putinan/.m2/repository/org/springframework/boot/spring-boot-starter-validation/3.2.0/spring-boot-starter-validation-3.2.0.jar:/Users/putinan/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.16/tomcat-embed-el-10.1.16.jar:/Users/putinan/.m2/repository/org/hibernate/validator/hibernate-validator/8.0.1.Final/hibernate-validator-8.0.1.Final.jar:/Users/putinan/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar:/Users/putinan/.m2/repository/org/springframework/boot/spring-boot-starter-actuator/3.2.0/spring-boot-starter-actuator-3.2.0.jar:/Users/putinan/.m2/repository/org/springframework/boot/spring-boot-actuator-autoconfigure/3.2.0/spring-boot-actuator-autoconfigure-3.2.0.jar:/Users/putinan/.m2/repository/org/springframework/boot/spring-boot-actuator/3.2.0/spring-boot-actuator-3.2.0.jar:/Users/putinan/.m2/repository/io/micrometer/micrometer-observation/1.12.0/micrometer-observation-1.12.0.jar:/Users/putinan/.m2/repository/io/micrometer/micrometer-commons/1.12.0/micrometer-commons-1.12.0.jar:/Users/putinan/.m2/repository/io/micrometer/micrometer-jakarta9/1.12.0/micrometer-jakarta9-1.12.0.jar:/Users/putinan/.m2/repository/io/micrometer/micrometer-core/1.12.0/micrometer-core-1.12.0.jar:/Users/putinan/.m2/repository/org/hdrhistogram/HdrHistogram/2.1.12/HdrHistogram-2.1.12.jar:/Users/putinan/.m2/repository/org/latencyutils/LatencyUtils/2.0.3/LatencyUtils-2.0.3.jar:/Users/putinan/.m2/repository/com/mysql/mysql-connector-j/8.1.0/mysql-connector-j-8.1.0.jar:/Users/putinan/.m2/repository/com/h2database/h2/2.2.224/h2-2.2.224.jar:/Users/putinan/.m2/repository/io/jsonwebtoken/jjwt-api/0.11.5/jjwt-api-0.11.5.jar:/Users/putinan/.m2/repository/io/jsonwebtoken/jjwt-impl/0.11.5/jjwt-impl-0.11.5.jar:/Users/putinan/.m2/repository/io/jsonwebtoken/jjwt-jackson/0.11.5/jjwt-jackson-0.11.5.jar:/Users/putinan/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.3/jackson-databind-2.15.3.jar:/Users/putinan/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.3/jackson-annotations-2.15.3.jar:/Users/putinan/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.3/jackson-core-2.15.3.jar:/Users/putinan/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.2.0/spring-boot-starter-test-3.2.0.jar:/Users/putinan/.m2/repository/org/springframework/boot/spring-boot-test/3.2.0/spring-boot-test-3.2.0.jar:/Users/putinan/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.2.0/spring-boot-test-autoconfigure-3.2.0.jar:/Users/putinan/.m2/repository/com/jayway/jsonpath/json-path/2.8.0/json-path-2.8.0.jar:/Users/putinan/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.1/jakarta.xml.bind-api-4.0.1.jar:/Users/putinan/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.2/jakarta.activation-api-2.1.2.jar:/Users/putinan/.m2/repository/net/minidev/json-smart/2.5.0/json-smart-2.5.0.jar:/Users/putinan/.m2/repository/net/minidev/accessors-smart/2.5.0/accessors-smart-2.5.0.jar:/Users/putinan/.m2/repository/org/ow2/asm/asm/9.3/asm-9.3.jar:/Users/putinan/.m2/repository/org/assertj/assertj-core/3.24.2/assertj-core-3.24.2.jar:/Users/putinan/.m2/repository/org/awaitility/awaitility/4.2.0/awaitility-4.2.0.jar:/Users/putinan/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/putinan/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.1/junit-jupiter-5.10.1.jar:/Users/putinan/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.1/junit-jupiter-api-5.10.1.jar:/Users/putinan/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.1/junit-jupiter-params-5.10.1.jar:/Users/putinan/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.1/junit-jupiter-engine-5.10.1.jar:/Users/putinan/.m2/repository/org/mockito/mockito-core/5.7.0/mockito-core-5.7.0.jar:/Users/putinan/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.10/byte-buddy-agent-1.14.10.jar:/Users/putinan/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/Users/putinan/.m2/repository/org/mockito/mockito-junit-jupiter/5.7.0/mockito-junit-jupiter-5.7.0.jar:/Users/putinan/.m2/repository/org/skyscreamer/jsonassert/1.5.1/jsonassert-1.5.1.jar:/Users/putinan/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/Users/putinan/.m2/repository/org/springframework/spring-core/6.1.1/spring-core-6.1.1.jar:/Users/putinan/.m2/repository/org/springframework/spring-jcl/6.1.1/spring-jcl-6.1.1.jar:/Users/putinan/.m2/repository/org/springframework/spring-test/6.1.1/spring-test-6.1.1.jar:/Users/putinan/.m2/repository/org/xmlunit/xmlunit-core/2.9.1/xmlunit-core-2.9.1.jar:/Users/putinan/.m2/repository/org/springframework/security/spring-security-test/6.2.0/spring-security-test-6.2.0.jar:/Users/putinan/.m2/repository/org/springframework/security/spring-security-core/6.2.0/spring-security-core-6.2.0.jar:/Users/putinan/.m2/repository/org/springframework/security/spring-security-crypto/6.2.0/spring-security-crypto-6.2.0.jar:/Users/putinan/.m2/repository/org/junit/platform/junit-platform-suite-engine/1.10.1/junit-platform-suite-engine-1.10.1.jar:/Users/putinan/.m2/repository/org/junit/platform/junit-platform-engine/1.10.1/junit-platform-engine-1.10.1.jar:/Users/putinan/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/putinan/.m2/repository/org/junit/platform/junit-platform-commons/1.10.1/junit-platform-commons-1.10.1.jar:/Users/putinan/.m2/repository/org/junit/platform/junit-platform-suite-api/1.10.1/junit-platform-suite-api-1.10.1.jar:/Users/putinan/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/putinan/.m2/repository/org/junit/platform/junit-platform-suite-commons/1.10.1/junit-platform-suite-commons-1.10.1.jar:/Users/putinan/.m2/repository/org/junit/platform/junit-platform-launcher/1.10.1/junit-platform-launcher-1.10.1.jar:/Users/putinan/.m2/repository/org/testcontainers/junit-jupiter/1.19.3/junit-jupiter-1.19.3.jar:/Users/putinan/.m2/repository/org/testcontainers/testcontainers/1.19.3/testcontainers-1.19.3.jar:/Users/putinan/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/Users/putinan/.m2/repository/org/hamcrest/hamcrest-core/2.2/hamcrest-core-2.2.jar:/Users/putinan/.m2/repository/org/apache/commons/commons-compress/1.24.0/commons-compress-1.24.0.jar:/Users/putinan/.m2/repository/org/rnorth/duct-tape/duct-tape/1.0.8/duct-tape-1.0.8.jar:/Users/putinan/.m2/repository/org/jetbrains/annotations/17.0.0/annotations-17.0.0.jar:/Users/putinan/.m2/repository/com/github/docker-java/docker-java-api/3.3.4/docker-java-api-3.3.4.jar:/Users/putinan/.m2/repository/com/github/docker-java/docker-java-transport-zerodep/3.3.4/docker-java-transport-zerodep-3.3.4.jar:/Users/putinan/.m2/repository/com/github/docker-java/docker-java-transport/3.3.4/docker-java-transport-3.3.4.jar:/Users/putinan/.m2/repository/net/java/dev/jna/jna/5.13.0/jna-5.13.0.jar:/Users/putinan/.m2/repository/org/testcontainers/mysql/1.19.3/mysql-1.19.3.jar:/Users/putinan/.m2/repository/org/testcontainers/jdbc/1.19.3/jdbc-1.19.3.jar:/Users/putinan/.m2/repository/org/testcontainers/database-commons/1.19.3/database-commons-1.19.3.jar:"/>
     <property name="java.vm.vendor" value="Homebrew"/>
@@ -13,11 +12,11 @@
     <property name="user.timezone" value="Asia/Bangkok"/>
     <property name="org.jboss.logging.provider" value="slf4j"/>
     <property name="os.name" value="Mac OS X"/>
-    <property name="java.vm.specification.version" value="21"/>
+    <property name="java.vm.specification.version" value="24"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="TH"/>
-    <property name="sun.boot.library.path" value="/opt/homebrew/Cellar/openjdk@21/21.0.8/libexec/openjdk.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/putinan/development/DevOps/develop/main_backend/target/surefire/surefirebooter-20250917222537465_3.jar /Users/putinan/development/DevOps/develop/main_backend/target/surefire 2025-09-17T22-25-37_401-jvmRun1 surefire-20250917222537465_1tmp surefire_0-20250917222537465_2tmp"/>
+    <property name="sun.boot.library.path" value="/opt/homebrew/Cellar/openjdk/24.0.2/libexec/openjdk.jdk/Contents/Home/lib"/>
+    <property name="sun.java.command" value="/Users/putinan/development/DevOps/develop/main_backend/target/surefire/surefirebooter-20250918055926835_3.jar /Users/putinan/development/DevOps/develop/main_backend/target/surefire 2025-09-18T05-59-26_759-jvmRun1 surefire-20250918055926835_1tmp surefire_0-20250918055926835_2tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/Users/putinan/development/DevOps/develop/main_backend/target/test-classes:/Users/putinan/development/DevOps/develop/main_backend/target/classes:/Users/putinan/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.2.0/spring-boot-starter-web-3.2.0.jar:/Users/putinan/.m2/repository/org/springframework/boot/spring-boot-starter/3.2.0/spring-boot-starter-3.2.0.jar:/Users/putinan/.m2/repository/org/springframework/boot/spring-boot/3.2.0/spring-boot-3.2.0.jar:/Users/putinan/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.2.0/spring-boot-autoconfigure-3.2.0.jar:/Users/putinan/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.2.0/spring-boot-starter-logging-3.2.0.jar:/Users/putinan/.m2/repository/ch/qos/logback/logback-classic/1.4.11/logback-classic-1.4.11.jar:/Users/putinan/.m2/repository/ch/qos/logback/logback-core/1.4.11/logback-core-1.4.11.jar:/Users/putinan/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.21.1/log4j-to-slf4j-2.21.1.jar:/Users/putinan/.m2/repository/org/apache/logging/log4j/log4j-api/2.21.1/log4j-api-2.21.1.jar:/Users/putinan/.m2/repository/org/slf4j/jul-to-slf4j/2.0.9/jul-to-slf4j-2.0.9.jar:/Users/putinan/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/Users/putinan/.m2/repository/org/yaml/snakeyaml/2.2/snakeyaml-2.2.jar:/Users/putinan/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.2.0/spring-boot-starter-json-3.2.0.jar:/Users/putinan/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.15.3/jackson-datatype-jdk8-2.15.3.jar:/Users/putinan/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.15.3/jackson-datatype-jsr310-2.15.3.jar:/Users/putinan/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.15.3/jackson-module-parameter-names-2.15.3.jar:/Users/putinan/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.2.0/spring-boot-starter-tomcat-3.2.0.jar:/Users/putinan/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.16/tomcat-embed-core-10.1.16.jar:/Users/putinan/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.16/tomcat-embed-websocket-10.1.16.jar:/Users/putinan/.m2/repository/org/springframework/spring-web/6.1.1/spring-web-6.1.1.jar:/Users/putinan/.m2/repository/org/springframework/spring-beans/6.1.1/spring-beans-6.1.1.jar:/Users/putinan/.m2/repository/org/springframework/spring-webmvc/6.1.1/spring-webmvc-6.1.1.jar:/Users/putinan/.m2/repository/org/springframework/spring-context/6.1.1/spring-context-6.1.1.jar:/Users/putinan/.m2/repository/org/springframework/spring-expression/6.1.1/spring-expression-6.1.1.jar:/Users/putinan/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/3.2.0/spring-boot-starter-data-jpa-3.2.0.jar:/Users/putinan/.m2/repository/org/springframework/boot/spring-boot-starter-aop/3.2.0/spring-boot-starter-aop-3.2.0.jar:/Users/putinan/.m2/repository/org/aspectj/aspectjweaver/1.9.20.1/aspectjweaver-1.9.20.1.jar:/Users/putinan/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.2.0/spring-boot-starter-jdbc-3.2.0.jar:/Users/putinan/.m2/repository/com/zaxxer/HikariCP/5.0.1/HikariCP-5.0.1.jar:/Users/putinan/.m2/repository/org/springframework/spring-jdbc/6.1.1/spring-jdbc-6.1.1.jar:/Users/putinan/.m2/repository/org/hibernate/orm/hibernate-core/6.3.1.Final/hibernate-core-6.3.1.Final.jar:/Users/putinan/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar:/Users/putinan/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/Users/putinan/.m2/repository/org/jboss/logging/jboss-logging/3.5.3.Final/jboss-logging-3.5.3.Final.jar:/Users/putinan/.m2/repository/org/hibernate/common/hibernate-commons-annotations/6.0.6.Final/hibernate-commons-annotations-6.0.6.Final.jar:/Users/putinan/.m2/repository/io/smallrye/jandex/3.1.2/jandex-3.1.2.jar:/Users/putinan/.m2/repository/com/fasterxml/classmate/1.6.0/classmate-1.6.0.jar:/Users/putinan/.m2/repository/net/bytebuddy/byte-buddy/1.14.10/byte-buddy-1.14.10.jar:/Users/putinan/.m2/repository/org/glassfish/jaxb/jaxb-runtime/4.0.4/jaxb-runtime-4.0.4.jar:/Users/putinan/.m2/repository/org/glassfish/jaxb/jaxb-core/4.0.4/jaxb-core-4.0.4.jar:/Users/putinan/.m2/repository/org/eclipse/angus/angus-activation/2.0.1/angus-activation-2.0.1.jar:/Users/putinan/.m2/repository/org/glassfish/jaxb/txw2/4.0.4/txw2-4.0.4.jar:/Users/putinan/.m2/repository/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar:/Users/putinan/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/Users/putinan/.m2/repository/org/antlr/antlr4-runtime/4.10.1/antlr4-runtime-4.10.1.jar:/Users/putinan/.m2/repository/org/springframework/data/spring-data-jpa/3.2.0/spring-data-jpa-3.2.0.jar:/Users/putinan/.m2/repository/org/springframework/data/spring-data-commons/3.2.0/spring-data-commons-3.2.0.jar:/Users/putinan/.m2/repository/org/springframework/spring-orm/6.1.1/spring-orm-6.1.1.jar:/Users/putinan/.m2/repository/org/springframework/spring-tx/6.1.1/spring-tx-6.1.1.jar:/Users/putinan/.m2/repository/org/slf4j/slf4j-api/2.0.9/slf4j-api-2.0.9.jar:/Users/putinan/.m2/repository/org/springframework/spring-aspects/6.1.1/spring-aspects-6.1.1.jar:/Users/putinan/.m2/repository/org/springframework/boot/spring-boot-starter-security/3.2.0/spring-boot-starter-security-3.2.0.jar:/Users/putinan/.m2/repository/org/springframework/spring-aop/6.1.1/spring-aop-6.1.1.jar:/Users/putinan/.m2/repository/org/springframework/security/spring-security-config/6.2.0/spring-security-config-6.2.0.jar:/Users/putinan/.m2/repository/org/springframework/security/spring-security-web/6.2.0/spring-security-web-6.2.0.jar:/Users/putinan/.m2/repository/org/springframework/boot/spring-boot-starter-validation/3.2.0/spring-boot-starter-validation-3.2.0.jar:/Users/putinan/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.16/tomcat-embed-el-10.1.16.jar:/Users/putinan/.m2/repository/org/hibernate/validator/hibernate-validator/8.0.1.Final/hibernate-validator-8.0.1.Final.jar:/Users/putinan/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar:/Users/putinan/.m2/repository/org/springframework/boot/spring-boot-starter-actuator/3.2.0/spring-boot-starter-actuator-3.2.0.jar:/Users/putinan/.m2/repository/org/springframework/boot/spring-boot-actuator-autoconfigure/3.2.0/spring-boot-actuator-autoconfigure-3.2.0.jar:/Users/putinan/.m2/repository/org/springframework/boot/spring-boot-actuator/3.2.0/spring-boot-actuator-3.2.0.jar:/Users/putinan/.m2/repository/io/micrometer/micrometer-observation/1.12.0/micrometer-observation-1.12.0.jar:/Users/putinan/.m2/repository/io/micrometer/micrometer-commons/1.12.0/micrometer-commons-1.12.0.jar:/Users/putinan/.m2/repository/io/micrometer/micrometer-jakarta9/1.12.0/micrometer-jakarta9-1.12.0.jar:/Users/putinan/.m2/repository/io/micrometer/micrometer-core/1.12.0/micrometer-core-1.12.0.jar:/Users/putinan/.m2/repository/org/hdrhistogram/HdrHistogram/2.1.12/HdrHistogram-2.1.12.jar:/Users/putinan/.m2/repository/org/latencyutils/LatencyUtils/2.0.3/LatencyUtils-2.0.3.jar:/Users/putinan/.m2/repository/com/mysql/mysql-connector-j/8.1.0/mysql-connector-j-8.1.0.jar:/Users/putinan/.m2/repository/com/h2database/h2/2.2.224/h2-2.2.224.jar:/Users/putinan/.m2/repository/io/jsonwebtoken/jjwt-api/0.11.5/jjwt-api-0.11.5.jar:/Users/putinan/.m2/repository/io/jsonwebtoken/jjwt-impl/0.11.5/jjwt-impl-0.11.5.jar:/Users/putinan/.m2/repository/io/jsonwebtoken/jjwt-jackson/0.11.5/jjwt-jackson-0.11.5.jar:/Users/putinan/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.3/jackson-databind-2.15.3.jar:/Users/putinan/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.3/jackson-annotations-2.15.3.jar:/Users/putinan/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.3/jackson-core-2.15.3.jar:/Users/putinan/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.2.0/spring-boot-starter-test-3.2.0.jar:/Users/putinan/.m2/repository/org/springframework/boot/spring-boot-test/3.2.0/spring-boot-test-3.2.0.jar:/Users/putinan/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.2.0/spring-boot-test-autoconfigure-3.2.0.jar:/Users/putinan/.m2/repository/com/jayway/jsonpath/json-path/2.8.0/json-path-2.8.0.jar:/Users/putinan/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.1/jakarta.xml.bind-api-4.0.1.jar:/Users/putinan/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.2/jakarta.activation-api-2.1.2.jar:/Users/putinan/.m2/repository/net/minidev/json-smart/2.5.0/json-smart-2.5.0.jar:/Users/putinan/.m2/repository/net/minidev/accessors-smart/2.5.0/accessors-smart-2.5.0.jar:/Users/putinan/.m2/repository/org/ow2/asm/asm/9.3/asm-9.3.jar:/Users/putinan/.m2/repository/org/assertj/assertj-core/3.24.2/assertj-core-3.24.2.jar:/Users/putinan/.m2/repository/org/awaitility/awaitility/4.2.0/awaitility-4.2.0.jar:/Users/putinan/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/putinan/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.1/junit-jupiter-5.10.1.jar:/Users/putinan/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.1/junit-jupiter-api-5.10.1.jar:/Users/putinan/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.1/junit-jupiter-params-5.10.1.jar:/Users/putinan/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.1/junit-jupiter-engine-5.10.1.jar:/Users/putinan/.m2/repository/org/mockito/mockito-core/5.7.0/mockito-core-5.7.0.jar:/Users/putinan/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.10/byte-buddy-agent-1.14.10.jar:/Users/putinan/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/Users/putinan/.m2/repository/org/mockito/mockito-junit-jupiter/5.7.0/mockito-junit-jupiter-5.7.0.jar:/Users/putinan/.m2/repository/org/skyscreamer/jsonassert/1.5.1/jsonassert-1.5.1.jar:/Users/putinan/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/Users/putinan/.m2/repository/org/springframework/spring-core/6.1.1/spring-core-6.1.1.jar:/Users/putinan/.m2/repository/org/springframework/spring-jcl/6.1.1/spring-jcl-6.1.1.jar:/Users/putinan/.m2/repository/org/springframework/spring-test/6.1.1/spring-test-6.1.1.jar:/Users/putinan/.m2/repository/org/xmlunit/xmlunit-core/2.9.1/xmlunit-core-2.9.1.jar:/Users/putinan/.m2/repository/org/springframework/security/spring-security-test/6.2.0/spring-security-test-6.2.0.jar:/Users/putinan/.m2/repository/org/springframework/security/spring-security-core/6.2.0/spring-security-core-6.2.0.jar:/Users/putinan/.m2/repository/org/springframework/security/spring-security-crypto/6.2.0/spring-security-crypto-6.2.0.jar:/Users/putinan/.m2/repository/org/junit/platform/junit-platform-suite-engine/1.10.1/junit-platform-suite-engine-1.10.1.jar:/Users/putinan/.m2/repository/org/junit/platform/junit-platform-engine/1.10.1/junit-platform-engine-1.10.1.jar:/Users/putinan/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/putinan/.m2/repository/org/junit/platform/junit-platform-commons/1.10.1/junit-platform-commons-1.10.1.jar:/Users/putinan/.m2/repository/org/junit/platform/junit-platform-suite-api/1.10.1/junit-platform-suite-api-1.10.1.jar:/Users/putinan/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/putinan/.m2/repository/org/junit/platform/junit-platform-suite-commons/1.10.1/junit-platform-suite-commons-1.10.1.jar:/Users/putinan/.m2/repository/org/junit/platform/junit-platform-launcher/1.10.1/junit-platform-launcher-1.10.1.jar:/Users/putinan/.m2/repository/org/testcontainers/junit-jupiter/1.19.3/junit-jupiter-1.19.3.jar:/Users/putinan/.m2/repository/org/testcontainers/testcontainers/1.19.3/testcontainers-1.19.3.jar:/Users/putinan/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/Users/putinan/.m2/repository/org/hamcrest/hamcrest-core/2.2/hamcrest-core-2.2.jar:/Users/putinan/.m2/repository/org/apache/commons/commons-compress/1.24.0/commons-compress-1.24.0.jar:/Users/putinan/.m2/repository/org/rnorth/duct-tape/duct-tape/1.0.8/duct-tape-1.0.8.jar:/Users/putinan/.m2/repository/org/jetbrains/annotations/17.0.0/annotations-17.0.0.jar:/Users/putinan/.m2/repository/com/github/docker-java/docker-java-api/3.3.4/docker-java-api-3.3.4.jar:/Users/putinan/.m2/repository/com/github/docker-java/docker-java-transport-zerodep/3.3.4/docker-java-transport-zerodep-3.3.4.jar:/Users/putinan/.m2/repository/com/github/docker-java/docker-java-transport/3.3.4/docker-java-transport-3.3.4.jar:/Users/putinan/.m2/repository/net/java/dev/jna/jna/5.13.0/jna-5.13.0.jar:/Users/putinan/.m2/repository/org/testcontainers/mysql/1.19.3/mysql-1.19.3.jar:/Users/putinan/.m2/repository/org/testcontainers/jdbc/1.19.3/jdbc-1.19.3.jar:/Users/putinan/.m2/repository/org/testcontainers/database-commons/1.19.3/database-commons-1.19.3.jar:"/>
@@ -26,7 +25,7 @@
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="java.version.date" value="2025-07-15"/>
-    <property name="java.home" value="/opt/homebrew/Cellar/openjdk@21/21.0.8/libexec/openjdk.jdk/Contents/Home"/>
+    <property name="java.home" value="/opt/homebrew/Cellar/openjdk/24.0.2/libexec/openjdk.jdk/Contents/Home"/>
     <property name="file.separator" value="/"/>
     <property name="basedir" value="/Users/putinan/development/DevOps/develop/main_backend"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
@@ -36,10 +35,10 @@
     <property name="FILE_LOG_CHARSET" value="UTF-8"/>
     <property name="java.awt.headless" value="true"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/putinan/development/DevOps/develop/main_backend/target/surefire/surefirebooter-20250917222537465_3.jar"/>
+    <property name="surefire.real.class.path" value="/Users/putinan/development/DevOps/develop/main_backend/target/surefire/surefirebooter-20250918055926835_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
-    <property name="java.runtime.version" value="21.0.8"/>
+    <property name="java.runtime.version" value="24.0.2"/>
     <property name="user.name" value="putinan"/>
     <property name="stdout.encoding" value="UTF-8"/>
     <property name="path.separator" value=":"/>
@@ -52,33 +51,32 @@
     <property name="java.vendor.url.bug" value="https://github.com/Homebrew/homebrew-core/issues"/>
     <property name="java.io.tmpdir" value="/var/folders/h4/z4qvk2pj28bgj0k8gh36rp5h0000gn/T/"/>
     <property name="com.zaxxer.hikari.pool_number" value="3"/>
-    <property name="catalina.home" value="/private/var/folders/h4/z4qvk2pj28bgj0k8gh36rp5h0000gn/T/tomcat.0.15601289776570748630"/>
-    <property name="java.version" value="21.0.8"/>
+    <property name="catalina.home" value="/private/var/folders/h4/z4qvk2pj28bgj0k8gh36rp5h0000gn/T/tomcat.0.9408586137443116654"/>
+    <property name="java.version" value="24.0.2"/>
     <property name="user.dir" value="/Users/putinan/development/DevOps/develop/main_backend"/>
     <property name="os.arch" value="aarch64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="PID" value="9586"/>
+    <property name="PID" value="24492"/>
     <property name="CONSOLE_LOG_CHARSET" value="UTF-8"/>
-    <property name="catalina.base" value="/private/var/folders/h4/z4qvk2pj28bgj0k8gh36rp5h0000gn/T/tomcat.0.15601289776570748630"/>
+    <property name="catalina.base" value="/private/var/folders/h4/z4qvk2pj28bgj0k8gh36rp5h0000gn/T/tomcat.0.9408586137443116654"/>
     <property name="native.encoding" value="UTF-8"/>
-    <property name="trimStackTrace" value="false"/>
     <property name="java.library.path" value="/Users/putinan/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
     <property name="java.vm.info" value="mixed mode, sharing"/>
     <property name="stderr.encoding" value="UTF-8"/>
     <property name="java.vendor" value="Homebrew"/>
-    <property name="java.vm.version" value="21.0.8"/>
+    <property name="java.vm.version" value="24.0.2"/>
     <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
-    <property name="java.class.version" value="65.0"/>
+    <property name="java.class.version" value="68.0"/>
   </properties>
-  <testcase name="testUserLoginValidationFailure" classname="com.concert.integration.AuthDockerIntegrationTest" time="0.028">
-    <system-out><![CDATA[2025-09-17T22:25:50.363+07:00  INFO 9586 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.concert.integration.AuthDockerIntegrationTest]: AuthDockerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2025-09-17T22:25:50.367+07:00  INFO 9586 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.concert.ConcertBackendApplication for test class com.concert.integration.AuthDockerIntegrationTest
-2025-09-17T22:25:50.369+07:00  INFO 9586 --- [           main] tc.mysql:8.0                             : Creating container for image: mysql:8.0
-2025-09-17T22:25:50.426+07:00  INFO 9586 --- [           main] tc.mysql:8.0                             : Container mysql:8.0 is starting: 55e638c87a9f9e842054f760463140259cb2b46b56a506cad99f650b43ef597c
-2025-09-17T22:25:50.581+07:00  INFO 9586 --- [           main] tc.mysql:8.0                             : Waiting for database connection to become available at jdbc:mysql://localhost:54776/testdb using query 'SELECT 1'
-2025-09-17T22:25:55.197+07:00  INFO 9586 --- [           main] tc.mysql:8.0                             : Container mysql:8.0 started in PT4.828642S
-2025-09-17T22:25:55.197+07:00  INFO 9586 --- [           main] tc.mysql:8.0                             : Container is started (JDBC URL: jdbc:mysql://localhost:54776/testdb)
+  <testcase name="testUserLoginValidationFailure" classname="com.concert.integration.AuthDockerIntegrationTest" time="0.038">
+    <system-out><![CDATA[&amp#27;[2m2025-09-18T05:59:39.176+07:00&amp#27;[0;39m &amp#27;[32m INFO&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mt.c.s.AnnotationConfigContextLoaderUtils&amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Could not detect default configuration classes for test class [com.concert.integration.AuthDockerIntegrationTest]: AuthDockerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+&amp#27;[2m2025-09-18T05:59:39.179+07:00&amp#27;[0;39m &amp#27;[32m INFO&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36m.b.t.c.SpringBootTestContextBootstrapper&amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Found @SpringBootConfiguration com.concert.ConcertBackendApplication for test class com.concert.integration.AuthDockerIntegrationTest
+&amp#27;[2m2025-09-18T05:59:39.181+07:00&amp#27;[0;39m &amp#27;[32m INFO&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mtc.mysql:8.0                            &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Creating container for image: mysql:8.0
+&amp#27;[2m2025-09-18T05:59:39.230+07:00&amp#27;[0;39m &amp#27;[32m INFO&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mtc.mysql:8.0                            &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Container mysql:8.0 is starting: 8caeb913f36ddac6682e5b44faa10f0ecd0fbb9bac29958bdba89b8bf31878ea
+&amp#27;[2m2025-09-18T05:59:39.345+07:00&amp#27;[0;39m &amp#27;[32m INFO&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mtc.mysql:8.0                            &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Waiting for database connection to become available at jdbc:mysql://localhost:57509/testdb using query 'SELECT 1'
+&amp#27;[2m2025-09-18T05:59:44.719+07:00&amp#27;[0;39m &amp#27;[32m INFO&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mtc.mysql:8.0                            &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Container mysql:8.0 started in PT5.537904S
+&amp#27;[2m2025-09-18T05:59:44.719+07:00&amp#27;[0;39m &amp#27;[32m INFO&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mtc.mysql:8.0                            &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Container is started (JDBC URL: jdbc:mysql://localhost:57509/testdb)
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -86,28 +84,28 @@
  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
   '  |____| .__|_| |_|_| |_\__, | / / / /
  =========|_|==============|___/=/_/_/_/
- :: Spring Boot ::                (v3.2.0)
+&amp#27;[32m :: Spring Boot :: &amp#27;[39m              &amp#27;[2m (v3.2.0)&amp#27;[0;39m
 
-2025-09-17T22:25:55.213+07:00  INFO 9586 --- [           main] c.c.i.AuthDockerIntegrationTest          : Starting AuthDockerIntegrationTest using Java 21.0.8 with PID 9586 (started by putinan in /Users/putinan/development/DevOps/develop/main_backend)
-2025-09-17T22:25:55.213+07:00 DEBUG 9586 --- [           main] c.c.i.AuthDockerIntegrationTest          : Running with Spring Boot v3.2.0, Spring v6.1.1
-2025-09-17T22:25:55.213+07:00  INFO 9586 --- [           main] c.c.i.AuthDockerIntegrationTest          : The following 1 profile is active: "docker"
-2025-09-17T22:25:55.280+07:00  INFO 9586 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-09-17T22:25:55.285+07:00  INFO 9586 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 1 JPA repository interface.
-2025-09-17T22:25:55.387+07:00  INFO 9586 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
-2025-09-17T22:25:55.392+07:00  INFO 9586 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-09-17T22:25:55.392+07:00  INFO 9586 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
-2025-09-17T22:25:55.414+07:00  INFO 9586 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-09-17T22:25:55.414+07:00  INFO 9586 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 200 ms
-2025-09-17T22:25:55.450+07:00 DEBUG 9586 --- [           main] c.c.security.JwtAuthenticationFilter     : Filter 'jwtAuthenticationFilter' configured for use
-2025-09-17T22:25:55.450+07:00 DEBUG 9586 --- [           main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
-2025-09-17T22:25:55.465+07:00  INFO 9586 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-09-17T22:25:55.465+07:00  INFO 9586 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-09-17T22:25:55.466+07:00  INFO 9586 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-09-17T22:25:55.466+07:00  INFO 9586 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
-2025-09-17T22:25:55.491+07:00  INFO 9586 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1d57deae
-2025-09-17T22:25:55.491+07:00  INFO 9586 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
-2025-09-17T22:25:55.492+07:00  WARN 9586 --- [           main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-09-17T22:25:55.505+07:00  INFO 9586 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+&amp#27;[2m2025-09-18T05:59:44.742+07:00&amp#27;[0;39m &amp#27;[32m INFO&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mc.c.i.AuthDockerIntegrationTest         &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Starting AuthDockerIntegrationTest using Java 24.0.2 with PID 24492 (started by putinan in /Users/putinan/development/DevOps/develop/main_backend)
+&amp#27;[2m2025-09-18T05:59:44.742+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mc.c.i.AuthDockerIntegrationTest         &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Running with Spring Boot v3.2.0, Spring v6.1.1
+&amp#27;[2m2025-09-18T05:59:44.742+07:00&amp#27;[0;39m &amp#27;[32m INFO&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mc.c.i.AuthDockerIntegrationTest         &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m The following 1 profile is active: "docker"
+&amp#27;[2m2025-09-18T05:59:44.813+07:00&amp#27;[0;39m &amp#27;[32m INFO&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36m.s.d.r.c.RepositoryConfigurationDelegate&amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+&amp#27;[2m2025-09-18T05:59:44.817+07:00&amp#27;[0;39m &amp#27;[32m INFO&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36m.s.d.r.c.RepositoryConfigurationDelegate&amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Finished Spring Data repository scanning in 2 ms. Found 1 JPA repository interface.
+&amp#27;[2m2025-09-18T05:59:44.911+07:00&amp#27;[0;39m &amp#27;[32m INFO&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.b.w.embedded.tomcat.TomcatWebServer &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Tomcat initialized with port 0 (http)
+&amp#27;[2m2025-09-18T05:59:44.919+07:00&amp#27;[0;39m &amp#27;[32m INFO&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.apache.catalina.core.StandardService  &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Starting service [Tomcat]
+&amp#27;[2m2025-09-18T05:59:44.920+07:00&amp#27;[0;39m &amp#27;[32m INFO&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.apache.catalina.core.StandardEngine   &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Starting Servlet engine: [Apache Tomcat/10.1.16]
+&amp#27;[2m2025-09-18T05:59:44.948+07:00&amp#27;[0;39m &amp#27;[32m INFO&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.a.c.c.C.[Tomcat].[localhost].[/]      &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Initializing Spring embedded WebApplicationContext
+&amp#27;[2m2025-09-18T05:59:44.948+07:00&amp#27;[0;39m &amp#27;[32m INFO&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mw.s.c.ServletWebServerApplicationContext&amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Root WebApplicationContext: initialization completed in 205 ms
+&amp#27;[2m2025-09-18T05:59:45.010+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mc.c.security.JwtAuthenticationFilter    &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Filter 'jwtAuthenticationFilter' configured for use
+&amp#27;[2m2025-09-18T05:59:45.010+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.w.f.ServerHttpObservationFilter     &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Filter 'webMvcObservationFilter' configured for use
+&amp#27;[2m2025-09-18T05:59:45.047+07:00&amp#27;[0;39m &amp#27;[32m INFO&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.hibernate.jpa.internal.util.LogHelper &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m HHH000204: Processing PersistenceUnitInfo [name: default]
+&amp#27;[2m2025-09-18T05:59:45.049+07:00&amp#27;[0;39m &amp#27;[32m INFO&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.h.c.internal.RegionFactoryInitiator   &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m HHH000026: Second-level cache disabled
+&amp#27;[2m2025-09-18T05:59:45.051+07:00&amp#27;[0;39m &amp#27;[32m INFO&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.o.j.p.SpringPersistenceUnitInfo     &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m No LoadTimeWeaver setup: ignoring JPA class transformer
+&amp#27;[2m2025-09-18T05:59:45.052+07:00&amp#27;[0;39m &amp#27;[32m INFO&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mcom.zaxxer.hikari.HikariDataSource      &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m HikariPool-3 - Starting...
+&amp#27;[2m2025-09-18T05:59:45.066+07:00&amp#27;[0;39m &amp#27;[32m INFO&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mcom.zaxxer.hikari.pool.HikariPool       &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2e7cb024
+&amp#27;[2m2025-09-18T05:59:45.066+07:00&amp#27;[0;39m &amp#27;[32m INFO&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mcom.zaxxer.hikari.HikariDataSource      &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m HikariPool-3 - Start completed.
+&amp#27;[2m2025-09-18T05:59:45.067+07:00&amp#27;[0;39m &amp#27;[33m WARN&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36morg.hibernate.orm.deprecation           &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+&amp#27;[2m2025-09-18T05:59:45.089+07:00&amp#27;[0;39m &amp#27;[32m INFO&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.h.e.t.j.p.i.JtaPlatformInitiator      &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
 Hibernate: 
     drop table if exists users
 Hibernate: 
@@ -135,27 +133,27 @@ Hibernate:
 Hibernate: 
     alter table users 
        add constraint UK_r43af9ap4edm43mmtq01oddj6 unique (username)
-2025-09-17T22:25:55.550+07:00  INFO 9586 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-09-17T22:25:55.591+07:00  WARN 9586 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-09-17T22:25:55.596+07:00  WARN 9586 --- [           main] .s.s.UserDetailsServiceAutoConfiguration : 
+&amp#27;[2m2025-09-18T05:59:45.126+07:00&amp#27;[0;39m &amp#27;[32m INFO&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mj.LocalContainerEntityManagerFactoryBean&amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Initialized JPA EntityManagerFactory for persistence unit 'default'
+&amp#27;[2m2025-09-18T05:59:45.187+07:00&amp#27;[0;39m &amp#27;[33m WARN&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mJpaBaseConfiguration$JpaWebConfiguration&amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+&amp#27;[2m2025-09-18T05:59:45.194+07:00&amp#27;[0;39m &amp#27;[33m WARN&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36m.s.s.UserDetailsServiceAutoConfiguration&amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m 
 
-Using generated security password: 01736cb5-4b83-4624-a607-8bf3d6563126
+Using generated security password: 771d844a-3ee7-4d11-a935-dcc2246baf4f
 
 This generated password is for development use only. Your security configuration must be updated before running your application in production.
 
-2025-09-17T22:25:55.609+07:00 DEBUG 9586 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : 8 mappings in 'requestMappingHandlerMapping'
-2025-09-17T22:25:55.630+07:00 DEBUG 9586 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
-2025-09-17T22:25:55.646+07:00  INFO 9586 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
-2025-09-17T22:25:55.655+07:00  INFO 9586 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@a5ca453, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7a89ac05, org.springframework.security.web.context.SecurityContextHolderFilter@6fbe3362, org.springframework.security.web.header.HeaderWriterFilter@2ed855dc, org.springframework.web.filter.CorsFilter@7e82c47d, org.springframework.security.web.authentication.logout.LogoutFilter@6b9521f8, com.concert.security.JwtAuthenticationFilter@1acc001c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4b3da04f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1b26d4cc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@552cd349, org.springframework.security.web.session.SessionManagementFilter@995740c, org.springframework.security.web.access.ExceptionTranslationFilter@17ff74cc, org.springframework.security.web.access.intercept.AuthorizationFilter@6f5fad44]
-2025-09-17T22:25:55.672+07:00 DEBUG 9586 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2025-09-17T22:25:55.676+07:00 DEBUG 9586 --- [           main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
-2025-09-17T22:25:55.760+07:00 DEBUG 9586 --- [           main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
-2025-09-17T22:25:55.760+07:00 DEBUG 9586 --- [           main] c.c.security.JwtAuthenticationFilter     : Filter 'jwtAuthenticationFilter' configured for use
-2025-09-17T22:25:55.760+07:00  INFO 9586 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring TestDispatcherServlet ''
-2025-09-17T22:25:55.760+07:00  INFO 9586 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2025-09-17T22:25:55.761+07:00  INFO 9586 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2025-09-17T22:25:55.784+07:00  INFO 9586 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 54830 (http) with context path ''
-2025-09-17T22:25:55.786+07:00  INFO 9586 --- [           main] c.c.i.AuthDockerIntegrationTest          : Started AuthDockerIntegrationTest in 0.587 seconds (process running for 18.278)
+&amp#27;[2m2025-09-18T05:59:45.206+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36ms.w.s.m.m.a.RequestMappingHandlerMapping&amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m 8 mappings in 'requestMappingHandlerMapping'
+&amp#27;[2m2025-09-18T05:59:45.231+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.w.s.handler.SimpleUrlHandlerMapping &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+&amp#27;[2m2025-09-18T05:59:45.259+07:00&amp#27;[0;39m &amp#27;[32m INFO&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.b.a.e.web.EndpointLinksResolver     &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Exposing 1 endpoint(s) beneath base path '/actuator'
+&amp#27;[2m2025-09-18T05:59:45.275+07:00&amp#27;[0;39m &amp#27;[32m INFO&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.s.web.DefaultSecurityFilterChain    &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@71915bdf, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@c112a9c, org.springframework.security.web.context.SecurityContextHolderFilter@5382bd3, org.springframework.security.web.header.HeaderWriterFilter@75b085d, org.springframework.web.filter.CorsFilter@5a346999, org.springframework.security.web.authentication.logout.LogoutFilter@3f4d0d8c, com.concert.security.JwtAuthenticationFilter@bb681fd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@76ee2b41, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@36d786b8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@28bff9da, org.springframework.security.web.session.SessionManagementFilter@1766c217, org.springframework.security.web.access.ExceptionTranslationFilter@49ebacd0, org.springframework.security.web.access.intercept.AuthorizationFilter@575a2107]
+&amp#27;[2m2025-09-18T05:59:45.303+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36ms.w.s.m.m.a.RequestMappingHandlerAdapter&amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+&amp#27;[2m2025-09-18T05:59:45.313+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36m.m.m.a.ExceptionHandlerExceptionResolver&amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+&amp#27;[2m2025-09-18T05:59:45.411+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.w.f.ServerHttpObservationFilter     &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Filter 'webMvcObservationFilter' configured for use
+&amp#27;[2m2025-09-18T05:59:45.411+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mc.c.security.JwtAuthenticationFilter    &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Filter 'jwtAuthenticationFilter' configured for use
+&amp#27;[2m2025-09-18T05:59:45.412+07:00&amp#27;[0;39m &amp#27;[32m INFO&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.a.c.c.C.[Tomcat].[localhost].[/]      &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Initializing Spring TestDispatcherServlet ''
+&amp#27;[2m2025-09-18T05:59:45.412+07:00&amp#27;[0;39m &amp#27;[32m INFO&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.t.web.servlet.TestDispatcherServlet &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Initializing Servlet ''
+&amp#27;[2m2025-09-18T05:59:45.412+07:00&amp#27;[0;39m &amp#27;[32m INFO&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.t.web.servlet.TestDispatcherServlet &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Completed initialization in 0 ms
+&amp#27;[2m2025-09-18T05:59:45.437+07:00&amp#27;[0;39m &amp#27;[32m INFO&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.b.w.embedded.tomcat.TomcatWebServer &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Tomcat started on port 57570 (http) with context path ''
+&amp#27;[2m2025-09-18T05:59:45.439+07:00&amp#27;[0;39m &amp#27;[32m INFO&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mc.c.i.AuthDockerIntegrationTest         &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Started AuthDockerIntegrationTest in 0.716 seconds (process running for 18.557)
 Hibernate: 
     select
         u1_0.user_id,
@@ -175,16 +173,453 @@ Hibernate:
         u1_0.website 
     from
         users u1_0
-2025-09-17T22:25:55.801+07:00 DEBUG 9586 --- [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
-2025-09-17T22:25:55.805+07:00 DEBUG 9586 --- [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-09-17T22:25:55.806+07:00  WARN 9586 --- [           main] o.s.w.s.h.HandlerMappingIntrospector     : Cache miss for REQUEST dispatch to '/api/auth/login' (previous null). Performing MatchableHandlerMapping lookup. This is logged once only at WARN level, and every time at TRACE.
-2025-09-17T22:25:55.810+07:00 DEBUG 9586 --- [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
-2025-09-17T22:25:55.810+07:00 DEBUG 9586 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.concert.controller.AuthController#login(LoginRequest)
-2025-09-17T22:25:55.811+07:00 DEBUG 9586 --- [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.concert.dto.LoginRequest@608baddd]
-2025-09-17T22:25:55.813+07:00  WARN 9586 --- [           main] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.concert.dto.AuthResponse> com.concert.controller.AuthController.login(com.concert.dto.LoginRequest) with 2 errors: [Field error in object 'loginRequest' on field 'password': rejected value []; codes [NotBlank.loginRequest.password,NotBlank.password,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [loginRequest.password,password]; arguments []; default message [password]]; default message [Password is required]] [Field error in object 'loginRequest' on field 'usernameOrEmail': rejected value []; codes [NotBlank.loginRequest.usernameOrEmail,NotBlank.usernameOrEmail,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [loginRequest.usernameOrEmail,usernameOrEmail]; arguments []; default message [usernameOrEmail]]; default message [Username or email is required]] ]
+&amp#27;[2m2025-09-18T05:59:45.460+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.security.web.FilterChainProxy       &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Securing POST /api/auth/login
+&amp#27;[2m2025-09-18T05:59:45.465+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.s.w.a.AnonymousAuthenticationFilter &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Set SecurityContextHolder to anonymous SecurityContext
+&amp#27;[2m2025-09-18T05:59:45.466+07:00&amp#27;[0;39m &amp#27;[33m WARN&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.w.s.h.HandlerMappingIntrospector    &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Cache miss for REQUEST dispatch to '/api/auth/login' (previous null). Performing MatchableHandlerMapping lookup. This is logged once only at WARN level, and every time at TRACE.
+&amp#27;[2m2025-09-18T05:59:45.469+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.security.web.FilterChainProxy       &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Secured POST /api/auth/login
+&amp#27;[2m2025-09-18T05:59:45.470+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36ms.w.s.m.m.a.RequestMappingHandlerMapping&amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Mapped to com.concert.controller.AuthController#login(LoginRequest)
+&amp#27;[2m2025-09-18T05:59:45.471+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mm.m.a.RequestResponseBodyMethodProcessor&amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Read "application/json;charset=UTF-8" to [com.concert.dto.LoginRequest@7e77d47]
+&amp#27;[2m2025-09-18T05:59:45.473+07:00&amp#27;[0;39m &amp#27;[33m WARN&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36m.w.s.m.s.DefaultHandlerExceptionResolver&amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.concert.dto.AuthResponse> com.concert.controller.AuthController.login(com.concert.dto.LoginRequest) with 2 errors: [Field error in object 'loginRequest' on field 'password': rejected value []; codes [NotBlank.loginRequest.password,NotBlank.password,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [loginRequest.password,password]; arguments []; default message [password]]; default message [Password is required]] [Field error in object 'loginRequest' on field 'usernameOrEmail': rejected value []; codes [NotBlank.loginRequest.usernameOrEmail,NotBlank.usernameOrEmail,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [loginRequest.usernameOrEmail,usernameOrEmail]; arguments []; default message [usernameOrEmail]]; default message [Username or email is required]] ]
 ]]></system-out>
+    <system-err><![CDATA[java.lang.instrument.IllegalClassFormatException: Error while instrumenting org/ietf/jgss/GSSException with JaCoCo 0.8.10.202304240956/8ea9668.
+	at org.jacoco.agent.rt.internal_4a7f17c.CoverageTransformer.transform(CoverageTransformer.java:94)
+	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:257)
+	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
+	at java.instrument/sun.instrument.InstrumentationImpl.transform(InstrumentationImpl.java:594)
+	at java.base/java.lang.ClassLoader.defineClass2(Native Method)
+	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1052)
+	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:164)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.defineClass(BuiltinClassLoader.java:735)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.findClassInModuleOrNull(BuiltinClassLoader.java:678)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(BuiltinClassLoader.java:604)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(BuiltinClassLoader.java:639)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(BuiltinClassLoader.java:608)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:578)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:490)
+	at org.apache.catalina.startup.Tomcat.createDefaultRealm(Tomcat.java:820)
+	at org.apache.catalina.startup.Tomcat.getEngine(Tomcat.java:632)
+	at org.apache.catalina.startup.Tomcat.getHost(Tomcat.java:609)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:212)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:188)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:610)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:455)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:323)
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46)
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1442)
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:552)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:141)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:97)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:247)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:163)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:378)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:383)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:378)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:215)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1716)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:570)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:560)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:315)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:807)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:377)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:290)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:289)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:279)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:278)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:55)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:223)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:175)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:139)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
+Caused by: java.io.IOException: Error while instrumenting org/ietf/jgss/GSSException with JaCoCo 0.8.10.202304240956/8ea9668.
+	at org.jacoco.agent.rt.internal_4a7f17c.core.instr.Instrumenter.instrumentError(Instrumenter.java:161)
+	at org.jacoco.agent.rt.internal_4a7f17c.core.instr.Instrumenter.instrument(Instrumenter.java:111)
+	at org.jacoco.agent.rt.internal_4a7f17c.CoverageTransformer.transform(CoverageTransformer.java:92)
+	... 106 more
+Caused by: java.lang.IllegalArgumentException: Unsupported class file major version 68
+	at org.jacoco.agent.rt.internal_4a7f17c.asm.ClassReader.<init>(ClassReader.java:199)
+	at org.jacoco.agent.rt.internal_4a7f17c.asm.ClassReader.<init>(ClassReader.java:180)
+	at org.jacoco.agent.rt.internal_4a7f17c.asm.ClassReader.<init>(ClassReader.java:166)
+	at org.jacoco.agent.rt.internal_4a7f17c.core.internal.instr.InstrSupport.classReaderFor(InstrSupport.java:280)
+	at org.jacoco.agent.rt.internal_4a7f17c.core.instr.Instrumenter.instrument(Instrumenter.java:77)
+	at org.jacoco.agent.rt.internal_4a7f17c.core.instr.Instrumenter.instrument(Instrumenter.java:109)
+	... 107 more
+java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/concert/model/User$HibernateProxy$VNTUPWD8 with JaCoCo 0.8.10.202304240956/8ea9668.
+	at org.jacoco.agent.rt.internal_4a7f17c.CoverageTransformer.transform(CoverageTransformer.java:94)
+	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:257)
+	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
+	at java.instrument/sun.instrument.InstrumentationImpl.transform(InstrumentationImpl.java:594)
+	at java.base/java.lang.ClassLoader.defineClass0(Native Method)
+	at java.base/java.lang.System$1.defineClass(System.java:2025)
+	at java.base/java.lang.invoke.MethodHandles$Lookup$ClassDefiner.defineClass(MethodHandles.java:2355)
+	at java.base/java.lang.invoke.MethodHandles$Lookup$ClassDefiner.defineClass(MethodHandles.java:2330)
+	at java.base/java.lang.invoke.MethodHandles$Lookup.defineClass(MethodHandles.java:1754)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at net.bytebuddy.utility.Invoker$Dispatcher.invoke(Unknown Source)
+	at net.bytebuddy.utility.dispatcher.JavaDispatcher$Dispatcher$ForNonStaticMethod.invoke(JavaDispatcher.java:1032)
+	at net.bytebuddy.utility.dispatcher.JavaDispatcher$ProxiedInvocationHandler.invoke(JavaDispatcher.java:1162)
+	at jdk.proxy2/jdk.proxy2.$Proxy164.defineClass(Unknown Source)
+	at net.bytebuddy.dynamic.loading.ClassInjector$UsingLookup.injectRaw(ClassInjector.java:1638)
+	at net.bytebuddy.dynamic.loading.ClassInjector$AbstractBase.inject(ClassInjector.java:118)
+	at net.bytebuddy.dynamic.loading.ClassLoadingStrategy$UsingLookup.load(ClassLoadingStrategy.java:519)
+	at net.bytebuddy.dynamic.TypeResolutionStrategy$Passive.initialize(TypeResolutionStrategy.java:101)
+	at net.bytebuddy.dynamic.DynamicType$Default$Unloaded.load(DynamicType.java:6325)
+	at org.hibernate.bytecode.internal.bytebuddy.ByteBuddyState$1.run(ByteBuddyState.java:205)
+	at org.hibernate.bytecode.internal.bytebuddy.ByteBuddyState$1.run(ByteBuddyState.java:201)
+	at org.hibernate.bytecode.internal.bytebuddy.ByteBuddyState.lambda$load$0(ByteBuddyState.java:214)
+	at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:168)
+	at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:190)
+	at org.hibernate.bytecode.internal.bytebuddy.ByteBuddyState.load(ByteBuddyState.java:197)
+	at org.hibernate.bytecode.internal.bytebuddy.ByteBuddyState.loadProxy(ByteBuddyState.java:112)
+	at org.hibernate.proxy.pojo.bytebuddy.ByteBuddyProxyHelper.buildProxy(ByteBuddyProxyHelper.java:61)
+	at org.hibernate.proxy.pojo.bytebuddy.ByteBuddyProxyFactory.postInstantiate(ByteBuddyProxyFactory.java:65)
+	at org.hibernate.metamodel.internal.EntityRepresentationStrategyPojoStandard.createProxyFactory(EntityRepresentationStrategyPojoStandard.java:269)
+	at org.hibernate.metamodel.internal.EntityRepresentationStrategyPojoStandard.<init>(EntityRepresentationStrategyPojoStandard.java:146)
+	at org.hibernate.metamodel.internal.ManagedTypeRepresentationResolverStandard.resolveStrategy(ManagedTypeRepresentationResolverStandard.java:62)
+	at org.hibernate.persister.entity.AbstractEntityPersister.<init>(AbstractEntityPersister.java:519)
+	at org.hibernate.persister.entity.SingleTableEntityPersister.<init>(SingleTableEntityPersister.java:135)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.hibernate.persister.internal.PersisterFactoryImpl.createEntityPersister(PersisterFactoryImpl.java:92)
+	at org.hibernate.persister.internal.PersisterFactoryImpl.createEntityPersister(PersisterFactoryImpl.java:75)
+	at org.hibernate.metamodel.model.domain.internal.MappingMetamodelImpl.processBootEntities(MappingMetamodelImpl.java:243)
+	at org.hibernate.metamodel.model.domain.internal.MappingMetamodelImpl.finishInitialization(MappingMetamodelImpl.java:181)
+	at org.hibernate.internal.SessionFactoryImpl.initializeMappingModel(SessionFactoryImpl.java:323)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:273)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:450)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1507)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1822)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1771)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1173)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:936)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:616)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:455)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:323)
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46)
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1442)
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:552)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:141)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:97)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:247)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:163)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:378)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:383)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:378)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:215)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1716)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:570)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:560)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:315)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:807)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:377)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:290)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:289)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:279)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:278)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:55)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:223)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:175)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:139)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
+Caused by: java.io.IOException: Error while instrumenting com/concert/model/User$HibernateProxy$VNTUPWD8 with JaCoCo 0.8.10.202304240956/8ea9668.
+	at org.jacoco.agent.rt.internal_4a7f17c.core.instr.Instrumenter.instrumentError(Instrumenter.java:161)
+	at org.jacoco.agent.rt.internal_4a7f17c.core.instr.Instrumenter.instrument(Instrumenter.java:111)
+	at org.jacoco.agent.rt.internal_4a7f17c.CoverageTransformer.transform(CoverageTransformer.java:92)
+	... 146 more
+Caused by: java.lang.IllegalArgumentException: Unsupported class file major version 68
+	at org.jacoco.agent.rt.internal_4a7f17c.asm.ClassReader.<init>(ClassReader.java:199)
+	at org.jacoco.agent.rt.internal_4a7f17c.asm.ClassReader.<init>(ClassReader.java:180)
+	at org.jacoco.agent.rt.internal_4a7f17c.asm.ClassReader.<init>(ClassReader.java:166)
+	at org.jacoco.agent.rt.internal_4a7f17c.core.internal.instr.InstrSupport.classReaderFor(InstrSupport.java:280)
+	at org.jacoco.agent.rt.internal_4a7f17c.core.instr.Instrumenter.instrument(Instrumenter.java:77)
+	at org.jacoco.agent.rt.internal_4a7f17c.core.instr.Instrumenter.instrument(Instrumenter.java:109)
+	... 147 more
+java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/concert/model/User$HibernateInstantiator$n97Wdl1v with JaCoCo 0.8.10.202304240956/8ea9668.
+	at org.jacoco.agent.rt.internal_4a7f17c.CoverageTransformer.transform(CoverageTransformer.java:94)
+	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:257)
+	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
+	at java.instrument/sun.instrument.InstrumentationImpl.transform(InstrumentationImpl.java:594)
+	at java.base/java.lang.ClassLoader.defineClass0(Native Method)
+	at java.base/java.lang.System$1.defineClass(System.java:2025)
+	at java.base/java.lang.invoke.MethodHandles$Lookup$ClassDefiner.defineClass(MethodHandles.java:2355)
+	at java.base/java.lang.invoke.MethodHandles$Lookup$ClassDefiner.defineClass(MethodHandles.java:2330)
+	at java.base/java.lang.invoke.MethodHandles$Lookup.defineClass(MethodHandles.java:1754)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at net.bytebuddy.utility.Invoker$Dispatcher.invoke(Unknown Source)
+	at net.bytebuddy.utility.dispatcher.JavaDispatcher$Dispatcher$ForNonStaticMethod.invoke(JavaDispatcher.java:1032)
+	at net.bytebuddy.utility.dispatcher.JavaDispatcher$ProxiedInvocationHandler.invoke(JavaDispatcher.java:1162)
+	at jdk.proxy2/jdk.proxy2.$Proxy164.defineClass(Unknown Source)
+	at net.bytebuddy.dynamic.loading.ClassInjector$UsingLookup.injectRaw(ClassInjector.java:1638)
+	at net.bytebuddy.dynamic.loading.ClassInjector$AbstractBase.inject(ClassInjector.java:118)
+	at net.bytebuddy.dynamic.loading.ClassLoadingStrategy$UsingLookup.load(ClassLoadingStrategy.java:519)
+	at net.bytebuddy.dynamic.TypeResolutionStrategy$Passive.initialize(TypeResolutionStrategy.java:101)
+	at net.bytebuddy.dynamic.DynamicType$Default$Unloaded.load(DynamicType.java:6325)
+	at org.hibernate.bytecode.internal.bytebuddy.ByteBuddyState.load(ByteBuddyState.java:146)
+	at org.hibernate.bytecode.internal.bytebuddy.BytecodeProviderImpl.getReflectionOptimizer(BytecodeProviderImpl.java:214)
+	at org.hibernate.metamodel.internal.EntityRepresentationStrategyPojoStandard.resolveReflectionOptimizer(EntityRepresentationStrategyPojoStandard.java:289)
+	at org.hibernate.metamodel.internal.EntityRepresentationStrategyPojoStandard.<init>(EntityRepresentationStrategyPojoStandard.java:160)
+	at org.hibernate.metamodel.internal.ManagedTypeRepresentationResolverStandard.resolveStrategy(ManagedTypeRepresentationResolverStandard.java:62)
+	at org.hibernate.persister.entity.AbstractEntityPersister.<init>(AbstractEntityPersister.java:519)
+	at org.hibernate.persister.entity.SingleTableEntityPersister.<init>(SingleTableEntityPersister.java:135)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.hibernate.persister.internal.PersisterFactoryImpl.createEntityPersister(PersisterFactoryImpl.java:92)
+	at org.hibernate.persister.internal.PersisterFactoryImpl.createEntityPersister(PersisterFactoryImpl.java:75)
+	at org.hibernate.metamodel.model.domain.internal.MappingMetamodelImpl.processBootEntities(MappingMetamodelImpl.java:243)
+	at org.hibernate.metamodel.model.domain.internal.MappingMetamodelImpl.finishInitialization(MappingMetamodelImpl.java:181)
+	at org.hibernate.internal.SessionFactoryImpl.initializeMappingModel(SessionFactoryImpl.java:323)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:273)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:450)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1507)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1822)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1771)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1173)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:936)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:616)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:455)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:323)
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46)
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1442)
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:552)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:141)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:97)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:247)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:163)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:378)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:383)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:378)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:215)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1716)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:570)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:560)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:315)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:807)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:377)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:290)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:289)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:279)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:278)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:55)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:223)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:175)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:139)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
+Caused by: java.io.IOException: Error while instrumenting com/concert/model/User$HibernateInstantiator$n97Wdl1v with JaCoCo 0.8.10.202304240956/8ea9668.
+	at org.jacoco.agent.rt.internal_4a7f17c.core.instr.Instrumenter.instrumentError(Instrumenter.java:161)
+	at org.jacoco.agent.rt.internal_4a7f17c.core.instr.Instrumenter.instrument(Instrumenter.java:111)
+	at org.jacoco.agent.rt.internal_4a7f17c.CoverageTransformer.transform(CoverageTransformer.java:92)
+	... 139 more
+Caused by: java.lang.IllegalArgumentException: Unsupported class file major version 68
+	at org.jacoco.agent.rt.internal_4a7f17c.asm.ClassReader.<init>(ClassReader.java:199)
+	at org.jacoco.agent.rt.internal_4a7f17c.asm.ClassReader.<init>(ClassReader.java:180)
+	at org.jacoco.agent.rt.internal_4a7f17c.asm.ClassReader.<init>(ClassReader.java:166)
+	at org.jacoco.agent.rt.internal_4a7f17c.core.internal.instr.InstrSupport.classReaderFor(InstrSupport.java:280)
+	at org.jacoco.agent.rt.internal_4a7f17c.core.instr.Instrumenter.instrument(Instrumenter.java:77)
+	at org.jacoco.agent.rt.internal_4a7f17c.core.instr.Instrumenter.instrument(Instrumenter.java:109)
+	... 140 more
+]]></system-err>
   </testcase>
-  <testcase name="testDuplicateEmailRegistration" classname="com.concert.integration.AuthDockerIntegrationTest" time="0.089">
+  <testcase name="testDuplicateEmailRegistration" classname="com.concert.integration.AuthDockerIntegrationTest" time="0.085">
     <system-out><![CDATA[Hibernate: 
     select
         u1_0.user_id,
@@ -204,11 +639,11 @@ Hibernate:
         u1_0.website 
     from
         users u1_0
-2025-09-17T22:25:55.822+07:00 DEBUG 9586 --- [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/register
-2025-09-17T22:25:55.822+07:00 DEBUG 9586 --- [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-09-17T22:25:55.822+07:00 DEBUG 9586 --- [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/register
-2025-09-17T22:25:55.823+07:00 DEBUG 9586 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.concert.controller.AuthController#register(RegisterRequest)
-2025-09-17T22:25:55.823+07:00 DEBUG 9586 --- [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.concert.dto.RegisterRequest@524ce4b4]
+&amp#27;[2m2025-09-18T05:59:45.486+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.security.web.FilterChainProxy       &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Securing POST /api/auth/register
+&amp#27;[2m2025-09-18T05:59:45.486+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.s.w.a.AnonymousAuthenticationFilter &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Set SecurityContextHolder to anonymous SecurityContext
+&amp#27;[2m2025-09-18T05:59:45.486+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.security.web.FilterChainProxy       &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Secured POST /api/auth/register
+&amp#27;[2m2025-09-18T05:59:45.487+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36ms.w.s.m.m.a.RequestMappingHandlerMapping&amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Mapped to com.concert.controller.AuthController#register(RegisterRequest)
+&amp#27;[2m2025-09-18T05:59:45.488+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mm.m.a.RequestResponseBodyMethodProcessor&amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Read "application/json;charset=UTF-8" to [com.concert.dto.RegisterRequest@2f111024]
 Hibernate: 
     select
         u1_0.user_id 
@@ -234,13 +669,13 @@ Hibernate:
         (address, city, company, country, created_at, email, name, password, phone, pincode, profile_photo, updated_at, username, website) 
     values
         (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-2025-09-17T22:25:55.896+07:00 DEBUG 9586 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2025-09-17T22:25:55.896+07:00 DEBUG 9586 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.concert.dto.AuthResponse@9dd3dfe]
-2025-09-17T22:25:55.897+07:00 DEBUG 9586 --- [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/register
-2025-09-17T22:25:55.897+07:00 DEBUG 9586 --- [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-09-17T22:25:55.898+07:00 DEBUG 9586 --- [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/register
-2025-09-17T22:25:55.898+07:00 DEBUG 9586 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.concert.controller.AuthController#register(RegisterRequest)
-2025-09-17T22:25:55.898+07:00 DEBUG 9586 --- [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.concert.dto.RegisterRequest@7957e0e4]
+&amp#27;[2m2025-09-18T05:59:45.559+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.w.s.m.m.a.HttpEntityMethodProcessor &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+&amp#27;[2m2025-09-18T05:59:45.560+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.w.s.m.m.a.HttpEntityMethodProcessor &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Writing [com.concert.dto.AuthResponse@3adb6077]
+&amp#27;[2m2025-09-18T05:59:45.561+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.security.web.FilterChainProxy       &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Securing POST /api/auth/register
+&amp#27;[2m2025-09-18T05:59:45.561+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.s.w.a.AnonymousAuthenticationFilter &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Set SecurityContextHolder to anonymous SecurityContext
+&amp#27;[2m2025-09-18T05:59:45.561+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.security.web.FilterChainProxy       &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Secured POST /api/auth/register
+&amp#27;[2m2025-09-18T05:59:45.561+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36ms.w.s.m.m.a.RequestMappingHandlerMapping&amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Mapped to com.concert.controller.AuthController#register(RegisterRequest)
+&amp#27;[2m2025-09-18T05:59:45.562+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mm.m.a.RequestResponseBodyMethodProcessor&amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Read "application/json;charset=UTF-8" to [com.concert.dto.RegisterRequest@15776e14]
 Hibernate: 
     select
         u1_0.user_id 
@@ -259,11 +694,11 @@ Hibernate:
         u1_0.email=? 
     limit
         ?
-2025-09-17T22:25:55.902+07:00 DEBUG 9586 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2025-09-17T22:25:55.902+07:00 DEBUG 9586 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.concert.dto.AuthResponse@6ce3b9c]
+&amp#27;[2m2025-09-18T05:59:45.564+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.w.s.m.m.a.HttpEntityMethodProcessor &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+&amp#27;[2m2025-09-18T05:59:45.565+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.w.s.m.m.a.HttpEntityMethodProcessor &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Writing [com.concert.dto.AuthResponse@4cca35d0]
 ]]></system-out>
   </testcase>
-  <testcase name="testDuplicateUsernameRegistration" classname="com.concert.integration.AuthDockerIntegrationTest" time="0.078">
+  <testcase name="testDuplicateUsernameRegistration" classname="com.concert.integration.AuthDockerIntegrationTest" time="0.071">
     <system-out><![CDATA[Hibernate: 
     select
         u1_0.user_id,
@@ -283,11 +718,11 @@ Hibernate:
         u1_0.website 
     from
         users u1_0
-2025-09-17T22:25:55.914+07:00 DEBUG 9586 --- [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/register
-2025-09-17T22:25:55.914+07:00 DEBUG 9586 --- [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-09-17T22:25:55.914+07:00 DEBUG 9586 --- [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/register
-2025-09-17T22:25:55.915+07:00 DEBUG 9586 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.concert.controller.AuthController#register(RegisterRequest)
-2025-09-17T22:25:55.915+07:00 DEBUG 9586 --- [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.concert.dto.RegisterRequest@6fee790d]
+&amp#27;[2m2025-09-18T05:59:45.570+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.security.web.FilterChainProxy       &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Securing POST /api/auth/register
+&amp#27;[2m2025-09-18T05:59:45.570+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.s.w.a.AnonymousAuthenticationFilter &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Set SecurityContextHolder to anonymous SecurityContext
+&amp#27;[2m2025-09-18T05:59:45.571+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.security.web.FilterChainProxy       &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Secured POST /api/auth/register
+&amp#27;[2m2025-09-18T05:59:45.571+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36ms.w.s.m.m.a.RequestMappingHandlerMapping&amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Mapped to com.concert.controller.AuthController#register(RegisterRequest)
+&amp#27;[2m2025-09-18T05:59:45.571+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mm.m.a.RequestResponseBodyMethodProcessor&amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Read "application/json;charset=UTF-8" to [com.concert.dto.RegisterRequest@4387f94]
 Hibernate: 
     select
         u1_0.user_id 
@@ -313,13 +748,13 @@ Hibernate:
         (address, city, company, country, created_at, email, name, password, phone, pincode, profile_photo, updated_at, username, website) 
     values
         (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-2025-09-17T22:25:55.980+07:00 DEBUG 9586 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2025-09-17T22:25:55.980+07:00 DEBUG 9586 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.concert.dto.AuthResponse@4cc59e52]
-2025-09-17T22:25:55.981+07:00 DEBUG 9586 --- [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/register
-2025-09-17T22:25:55.981+07:00 DEBUG 9586 --- [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-09-17T22:25:55.982+07:00 DEBUG 9586 --- [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/register
-2025-09-17T22:25:55.982+07:00 DEBUG 9586 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.concert.controller.AuthController#register(RegisterRequest)
-2025-09-17T22:25:55.982+07:00 DEBUG 9586 --- [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.concert.dto.RegisterRequest@1b45a0dc]
+&amp#27;[2m2025-09-18T05:59:45.632+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.w.s.m.m.a.HttpEntityMethodProcessor &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+&amp#27;[2m2025-09-18T05:59:45.632+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.w.s.m.m.a.HttpEntityMethodProcessor &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Writing [com.concert.dto.AuthResponse@299580a4]
+&amp#27;[2m2025-09-18T05:59:45.633+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.security.web.FilterChainProxy       &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Securing POST /api/auth/register
+&amp#27;[2m2025-09-18T05:59:45.633+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.s.w.a.AnonymousAuthenticationFilter &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Set SecurityContextHolder to anonymous SecurityContext
+&amp#27;[2m2025-09-18T05:59:45.634+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.security.web.FilterChainProxy       &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Secured POST /api/auth/register
+&amp#27;[2m2025-09-18T05:59:45.634+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36ms.w.s.m.m.a.RequestMappingHandlerMapping&amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Mapped to com.concert.controller.AuthController#register(RegisterRequest)
+&amp#27;[2m2025-09-18T05:59:45.634+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mm.m.a.RequestResponseBodyMethodProcessor&amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Read "application/json;charset=UTF-8" to [com.concert.dto.RegisterRequest@61abb6ed]
 Hibernate: 
     select
         u1_0.user_id 
@@ -329,11 +764,11 @@ Hibernate:
         u1_0.username=? 
     limit
         ?
-2025-09-17T22:25:55.984+07:00 DEBUG 9586 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2025-09-17T22:25:55.984+07:00 DEBUG 9586 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.concert.dto.AuthResponse@3f67f2ff]
+&amp#27;[2m2025-09-18T05:59:45.636+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.w.s.m.m.a.HttpEntityMethodProcessor &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+&amp#27;[2m2025-09-18T05:59:45.636+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.w.s.m.m.a.HttpEntityMethodProcessor &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Writing [com.concert.dto.AuthResponse@5df53d18]
 ]]></system-out>
   </testcase>
-  <testcase name="testUserLoginFailureWrongPassword" classname="com.concert.integration.AuthDockerIntegrationTest" time="0.128">
+  <testcase name="testUserLoginFailureWrongPassword" classname="com.concert.integration.AuthDockerIntegrationTest" time="0.129">
     <system-out><![CDATA[Hibernate: 
     select
         u1_0.user_id,
@@ -353,11 +788,11 @@ Hibernate:
         u1_0.website 
     from
         users u1_0
-2025-09-17T22:25:55.989+07:00 DEBUG 9586 --- [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/register
-2025-09-17T22:25:55.989+07:00 DEBUG 9586 --- [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-09-17T22:25:55.990+07:00 DEBUG 9586 --- [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/register
-2025-09-17T22:25:55.990+07:00 DEBUG 9586 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.concert.controller.AuthController#register(RegisterRequest)
-2025-09-17T22:25:55.990+07:00 DEBUG 9586 --- [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.concert.dto.RegisterRequest@75386034]
+&amp#27;[2m2025-09-18T05:59:45.642+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.security.web.FilterChainProxy       &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Securing POST /api/auth/register
+&amp#27;[2m2025-09-18T05:59:45.643+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.s.w.a.AnonymousAuthenticationFilter &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Set SecurityContextHolder to anonymous SecurityContext
+&amp#27;[2m2025-09-18T05:59:45.643+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.security.web.FilterChainProxy       &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Secured POST /api/auth/register
+&amp#27;[2m2025-09-18T05:59:45.643+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36ms.w.s.m.m.a.RequestMappingHandlerMapping&amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Mapped to com.concert.controller.AuthController#register(RegisterRequest)
+&amp#27;[2m2025-09-18T05:59:45.643+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mm.m.a.RequestResponseBodyMethodProcessor&amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Read "application/json;charset=UTF-8" to [com.concert.dto.RegisterRequest@96c32bc]
 Hibernate: 
     select
         u1_0.user_id 
@@ -383,13 +818,13 @@ Hibernate:
         (address, city, company, country, created_at, email, name, password, phone, pincode, profile_photo, updated_at, username, website) 
     values
         (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-2025-09-17T22:25:56.051+07:00 DEBUG 9586 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2025-09-17T22:25:56.051+07:00 DEBUG 9586 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.concert.dto.AuthResponse@41623e89]
-2025-09-17T22:25:56.052+07:00 DEBUG 9586 --- [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
-2025-09-17T22:25:56.052+07:00 DEBUG 9586 --- [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-09-17T22:25:56.052+07:00 DEBUG 9586 --- [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
-2025-09-17T22:25:56.052+07:00 DEBUG 9586 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.concert.controller.AuthController#login(LoginRequest)
-2025-09-17T22:25:56.052+07:00 DEBUG 9586 --- [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.concert.dto.LoginRequest@6a4ed4ea]
+&amp#27;[2m2025-09-18T05:59:45.704+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.w.s.m.m.a.HttpEntityMethodProcessor &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+&amp#27;[2m2025-09-18T05:59:45.704+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.w.s.m.m.a.HttpEntityMethodProcessor &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Writing [com.concert.dto.AuthResponse@1f2144c1]
+&amp#27;[2m2025-09-18T05:59:45.705+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.security.web.FilterChainProxy       &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Securing POST /api/auth/login
+&amp#27;[2m2025-09-18T05:59:45.705+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.s.w.a.AnonymousAuthenticationFilter &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Set SecurityContextHolder to anonymous SecurityContext
+&amp#27;[2m2025-09-18T05:59:45.706+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.security.web.FilterChainProxy       &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Secured POST /api/auth/login
+&amp#27;[2m2025-09-18T05:59:45.706+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36ms.w.s.m.m.a.RequestMappingHandlerMapping&amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Mapped to com.concert.controller.AuthController#login(LoginRequest)
+&amp#27;[2m2025-09-18T05:59:45.706+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mm.m.a.RequestResponseBodyMethodProcessor&amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Read "application/json;charset=UTF-8" to [com.concert.dto.LoginRequest@392944b7]
 Hibernate: 
     select
         u1_0.user_id,
@@ -412,11 +847,11 @@ Hibernate:
     where
         u1_0.username=? 
         or u1_0.email=?
-2025-09-17T22:25:56.109+07:00 DEBUG 9586 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2025-09-17T22:25:56.109+07:00 DEBUG 9586 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.concert.dto.AuthResponse@2634a835]
+&amp#27;[2m2025-09-18T05:59:45.764+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.w.s.m.m.a.HttpEntityMethodProcessor &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+&amp#27;[2m2025-09-18T05:59:45.764+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.w.s.m.m.a.HttpEntityMethodProcessor &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Writing [com.concert.dto.AuthResponse@520145ba]
 ]]></system-out>
   </testcase>
-  <testcase name="testUserLoginWithEmail" classname="com.concert.integration.AuthDockerIntegrationTest" time="0.127">
+  <testcase name="testUserLoginWithEmail" classname="com.concert.integration.AuthDockerIntegrationTest" time="0.135">
     <system-out><![CDATA[Hibernate: 
     select
         u1_0.user_id,
@@ -436,11 +871,11 @@ Hibernate:
         u1_0.website 
     from
         users u1_0
-2025-09-17T22:25:56.118+07:00 DEBUG 9586 --- [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/register
-2025-09-17T22:25:56.119+07:00 DEBUG 9586 --- [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-09-17T22:25:56.119+07:00 DEBUG 9586 --- [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/register
-2025-09-17T22:25:56.119+07:00 DEBUG 9586 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.concert.controller.AuthController#register(RegisterRequest)
-2025-09-17T22:25:56.119+07:00 DEBUG 9586 --- [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.concert.dto.RegisterRequest@12ed8e5f]
+&amp#27;[2m2025-09-18T05:59:45.773+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.security.web.FilterChainProxy       &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Securing POST /api/auth/register
+&amp#27;[2m2025-09-18T05:59:45.773+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.s.w.a.AnonymousAuthenticationFilter &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Set SecurityContextHolder to anonymous SecurityContext
+&amp#27;[2m2025-09-18T05:59:45.774+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.security.web.FilterChainProxy       &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Secured POST /api/auth/register
+&amp#27;[2m2025-09-18T05:59:45.774+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36ms.w.s.m.m.a.RequestMappingHandlerMapping&amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Mapped to com.concert.controller.AuthController#register(RegisterRequest)
+&amp#27;[2m2025-09-18T05:59:45.774+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mm.m.a.RequestResponseBodyMethodProcessor&amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Read "application/json;charset=UTF-8" to [com.concert.dto.RegisterRequest@436f7250]
 Hibernate: 
     select
         u1_0.user_id 
@@ -466,13 +901,13 @@ Hibernate:
         (address, city, company, country, created_at, email, name, password, phone, pincode, profile_photo, updated_at, username, website) 
     values
         (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-2025-09-17T22:25:56.179+07:00 DEBUG 9586 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2025-09-17T22:25:56.179+07:00 DEBUG 9586 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.concert.dto.AuthResponse@65c360f5]
-2025-09-17T22:25:56.180+07:00 DEBUG 9586 --- [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
-2025-09-17T22:25:56.180+07:00 DEBUG 9586 --- [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-09-17T22:25:56.181+07:00 DEBUG 9586 --- [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
-2025-09-17T22:25:56.181+07:00 DEBUG 9586 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.concert.controller.AuthController#login(LoginRequest)
-2025-09-17T22:25:56.181+07:00 DEBUG 9586 --- [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.concert.dto.LoginRequest@6eec15ba]
+&amp#27;[2m2025-09-18T05:59:45.841+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.w.s.m.m.a.HttpEntityMethodProcessor &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+&amp#27;[2m2025-09-18T05:59:45.841+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.w.s.m.m.a.HttpEntityMethodProcessor &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Writing [com.concert.dto.AuthResponse@7ece26f7]
+&amp#27;[2m2025-09-18T05:59:45.842+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.security.web.FilterChainProxy       &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Securing POST /api/auth/login
+&amp#27;[2m2025-09-18T05:59:45.842+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.s.w.a.AnonymousAuthenticationFilter &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Set SecurityContextHolder to anonymous SecurityContext
+&amp#27;[2m2025-09-18T05:59:45.842+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.security.web.FilterChainProxy       &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Secured POST /api/auth/login
+&amp#27;[2m2025-09-18T05:59:45.842+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36ms.w.s.m.m.a.RequestMappingHandlerMapping&amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Mapped to com.concert.controller.AuthController#login(LoginRequest)
+&amp#27;[2m2025-09-18T05:59:45.842+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mm.m.a.RequestResponseBodyMethodProcessor&amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Read "application/json;charset=UTF-8" to [com.concert.dto.LoginRequest@31bdb919]
 Hibernate: 
     select
         u1_0.user_id,
@@ -495,11 +930,11 @@ Hibernate:
     where
         u1_0.username=? 
         or u1_0.email=?
-2025-09-17T22:25:56.238+07:00 DEBUG 9586 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2025-09-17T22:25:56.238+07:00 DEBUG 9586 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.concert.dto.AuthResponse@547053ec]
+&amp#27;[2m2025-09-18T05:59:45.899+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.w.s.m.m.a.HttpEntityMethodProcessor &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+&amp#27;[2m2025-09-18T05:59:45.899+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.w.s.m.m.a.HttpEntityMethodProcessor &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Writing [com.concert.dto.AuthResponse@5eab28b4]
 ]]></system-out>
   </testcase>
-  <testcase name="testUserLoginSuccess" classname="com.concert.integration.AuthDockerIntegrationTest" time="0.13">
+  <testcase name="testUserLoginSuccess" classname="com.concert.integration.AuthDockerIntegrationTest" time="0.162">
     <system-out><![CDATA[Hibernate: 
     select
         u1_0.user_id,
@@ -519,11 +954,11 @@ Hibernate:
         u1_0.website 
     from
         users u1_0
-2025-09-17T22:25:56.246+07:00 DEBUG 9586 --- [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/register
-2025-09-17T22:25:56.246+07:00 DEBUG 9586 --- [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-09-17T22:25:56.247+07:00 DEBUG 9586 --- [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/register
-2025-09-17T22:25:56.247+07:00 DEBUG 9586 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.concert.controller.AuthController#register(RegisterRequest)
-2025-09-17T22:25:56.247+07:00 DEBUG 9586 --- [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.concert.dto.RegisterRequest@46c4fa83]
+&amp#27;[2m2025-09-18T05:59:45.907+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.security.web.FilterChainProxy       &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Securing POST /api/auth/register
+&amp#27;[2m2025-09-18T05:59:45.908+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.s.w.a.AnonymousAuthenticationFilter &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Set SecurityContextHolder to anonymous SecurityContext
+&amp#27;[2m2025-09-18T05:59:45.908+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.security.web.FilterChainProxy       &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Secured POST /api/auth/register
+&amp#27;[2m2025-09-18T05:59:45.908+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36ms.w.s.m.m.a.RequestMappingHandlerMapping&amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Mapped to com.concert.controller.AuthController#register(RegisterRequest)
+&amp#27;[2m2025-09-18T05:59:45.908+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mm.m.a.RequestResponseBodyMethodProcessor&amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Read "application/json;charset=UTF-8" to [com.concert.dto.RegisterRequest@74904fdc]
 Hibernate: 
     select
         u1_0.user_id 
@@ -549,13 +984,13 @@ Hibernate:
         (address, city, company, country, created_at, email, name, password, phone, pincode, profile_photo, updated_at, username, website) 
     values
         (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-2025-09-17T22:25:56.307+07:00 DEBUG 9586 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2025-09-17T22:25:56.307+07:00 DEBUG 9586 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.concert.dto.AuthResponse@1089d310]
-2025-09-17T22:25:56.308+07:00 DEBUG 9586 --- [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
-2025-09-17T22:25:56.308+07:00 DEBUG 9586 --- [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-09-17T22:25:56.308+07:00 DEBUG 9586 --- [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
-2025-09-17T22:25:56.308+07:00 DEBUG 9586 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.concert.controller.AuthController#login(LoginRequest)
-2025-09-17T22:25:56.309+07:00 DEBUG 9586 --- [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.concert.dto.LoginRequest@42499b81]
+&amp#27;[2m2025-09-18T05:59:45.977+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.w.s.m.m.a.HttpEntityMethodProcessor &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+&amp#27;[2m2025-09-18T05:59:45.977+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.w.s.m.m.a.HttpEntityMethodProcessor &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Writing [com.concert.dto.AuthResponse@4776f05e]
+&amp#27;[2m2025-09-18T05:59:45.978+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.security.web.FilterChainProxy       &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Securing POST /api/auth/login
+&amp#27;[2m2025-09-18T05:59:45.979+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.s.w.a.AnonymousAuthenticationFilter &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Set SecurityContextHolder to anonymous SecurityContext
+&amp#27;[2m2025-09-18T05:59:45.979+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.security.web.FilterChainProxy       &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Secured POST /api/auth/login
+&amp#27;[2m2025-09-18T05:59:45.979+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36ms.w.s.m.m.a.RequestMappingHandlerMapping&amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Mapped to com.concert.controller.AuthController#login(LoginRequest)
+&amp#27;[2m2025-09-18T05:59:45.979+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mm.m.a.RequestResponseBodyMethodProcessor&amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Read "application/json;charset=UTF-8" to [com.concert.dto.LoginRequest@7c6230d]
 Hibernate: 
     select
         u1_0.user_id,
@@ -578,11 +1013,11 @@ Hibernate:
     where
         u1_0.username=? 
         or u1_0.email=?
-2025-09-17T22:25:56.365+07:00 DEBUG 9586 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2025-09-17T22:25:56.365+07:00 DEBUG 9586 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.concert.dto.AuthResponse@15b32223]
+&amp#27;[2m2025-09-18T05:59:46.054+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.w.s.m.m.a.HttpEntityMethodProcessor &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+&amp#27;[2m2025-09-18T05:59:46.054+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.w.s.m.m.a.HttpEntityMethodProcessor &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Writing [com.concert.dto.AuthResponse@604e4d40]
 ]]></system-out>
   </testcase>
-  <testcase name="testUserRegistrationValidationFailure" classname="com.concert.integration.AuthDockerIntegrationTest" time="0.006">
+  <testcase name="testUserRegistrationValidationFailure" classname="com.concert.integration.AuthDockerIntegrationTest" time="0.023">
     <system-out><![CDATA[Hibernate: 
     select
         u1_0.user_id,
@@ -602,15 +1037,15 @@ Hibernate:
         u1_0.website 
     from
         users u1_0
-2025-09-17T22:25:56.376+07:00 DEBUG 9586 --- [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/register
-2025-09-17T22:25:56.376+07:00 DEBUG 9586 --- [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-09-17T22:25:56.376+07:00 DEBUG 9586 --- [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/register
-2025-09-17T22:25:56.377+07:00 DEBUG 9586 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.concert.controller.AuthController#register(RegisterRequest)
-2025-09-17T22:25:56.377+07:00 DEBUG 9586 --- [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.concert.dto.RegisterRequest@60b2da51]
-2025-09-17T22:25:56.377+07:00  WARN 9586 --- [           main] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.concert.dto.AuthResponse> com.concert.controller.AuthController.register(com.concert.dto.RegisterRequest) with 4 errors: [Field error in object 'registerRequest' on field 'email': rejected value [invalid-email]; codes [Email.registerRequest.email,Email.email,Email.java.lang.String,Email]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [registerRequest.email,email]; arguments []; default message [email],[Ljakarta.validation.constraints.Pattern$Flag;@1b81baff,.*]; default message [Email should be valid]] [Field error in object 'registerRequest' on field 'password': rejected value [123]; codes [Size.registerRequest.password,Size.password,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [registerRequest.password,password]; arguments []; default message [password],2147483647,6]; default message [Password must be at least 6 characters]] [Field error in object 'registerRequest' on field 'username': rejected value []; codes [Size.registerRequest.username,Size.username,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [registerRequest.username,username]; arguments []; default message [username],50,3]; default message [Username must be between 3 and 50 characters]] [Field error in object 'registerRequest' on field 'username': rejected value []; codes [NotBlank.registerRequest.username,NotBlank.username,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [registerRequest.username,username]; arguments []; default message [username]]; default message [Username is required]] ]
+&amp#27;[2m2025-09-18T05:59:46.077+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.security.web.FilterChainProxy       &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Securing POST /api/auth/register
+&amp#27;[2m2025-09-18T05:59:46.077+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.s.w.a.AnonymousAuthenticationFilter &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Set SecurityContextHolder to anonymous SecurityContext
+&amp#27;[2m2025-09-18T05:59:46.077+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.security.web.FilterChainProxy       &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Secured POST /api/auth/register
+&amp#27;[2m2025-09-18T05:59:46.078+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36ms.w.s.m.m.a.RequestMappingHandlerMapping&amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Mapped to com.concert.controller.AuthController#register(RegisterRequest)
+&amp#27;[2m2025-09-18T05:59:46.078+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mm.m.a.RequestResponseBodyMethodProcessor&amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Read "application/json;charset=UTF-8" to [com.concert.dto.RegisterRequest@50d5375a]
+&amp#27;[2m2025-09-18T05:59:46.082+07:00&amp#27;[0;39m &amp#27;[33m WARN&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36m.w.s.m.s.DefaultHandlerExceptionResolver&amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.concert.dto.AuthResponse> com.concert.controller.AuthController.register(com.concert.dto.RegisterRequest) with 4 errors: [Field error in object 'registerRequest' on field 'username': rejected value []; codes [NotBlank.registerRequest.username,NotBlank.username,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [registerRequest.username,username]; arguments []; default message [username]]; default message [Username is required]] [Field error in object 'registerRequest' on field 'username': rejected value []; codes [Size.registerRequest.username,Size.username,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [registerRequest.username,username]; arguments []; default message [username],50,3]; default message [Username must be between 3 and 50 characters]] [Field error in object 'registerRequest' on field 'password': rejected value [123]; codes [Size.registerRequest.password,Size.password,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [registerRequest.password,password]; arguments []; default message [password],2147483647,6]; default message [Password must be at least 6 characters]] [Field error in object 'registerRequest' on field 'email': rejected value [invalid-email]; codes [Email.registerRequest.email,Email.email,Email.java.lang.String,Email]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [registerRequest.email,email]; arguments []; default message [email],[Ljakarta.validation.constraints.Pattern$Flag;@2b3074e2,.*]; default message [Email should be valid]] ]
 ]]></system-out>
   </testcase>
-  <testcase name="testUserNotFoundLogin" classname="com.concert.integration.AuthDockerIntegrationTest" time="0.008">
+  <testcase name="testUserNotFoundLogin" classname="com.concert.integration.AuthDockerIntegrationTest" time="0.029">
     <system-out><![CDATA[Hibernate: 
     select
         u1_0.user_id,
@@ -630,11 +1065,11 @@ Hibernate:
         u1_0.website 
     from
         users u1_0
-2025-09-17T22:25:56.382+07:00 DEBUG 9586 --- [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
-2025-09-17T22:25:56.382+07:00 DEBUG 9586 --- [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-09-17T22:25:56.383+07:00 DEBUG 9586 --- [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
-2025-09-17T22:25:56.383+07:00 DEBUG 9586 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.concert.controller.AuthController#login(LoginRequest)
-2025-09-17T22:25:56.383+07:00 DEBUG 9586 --- [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.concert.dto.LoginRequest@77de3b59]
+&amp#27;[2m2025-09-18T05:59:46.109+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.security.web.FilterChainProxy       &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Securing POST /api/auth/login
+&amp#27;[2m2025-09-18T05:59:46.110+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.s.w.a.AnonymousAuthenticationFilter &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Set SecurityContextHolder to anonymous SecurityContext
+&amp#27;[2m2025-09-18T05:59:46.111+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.security.web.FilterChainProxy       &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Secured POST /api/auth/login
+&amp#27;[2m2025-09-18T05:59:46.111+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36ms.w.s.m.m.a.RequestMappingHandlerMapping&amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Mapped to com.concert.controller.AuthController#login(LoginRequest)
+&amp#27;[2m2025-09-18T05:59:46.112+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mm.m.a.RequestResponseBodyMethodProcessor&amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Read "application/json;charset=UTF-8" to [com.concert.dto.LoginRequest@327665c3]
 Hibernate: 
     select
         u1_0.user_id,
@@ -657,11 +1092,11 @@ Hibernate:
     where
         u1_0.username=? 
         or u1_0.email=?
-2025-09-17T22:25:56.385+07:00 DEBUG 9586 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2025-09-17T22:25:56.385+07:00 DEBUG 9586 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.concert.dto.AuthResponse@3bc5b4c]
+&amp#27;[2m2025-09-18T05:59:46.117+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.w.s.m.m.a.HttpEntityMethodProcessor &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+&amp#27;[2m2025-09-18T05:59:46.117+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.w.s.m.m.a.HttpEntityMethodProcessor &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Writing [com.concert.dto.AuthResponse@68d2fc35]
 ]]></system-out>
   </testcase>
-  <testcase name="testUserRegistrationSuccess" classname="com.concert.integration.AuthDockerIntegrationTest" time="0.069">
+  <testcase name="testUserRegistrationSuccess" classname="com.concert.integration.AuthDockerIntegrationTest" time="0.127">
     <system-out><![CDATA[Hibernate: 
     select
         u1_0.user_id,
@@ -681,11 +1116,11 @@ Hibernate:
         u1_0.website 
     from
         users u1_0
-2025-09-17T22:25:56.391+07:00 DEBUG 9586 --- [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/register
-2025-09-17T22:25:56.391+07:00 DEBUG 9586 --- [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-09-17T22:25:56.391+07:00 DEBUG 9586 --- [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/register
-2025-09-17T22:25:56.392+07:00 DEBUG 9586 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.concert.controller.AuthController#register(RegisterRequest)
-2025-09-17T22:25:56.392+07:00 DEBUG 9586 --- [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.concert.dto.RegisterRequest@2bc44561]
+&amp#27;[2m2025-09-18T05:59:46.127+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.security.web.FilterChainProxy       &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Securing POST /api/auth/register
+&amp#27;[2m2025-09-18T05:59:46.128+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.s.w.a.AnonymousAuthenticationFilter &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Set SecurityContextHolder to anonymous SecurityContext
+&amp#27;[2m2025-09-18T05:59:46.128+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.security.web.FilterChainProxy       &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Secured POST /api/auth/register
+&amp#27;[2m2025-09-18T05:59:46.128+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36ms.w.s.m.m.a.RequestMappingHandlerMapping&amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Mapped to com.concert.controller.AuthController#register(RegisterRequest)
+&amp#27;[2m2025-09-18T05:59:46.129+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mm.m.a.RequestResponseBodyMethodProcessor&amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Read "application/json;charset=UTF-8" to [com.concert.dto.RegisterRequest@1c0f25d1]
 Hibernate: 
     select
         u1_0.user_id 
@@ -711,8 +1146,8 @@ Hibernate:
         (address, city, company, country, created_at, email, name, password, phone, pincode, profile_photo, updated_at, username, website) 
     values
         (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-2025-09-17T22:25:56.452+07:00 DEBUG 9586 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2025-09-17T22:25:56.452+07:00 DEBUG 9586 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.concert.dto.AuthResponse@6b87e1cd]
+&amp#27;[2m2025-09-18T05:59:46.244+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.w.s.m.m.a.HttpEntityMethodProcessor &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+&amp#27;[2m2025-09-18T05:59:46.244+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.w.s.m.m.a.HttpEntityMethodProcessor &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Writing [com.concert.dto.AuthResponse@3f6d93d4]
 Hibernate: 
     select
         u1_0.user_id 
@@ -724,7 +1159,7 @@ Hibernate:
         ?
 ]]></system-out>
   </testcase>
-  <testcase name="testCompleteAuthFlowWithDocker" classname="com.concert.integration.AuthDockerIntegrationTest" time="0.129">
+  <testcase name="testCompleteAuthFlowWithDocker" classname="com.concert.integration.AuthDockerIntegrationTest" time="0.143">
     <system-out><![CDATA[Hibernate: 
     select
         u1_0.user_id,
@@ -744,11 +1179,11 @@ Hibernate:
         u1_0.website 
     from
         users u1_0
-2025-09-17T22:25:56.460+07:00 DEBUG 9586 --- [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/register
-2025-09-17T22:25:56.460+07:00 DEBUG 9586 --- [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-09-17T22:25:56.460+07:00 DEBUG 9586 --- [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/register
-2025-09-17T22:25:56.460+07:00 DEBUG 9586 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.concert.controller.AuthController#register(RegisterRequest)
-2025-09-17T22:25:56.460+07:00 DEBUG 9586 --- [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.concert.dto.RegisterRequest@fc46c43]
+&amp#27;[2m2025-09-18T05:59:46.254+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.security.web.FilterChainProxy       &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Securing POST /api/auth/register
+&amp#27;[2m2025-09-18T05:59:46.254+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.s.w.a.AnonymousAuthenticationFilter &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Set SecurityContextHolder to anonymous SecurityContext
+&amp#27;[2m2025-09-18T05:59:46.255+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.security.web.FilterChainProxy       &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Secured POST /api/auth/register
+&amp#27;[2m2025-09-18T05:59:46.255+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36ms.w.s.m.m.a.RequestMappingHandlerMapping&amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Mapped to com.concert.controller.AuthController#register(RegisterRequest)
+&amp#27;[2m2025-09-18T05:59:46.255+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mm.m.a.RequestResponseBodyMethodProcessor&amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Read "application/json;charset=UTF-8" to [com.concert.dto.RegisterRequest@762af0e9]
 Hibernate: 
     select
         u1_0.user_id 
@@ -774,13 +1209,13 @@ Hibernate:
         (address, city, company, country, created_at, email, name, password, phone, pincode, profile_photo, updated_at, username, website) 
     values
         (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-2025-09-17T22:25:56.520+07:00 DEBUG 9586 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2025-09-17T22:25:56.520+07:00 DEBUG 9586 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.concert.dto.AuthResponse@554a7af6]
-2025-09-17T22:25:56.521+07:00 DEBUG 9586 --- [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
-2025-09-17T22:25:56.521+07:00 DEBUG 9586 --- [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-09-17T22:25:56.521+07:00 DEBUG 9586 --- [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
-2025-09-17T22:25:56.521+07:00 DEBUG 9586 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.concert.controller.AuthController#login(LoginRequest)
-2025-09-17T22:25:56.522+07:00 DEBUG 9586 --- [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.concert.dto.LoginRequest@45fa8b7]
+&amp#27;[2m2025-09-18T05:59:46.327+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.w.s.m.m.a.HttpEntityMethodProcessor &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+&amp#27;[2m2025-09-18T05:59:46.327+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.w.s.m.m.a.HttpEntityMethodProcessor &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Writing [com.concert.dto.AuthResponse@3123ea3]
+&amp#27;[2m2025-09-18T05:59:46.327+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.security.web.FilterChainProxy       &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Securing POST /api/auth/login
+&amp#27;[2m2025-09-18T05:59:46.328+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.s.w.a.AnonymousAuthenticationFilter &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Set SecurityContextHolder to anonymous SecurityContext
+&amp#27;[2m2025-09-18T05:59:46.328+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.security.web.FilterChainProxy       &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Secured POST /api/auth/login
+&amp#27;[2m2025-09-18T05:59:46.328+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36ms.w.s.m.m.a.RequestMappingHandlerMapping&amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Mapped to com.concert.controller.AuthController#login(LoginRequest)
+&amp#27;[2m2025-09-18T05:59:46.328+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mm.m.a.RequestResponseBodyMethodProcessor&amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Read "application/json;charset=UTF-8" to [com.concert.dto.LoginRequest@77394bf]
 Hibernate: 
     select
         u1_0.user_id,
@@ -803,8 +1238,8 @@ Hibernate:
     where
         u1_0.username=? 
         or u1_0.email=?
-2025-09-17T22:25:56.577+07:00 DEBUG 9586 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2025-09-17T22:25:56.577+07:00 DEBUG 9586 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.concert.dto.AuthResponse@2a8f8ce1]
+&amp#27;[2m2025-09-18T05:59:46.385+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.w.s.m.m.a.HttpEntityMethodProcessor &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+&amp#27;[2m2025-09-18T05:59:46.386+07:00&amp#27;[0;39m &amp#27;[32mDEBUG&amp#27;[0;39m &amp#27;[35m24492&amp#27;[0;39m &amp#27;[2m---&amp#27;[0;39m &amp#27;[2m[           main]&amp#27;[0;39m &amp#27;[2m&amp#27;[0;39m&amp#27;[36mo.s.w.s.m.m.a.HttpEntityMethodProcessor &amp#27;[0;39m &amp#27;[2m:&amp#27;[0;39m Writing [com.concert.dto.AuthResponse@364c82eb]
 Hibernate: 
     select
         u1_0.user_id 
