@@ -29,9 +29,9 @@ import org.springframework.web.bind.annotation.*;
             } else {
 <span class="fc" id="L30">                return ResponseEntity.badRequest().body(response);</span>
             }
-<span class="nc" id="L32">        } catch (Exception e) {</span>
-<span class="nc" id="L33">            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)</span>
-<span class="nc" id="L34">                    .body(new AuthResponse(&quot;Registration failed: &quot; + e.getMessage()));</span>
+<span class="fc" id="L32">        } catch (Exception e) {</span>
+<span class="fc" id="L33">            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)</span>
+<span class="fc" id="L34">                    .body(new AuthResponse(&quot;Registration failed: &quot; + e.getMessage()));</span>
         }
     }
     
@@ -45,26 +45,26 @@ import org.springframework.web.bind.annotation.*;
             } else {
 <span class="fc" id="L46">                return ResponseEntity.badRequest().body(response);</span>
             }
-<span class="nc" id="L48">        } catch (Exception e) {</span>
-<span class="nc" id="L49">            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)</span>
-<span class="nc" id="L50">                    .body(new AuthResponse(&quot;Login failed: &quot; + e.getMessage()));</span>
+<span class="fc" id="L48">        } catch (Exception e) {</span>
+<span class="fc" id="L49">            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)</span>
+<span class="fc" id="L50">                    .body(new AuthResponse(&quot;Login failed: &quot; + e.getMessage()));</span>
         }
     }
     
     @GetMapping(&quot;/test&quot;)
     public ResponseEntity&lt;String&gt; test() {
-<span class="nc" id="L56">        return ResponseEntity.ok(&quot;Auth API is working!&quot;);</span>
+<span class="fc" id="L56">        return ResponseEntity.ok(&quot;Auth API is working!&quot;);</span>
     }
     
     @GetMapping(&quot;/me&quot;)
     public ResponseEntity&lt;AuthResponse&gt; getCurrentUser(Authentication authentication) {
         try {
-<span class="nc" id="L62">            String username = authentication.getName();</span>
-<span class="nc" id="L63">            AuthResponse response = authService.getCurrentUser(username);</span>
-<span class="nc" id="L64">            return ResponseEntity.ok(response);</span>
-<span class="nc" id="L65">        } catch (Exception e) {</span>
-<span class="nc" id="L66">            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)</span>
-<span class="nc" id="L67">                    .body(new AuthResponse(&quot;Failed to get user profile: &quot; + e.getMessage()));</span>
+<span class="fc" id="L62">            String username = authentication.getName();</span>
+<span class="fc" id="L63">            AuthResponse response = authService.getCurrentUser(username);</span>
+<span class="fc" id="L64">            return ResponseEntity.ok(response);</span>
+<span class="fc" id="L65">        } catch (Exception e) {</span>
+<span class="fc" id="L66">            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)</span>
+<span class="fc" id="L67">                    .body(new AuthResponse(&quot;Failed to get user profile: &quot; + e.getMessage()));</span>
         }
     }
 }

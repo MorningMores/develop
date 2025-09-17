@@ -31,26 +31,26 @@ import java.util.ArrayList;
         final String jwt;
         final String username;
 
-<span class="pc bpc" id="L34" title="3 of 4 branches missed.">        if (authHeader == null || !authHeader.startsWith(&quot;Bearer &quot;)) {</span>
+<span class="fc bfc" id="L34" title="All 4 branches covered.">        if (authHeader == null || !authHeader.startsWith(&quot;Bearer &quot;)) {</span>
 <span class="fc" id="L35">            filterChain.doFilter(request, response);</span>
 <span class="fc" id="L36">            return;</span>
         }
 
-<span class="nc" id="L39">        jwt = authHeader.substring(7);</span>
-<span class="nc" id="L40">        username = jwtService.extractUsername(jwt);</span>
+<span class="fc" id="L39">        jwt = authHeader.substring(7);</span>
+<span class="fc" id="L40">        username = jwtService.extractUsername(jwt);</span>
 
-<span class="nc bnc" id="L42" title="All 4 branches missed.">        if (username != null &amp;&amp; SecurityContextHolder.getContext().getAuthentication() == null) {</span>
-<span class="nc bnc" id="L43" title="All 2 branches missed.">            if (jwtService.isTokenValid(jwt, username)) {</span>
-<span class="nc" id="L44">                UsernamePasswordAuthenticationToken authToken = new UsernamePasswordAuthenticationToken(</span>
-                        username,
-                        null,
-                        new ArrayList&lt;&gt;()
+<span class="fc bfc" id="L42" title="All 4 branches covered.">        if (username != null &amp;&amp; SecurityContextHolder.getContext().getAuthentication() == null) {</span>
+<span class="fc bfc" id="L43" title="All 2 branches covered.">            if (jwtService.isTokenValid(jwt, username)) {</span>
+<span class="fc" id="L44">                UsernamePasswordAuthenticationToken authToken = new UsernamePasswordAuthenticationToken(</span>
+<span class="fc" id="L45">                        username,</span>
+<span class="fc" id="L46">                        null,</span>
+<span class="fc" id="L47">                        new ArrayList&lt;&gt;()</span>
                 );
-<span class="nc" id="L49">                authToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));</span>
-<span class="nc" id="L50">                SecurityContextHolder.getContext().setAuthentication(authToken);</span>
+<span class="fc" id="L49">                authToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));</span>
+<span class="fc" id="L50">                SecurityContextHolder.getContext().setAuthentication(authToken);</span>
             }
         }
-<span class="nc" id="L53">        filterChain.doFilter(request, response);</span>
-<span class="nc" id="L54">    }</span>
+<span class="fc" id="L53">        filterChain.doFilter(request, response);</span>
+<span class="fc" id="L54">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.10.202304240956</span></div></body></html>

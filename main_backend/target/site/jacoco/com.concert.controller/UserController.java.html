@@ -19,21 +19,21 @@ import java.util.List;
     @GetMapping
     public ResponseEntity&lt;List&lt;User&gt;&gt; getAllUsers() {
         try {
-<span class="nc" id="L22">            List&lt;User&gt; users = userRepository.findAll();</span>
-<span class="nc" id="L23">            return ResponseEntity.ok(users);</span>
-<span class="nc" id="L24">        } catch (Exception e) {</span>
-<span class="nc" id="L25">            return ResponseEntity.internalServerError().build();</span>
+<span class="fc" id="L22">            List&lt;User&gt; users = userRepository.findAll();</span>
+<span class="fc" id="L23">            return ResponseEntity.ok(users);</span>
+<span class="fc" id="L24">        } catch (Exception e) {</span>
+<span class="fc" id="L25">            return ResponseEntity.internalServerError().build();</span>
         }
     }
     
     @GetMapping(&quot;/{id}&quot;)
     public ResponseEntity&lt;User&gt; getUserById(@PathVariable Long id) {
         try {
-<span class="nc" id="L32">            return userRepository.findById(id)</span>
-<span class="nc" id="L33">                    .map(user -&gt; ResponseEntity.ok(user))</span>
-<span class="nc" id="L34">                    .orElse(ResponseEntity.notFound().build());</span>
-<span class="nc" id="L35">        } catch (Exception e) {</span>
-<span class="nc" id="L36">            return ResponseEntity.internalServerError().build();</span>
+<span class="fc" id="L32">            return userRepository.findById(id)</span>
+<span class="fc" id="L33">                    .map(user -&gt; ResponseEntity.ok(user))</span>
+<span class="fc" id="L34">                    .orElse(ResponseEntity.notFound().build());</span>
+<span class="fc" id="L35">        } catch (Exception e) {</span>
+<span class="fc" id="L36">            return ResponseEntity.internalServerError().build();</span>
         }
     }
 }
