@@ -1,6 +1,0 @@
-#surefire_0
-#Wed Sep 17 00:57:44 UTC 2025
-basedir=/workspace/main_backend
-jacoco.haltOnFailure=false
-test=**/*Docker*Test
-localRepository=/root/.m2/repository
