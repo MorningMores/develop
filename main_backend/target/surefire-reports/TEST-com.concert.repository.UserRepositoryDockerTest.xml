@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.concert.repository.UserRepositoryDockerTest" time="9.013" tests="9" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.concert.repository.UserRepositoryDockerTest" time="10.179" tests="9" errors="0" skipped="0" failures="0">
   <properties>
     <property name="surefire.printSummary" value="true"/>
     <property name="java.specification.version" value="21"/>
@@ -16,7 +16,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="TH"/>
     <property name="sun.boot.library.path" value="/opt/homebrew/Cellar/openjdk@21/21.0.8/libexec/openjdk.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/putinan/development/DevOps/develop/main_backend/target/surefire/surefirebooter-20250917222053440_3.jar /Users/putinan/development/DevOps/develop/main_backend/target/surefire 2025-09-17T22-20-53_374-jvmRun1 surefire-20250917222053440_1tmp surefire_0-20250917222053440_2tmp"/>
+    <property name="sun.java.command" value="/Users/putinan/development/DevOps/develop/main_backend/target/surefire/surefirebooter-20250917222537465_3.jar /Users/putinan/development/DevOps/develop/main_backend/target/surefire 2025-09-17T22-25-37_401-jvmRun1 surefire-20250917222537465_1tmp surefire_0-20250917222537465_2tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/Users/putinan/development/DevOps/develop/main_backend/target/test-classes:/Users/putinan/development/DevOps/develop/main_backend/target/classes:/Users/putinan/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.2.0/spring-boot-starter-web-3.2.0.jar:/Users/putinan/.m2/repository/org/springframework/boot/spring-boot-starter/3.2.0/spring-boot-starter-3.2.0.jar:/Users/putinan/.m2/repository/org/springframework/boot/spring-boot/3.2.0/spring-boot-3.2.0.jar:/Users/putinan/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.2.0/spring-boot-autoconfigure-3.2.0.jar:/Users/putinan/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.2.0/spring-boot-starter-logging-3.2.0.jar:/Users/putinan/.m2/repository/ch/qos/logback/logback-classic/1.4.11/logback-classic-1.4.11.jar:/Users/putinan/.m2/repository/ch/qos/logback/logback-core/1.4.11/logback-core-1.4.11.jar:/Users/putinan/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.21.1/log4j-to-slf4j-2.21.1.jar:/Users/putinan/.m2/repository/org/apache/logging/log4j/log4j-api/2.21.1/log4j-api-2.21.1.jar:/Users/putinan/.m2/repository/org/slf4j/jul-to-slf4j/2.0.9/jul-to-slf4j-2.0.9.jar:/Users/putinan/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/Users/putinan/.m2/repository/org/yaml/snakeyaml/2.2/snakeyaml-2.2.jar:/Users/putinan/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.2.0/spring-boot-starter-json-3.2.0.jar:/Users/putinan/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.15.3/jackson-datatype-jdk8-2.15.3.jar:/Users/putinan/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.15.3/jackson-datatype-jsr310-2.15.3.jar:/Users/putinan/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.15.3/jackson-module-parameter-names-2.15.3.jar:/Users/putinan/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.2.0/spring-boot-starter-tomcat-3.2.0.jar:/Users/putinan/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.16/tomcat-embed-core-10.1.16.jar:/Users/putinan/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.16/tomcat-embed-websocket-10.1.16.jar:/Users/putinan/.m2/repository/org/springframework/spring-web/6.1.1/spring-web-6.1.1.jar:/Users/putinan/.m2/repository/org/springframework/spring-beans/6.1.1/spring-beans-6.1.1.jar:/Users/putinan/.m2/repository/org/springframework/spring-webmvc/6.1.1/spring-webmvc-6.1.1.jar:/Users/putinan/.m2/repository/org/springframework/spring-context/6.1.1/spring-context-6.1.1.jar:/Users/putinan/.m2/repository/org/springframework/spring-expression/6.1.1/spring-expression-6.1.1.jar:/Users/putinan/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/3.2.0/spring-boot-starter-data-jpa-3.2.0.jar:/Users/putinan/.m2/repository/org/springframework/boot/spring-boot-starter-aop/3.2.0/spring-boot-starter-aop-3.2.0.jar:/Users/putinan/.m2/repository/org/aspectj/aspectjweaver/1.9.20.1/aspectjweaver-1.9.20.1.jar:/Users/putinan/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.2.0/spring-boot-starter-jdbc-3.2.0.jar:/Users/putinan/.m2/repository/com/zaxxer/HikariCP/5.0.1/HikariCP-5.0.1.jar:/Users/putinan/.m2/repository/org/springframework/spring-jdbc/6.1.1/spring-jdbc-6.1.1.jar:/Users/putinan/.m2/repository/org/hibernate/orm/hibernate-core/6.3.1.Final/hibernate-core-6.3.1.Final.jar:/Users/putinan/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar:/Users/putinan/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/Users/putinan/.m2/repository/org/jboss/logging/jboss-logging/3.5.3.Final/jboss-logging-3.5.3.Final.jar:/Users/putinan/.m2/repository/org/hibernate/common/hibernate-commons-annotations/6.0.6.Final/hibernate-commons-annotations-6.0.6.Final.jar:/Users/putinan/.m2/repository/io/smallrye/jandex/3.1.2/jandex-3.1.2.jar:/Users/putinan/.m2/repository/com/fasterxml/classmate/1.6.0/classmate-1.6.0.jar:/Users/putinan/.m2/repository/net/bytebuddy/byte-buddy/1.14.10/byte-buddy-1.14.10.jar:/Users/putinan/.m2/repository/org/glassfish/jaxb/jaxb-runtime/4.0.4/jaxb-runtime-4.0.4.jar:/Users/putinan/.m2/repository/org/glassfish/jaxb/jaxb-core/4.0.4/jaxb-core-4.0.4.jar:/Users/putinan/.m2/repository/org/eclipse/angus/angus-activation/2.0.1/angus-activation-2.0.1.jar:/Users/putinan/.m2/repository/org/glassfish/jaxb/txw2/4.0.4/txw2-4.0.4.jar:/Users/putinan/.m2/repository/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar:/Users/putinan/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/Users/putinan/.m2/repository/org/antlr/antlr4-runtime/4.10.1/antlr4-runtime-4.10.1.jar:/Users/putinan/.m2/repository/org/springframework/data/spring-data-jpa/3.2.0/spring-data-jpa-3.2.0.jar:/Users/putinan/.m2/repository/org/springframework/data/spring-data-commons/3.2.0/spring-data-commons-3.2.0.jar:/Users/putinan/.m2/repository/org/springframework/spring-orm/6.1.1/spring-orm-6.1.1.jar:/Users/putinan/.m2/repository/org/springframework/spring-tx/6.1.1/spring-tx-6.1.1.jar:/Users/putinan/.m2/repository/org/slf4j/slf4j-api/2.0.9/slf4j-api-2.0.9.jar:/Users/putinan/.m2/repository/org/springframework/spring-aspects/6.1.1/spring-aspects-6.1.1.jar:/Users/putinan/.m2/repository/org/springframework/boot/spring-boot-starter-security/3.2.0/spring-boot-starter-security-3.2.0.jar:/Users/putinan/.m2/repository/org/springframework/spring-aop/6.1.1/spring-aop-6.1.1.jar:/Users/putinan/.m2/repository/org/springframework/security/spring-security-config/6.2.0/spring-security-config-6.2.0.jar:/Users/putinan/.m2/repository/org/springframework/security/spring-security-web/6.2.0/spring-security-web-6.2.0.jar:/Users/putinan/.m2/repository/org/springframework/boot/spring-boot-starter-validation/3.2.0/spring-boot-starter-validation-3.2.0.jar:/Users/putinan/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.16/tomcat-embed-el-10.1.16.jar:/Users/putinan/.m2/repository/org/hibernate/validator/hibernate-validator/8.0.1.Final/hibernate-validator-8.0.1.Final.jar:/Users/putinan/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar:/Users/putinan/.m2/repository/org/springframework/boot/spring-boot-starter-actuator/3.2.0/spring-boot-starter-actuator-3.2.0.jar:/Users/putinan/.m2/repository/org/springframework/boot/spring-boot-actuator-autoconfigure/3.2.0/spring-boot-actuator-autoconfigure-3.2.0.jar:/Users/putinan/.m2/repository/org/springframework/boot/spring-boot-actuator/3.2.0/spring-boot-actuator-3.2.0.jar:/Users/putinan/.m2/repository/io/micrometer/micrometer-observation/1.12.0/micrometer-observation-1.12.0.jar:/Users/putinan/.m2/repository/io/micrometer/micrometer-commons/1.12.0/micrometer-commons-1.12.0.jar:/Users/putinan/.m2/repository/io/micrometer/micrometer-jakarta9/1.12.0/micrometer-jakarta9-1.12.0.jar:/Users/putinan/.m2/repository/io/micrometer/micrometer-core/1.12.0/micrometer-core-1.12.0.jar:/Users/putinan/.m2/repository/org/hdrhistogram/HdrHistogram/2.1.12/HdrHistogram-2.1.12.jar:/Users/putinan/.m2/repository/org/latencyutils/LatencyUtils/2.0.3/LatencyUtils-2.0.3.jar:/Users/putinan/.m2/repository/com/mysql/mysql-connector-j/8.1.0/mysql-connector-j-8.1.0.jar:/Users/putinan/.m2/repository/com/h2database/h2/2.2.224/h2-2.2.224.jar:/Users/putinan/.m2/repository/io/jsonwebtoken/jjwt-api/0.11.5/jjwt-api-0.11.5.jar:/Users/putinan/.m2/repository/io/jsonwebtoken/jjwt-impl/0.11.5/jjwt-impl-0.11.5.jar:/Users/putinan/.m2/repository/io/jsonwebtoken/jjwt-jackson/0.11.5/jjwt-jackson-0.11.5.jar:/Users/putinan/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.3/jackson-databind-2.15.3.jar:/Users/putinan/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.3/jackson-annotations-2.15.3.jar:/Users/putinan/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.3/jackson-core-2.15.3.jar:/Users/putinan/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.2.0/spring-boot-starter-test-3.2.0.jar:/Users/putinan/.m2/repository/org/springframework/boot/spring-boot-test/3.2.0/spring-boot-test-3.2.0.jar:/Users/putinan/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.2.0/spring-boot-test-autoconfigure-3.2.0.jar:/Users/putinan/.m2/repository/com/jayway/jsonpath/json-path/2.8.0/json-path-2.8.0.jar:/Users/putinan/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.1/jakarta.xml.bind-api-4.0.1.jar:/Users/putinan/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.2/jakarta.activation-api-2.1.2.jar:/Users/putinan/.m2/repository/net/minidev/json-smart/2.5.0/json-smart-2.5.0.jar:/Users/putinan/.m2/repository/net/minidev/accessors-smart/2.5.0/accessors-smart-2.5.0.jar:/Users/putinan/.m2/repository/org/ow2/asm/asm/9.3/asm-9.3.jar:/Users/putinan/.m2/repository/org/assertj/assertj-core/3.24.2/assertj-core-3.24.2.jar:/Users/putinan/.m2/repository/org/awaitility/awaitility/4.2.0/awaitility-4.2.0.jar:/Users/putinan/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/putinan/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.1/junit-jupiter-5.10.1.jar:/Users/putinan/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.1/junit-jupiter-api-5.10.1.jar:/Users/putinan/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.1/junit-jupiter-params-5.10.1.jar:/Users/putinan/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.1/junit-jupiter-engine-5.10.1.jar:/Users/putinan/.m2/repository/org/mockito/mockito-core/5.7.0/mockito-core-5.7.0.jar:/Users/putinan/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.10/byte-buddy-agent-1.14.10.jar:/Users/putinan/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/Users/putinan/.m2/repository/org/mockito/mockito-junit-jupiter/5.7.0/mockito-junit-jupiter-5.7.0.jar:/Users/putinan/.m2/repository/org/skyscreamer/jsonassert/1.5.1/jsonassert-1.5.1.jar:/Users/putinan/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/Users/putinan/.m2/repository/org/springframework/spring-core/6.1.1/spring-core-6.1.1.jar:/Users/putinan/.m2/repository/org/springframework/spring-jcl/6.1.1/spring-jcl-6.1.1.jar:/Users/putinan/.m2/repository/org/springframework/spring-test/6.1.1/spring-test-6.1.1.jar:/Users/putinan/.m2/repository/org/xmlunit/xmlunit-core/2.9.1/xmlunit-core-2.9.1.jar:/Users/putinan/.m2/repository/org/springframework/security/spring-security-test/6.2.0/spring-security-test-6.2.0.jar:/Users/putinan/.m2/repository/org/springframework/security/spring-security-core/6.2.0/spring-security-core-6.2.0.jar:/Users/putinan/.m2/repository/org/springframework/security/spring-security-crypto/6.2.0/spring-security-crypto-6.2.0.jar:/Users/putinan/.m2/repository/org/junit/platform/junit-platform-suite-engine/1.10.1/junit-platform-suite-engine-1.10.1.jar:/Users/putinan/.m2/repository/org/junit/platform/junit-platform-engine/1.10.1/junit-platform-engine-1.10.1.jar:/Users/putinan/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/putinan/.m2/repository/org/junit/platform/junit-platform-commons/1.10.1/junit-platform-commons-1.10.1.jar:/Users/putinan/.m2/repository/org/junit/platform/junit-platform-suite-api/1.10.1/junit-platform-suite-api-1.10.1.jar:/Users/putinan/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/putinan/.m2/repository/org/junit/platform/junit-platform-suite-commons/1.10.1/junit-platform-suite-commons-1.10.1.jar:/Users/putinan/.m2/repository/org/junit/platform/junit-platform-launcher/1.10.1/junit-platform-launcher-1.10.1.jar:/Users/putinan/.m2/repository/org/testcontainers/junit-jupiter/1.19.3/junit-jupiter-1.19.3.jar:/Users/putinan/.m2/repository/org/testcontainers/testcontainers/1.19.3/testcontainers-1.19.3.jar:/Users/putinan/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/Users/putinan/.m2/repository/org/hamcrest/hamcrest-core/2.2/hamcrest-core-2.2.jar:/Users/putinan/.m2/repository/org/apache/commons/commons-compress/1.24.0/commons-compress-1.24.0.jar:/Users/putinan/.m2/repository/org/rnorth/duct-tape/duct-tape/1.0.8/duct-tape-1.0.8.jar:/Users/putinan/.m2/repository/org/jetbrains/annotations/17.0.0/annotations-17.0.0.jar:/Users/putinan/.m2/repository/com/github/docker-java/docker-java-api/3.3.4/docker-java-api-3.3.4.jar:/Users/putinan/.m2/repository/com/github/docker-java/docker-java-transport-zerodep/3.3.4/docker-java-transport-zerodep-3.3.4.jar:/Users/putinan/.m2/repository/com/github/docker-java/docker-java-transport/3.3.4/docker-java-transport-3.3.4.jar:/Users/putinan/.m2/repository/net/java/dev/jna/jna/5.13.0/jna-5.13.0.jar:/Users/putinan/.m2/repository/org/testcontainers/mysql/1.19.3/mysql-1.19.3.jar:/Users/putinan/.m2/repository/org/testcontainers/jdbc/1.19.3/jdbc-1.19.3.jar:/Users/putinan/.m2/repository/org/testcontainers/database-commons/1.19.3/database-commons-1.19.3.jar:"/>
@@ -35,7 +35,7 @@
     <property name="FILE_LOG_CHARSET" value="UTF-8"/>
     <property name="java.awt.headless" value="true"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/putinan/development/DevOps/develop/main_backend/target/surefire/surefirebooter-20250917222053440_3.jar"/>
+    <property name="surefire.real.class.path" value="/Users/putinan/development/DevOps/develop/main_backend/target/surefire/surefirebooter-20250917222537465_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="21.0.8"/>
@@ -55,7 +55,7 @@
     <property name="user.dir" value="/Users/putinan/development/DevOps/develop/main_backend"/>
     <property name="os.arch" value="aarch64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="PID" value="8640"/>
+    <property name="PID" value="9586"/>
     <property name="CONSOLE_LOG_CHARSET" value="UTF-8"/>
     <property name="native.encoding" value="UTF-8"/>
     <property name="trimStackTrace" value="false"/>
@@ -68,30 +68,30 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testDockerPersistenceAcrossOperations" classname="com.concert.repository.UserRepositoryDockerTest" time="0.405">
-    <system-out><![CDATA[22:20:53.989 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.concert.repository.UserRepositoryDockerTest]: UserRepositoryDockerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-22:20:54.040 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.concert.ConcertBackendApplication for test class com.concert.repository.UserRepositoryDockerTest
-22:20:54.110 [main] INFO org.testcontainers.images.PullPolicy -- Image pull policy will be performed by: DefaultPullPolicy()
-22:20:54.113 [main] INFO org.testcontainers.utility.ImageNameSubstitutor -- Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
-22:20:54.271 [main] INFO org.testcontainers.dockerclient.DockerClientProviderStrategy -- Loaded org.testcontainers.dockerclient.UnixSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
-22:20:54.436 [main] INFO org.testcontainers.dockerclient.DockerClientProviderStrategy -- Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
-22:20:54.437 [main] INFO org.testcontainers.DockerClientFactory -- Docker host IP address is localhost
-22:20:54.449 [main] INFO org.testcontainers.DockerClientFactory -- Connected to docker: 
+  <testcase name="testDockerPersistenceAcrossOperations" classname="com.concert.repository.UserRepositoryDockerTest" time="0.409">
+    <system-out><![CDATA[22:25:38.017 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.concert.repository.UserRepositoryDockerTest]: UserRepositoryDockerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22:25:38.068 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.concert.ConcertBackendApplication for test class com.concert.repository.UserRepositoryDockerTest
+22:25:38.142 [main] INFO org.testcontainers.images.PullPolicy -- Image pull policy will be performed by: DefaultPullPolicy()
+22:25:38.144 [main] INFO org.testcontainers.utility.ImageNameSubstitutor -- Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+22:25:38.293 [main] INFO org.testcontainers.dockerclient.DockerClientProviderStrategy -- Loaded org.testcontainers.dockerclient.UnixSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+22:25:38.456 [main] INFO org.testcontainers.dockerclient.DockerClientProviderStrategy -- Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
+22:25:38.457 [main] INFO org.testcontainers.DockerClientFactory -- Docker host IP address is localhost
+22:25:38.469 [main] INFO org.testcontainers.DockerClientFactory -- Connected to docker: 
   Server Version: 28.3.3
   API Version: 1.51
   Operating System: Docker Desktop
   Total Memory: 7837 MB
-22:20:54.516 [main] INFO tc.testcontainers/ryuk:0.5.1 -- Creating container for image: testcontainers/ryuk:0.5.1
-22:20:54.703 [main] INFO tc.testcontainers/ryuk:0.5.1 -- Container testcontainers/ryuk:0.5.1 is starting: b8fb37dc85b1ac5e1efafb1b30dc47d312c52c2fa5eae6350f9a8b86bd9c8b07
-22:20:54.852 [main] INFO tc.testcontainers/ryuk:0.5.1 -- Container testcontainers/ryuk:0.5.1 started in PT0.335985S
-22:20:54.857 [main] INFO org.testcontainers.utility.RyukResourceReaper -- Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
-22:20:54.857 [main] INFO org.testcontainers.DockerClientFactory -- Checking the system...
-22:20:54.857 [main] INFO org.testcontainers.DockerClientFactory -- ✔︎ Docker server version should be at least 1.6.0
-22:20:54.859 [main] INFO tc.mysql:8.0 -- Creating container for image: mysql:8.0
-22:20:54.910 [main] INFO tc.mysql:8.0 -- Container mysql:8.0 is starting: 95238ca34601765089640bd41ec6a5882cdba1a25486473e5b125c9eeb218a9b
-22:20:55.021 [main] INFO tc.mysql:8.0 -- Waiting for database connection to become available at jdbc:mysql://localhost:54426/testdb using query 'SELECT 1'
-22:20:59.698 [main] INFO tc.mysql:8.0 -- Container mysql:8.0 started in PT4.839295S
-22:20:59.698 [main] INFO tc.mysql:8.0 -- Container is started (JDBC URL: jdbc:mysql://localhost:54426/testdb)
+22:25:38.533 [main] INFO tc.testcontainers/ryuk:0.5.1 -- Creating container for image: testcontainers/ryuk:0.5.1
+22:25:38.733 [main] INFO tc.testcontainers/ryuk:0.5.1 -- Container testcontainers/ryuk:0.5.1 is starting: 91272f8befaf57e132818edba6773509b3bd4b602c415e25caa0c494024c5d4f
+22:25:38.984 [main] INFO tc.testcontainers/ryuk:0.5.1 -- Container testcontainers/ryuk:0.5.1 started in PT0.450808S
+22:25:38.990 [main] INFO org.testcontainers.utility.RyukResourceReaper -- Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+22:25:38.990 [main] INFO org.testcontainers.DockerClientFactory -- Checking the system...
+22:25:38.990 [main] INFO org.testcontainers.DockerClientFactory -- ✔︎ Docker server version should be at least 1.6.0
+22:25:38.993 [main] INFO tc.mysql:8.0 -- Creating container for image: mysql:8.0
+22:25:39.104 [main] INFO tc.mysql:8.0 -- Container mysql:8.0 is starting: 569579f4e8784646764753958bf4ca09fbdf95505d126b1a97c846fb1cd49e16
+22:25:39.413 [main] INFO tc.mysql:8.0 -- Waiting for database connection to become available at jdbc:mysql://localhost:54714/testdb using query 'SELECT 1'
+22:25:44.424 [main] INFO tc.mysql:8.0 -- Container mysql:8.0 started in PT5.431411S
+22:25:44.424 [main] INFO tc.mysql:8.0 -- Container is started (JDBC URL: jdbc:mysql://localhost:54714/testdb)
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -101,21 +101,21 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.2.0)
 
-2025-09-17T22:20:59.833+07:00  INFO 8640 --- [           main] c.c.repository.UserRepositoryDockerTest  : Starting UserRepositoryDockerTest using Java 21.0.8 with PID 8640 (started by putinan in /Users/putinan/development/DevOps/develop/main_backend)
-2025-09-17T22:20:59.833+07:00 DEBUG 8640 --- [           main] c.c.repository.UserRepositoryDockerTest  : Running with Spring Boot v3.2.0, Spring v6.1.1
-2025-09-17T22:20:59.834+07:00  INFO 8640 --- [           main] c.c.repository.UserRepositoryDockerTest  : The following 1 profile is active: "docker"
-2025-09-17T22:20:59.848+07:00 DEBUG 8640 --- [           main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@3d4ea4cf
-2025-09-17T22:21:00.190+07:00  INFO 8640 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-09-17T22:21:00.213+07:00  INFO 8640 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 1 JPA repository interface.
-2025-09-17T22:21:00.513+07:00  INFO 8640 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-09-17T22:21:00.541+07:00  INFO 8640 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
-2025-09-17T22:21:00.559+07:00  INFO 8640 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-09-17T22:21:00.662+07:00  INFO 8640 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-09-17T22:21:00.678+07:00  INFO 8640 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-09-17T22:21:00.762+07:00  INFO 8640 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4ca398b0
-2025-09-17T22:21:00.762+07:00  INFO 8640 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-09-17T22:21:00.787+07:00  WARN 8640 --- [           main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-09-17T22:21:01.161+07:00  INFO 8640 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-17T22:25:44.592+07:00  INFO 9586 --- [           main] c.c.repository.UserRepositoryDockerTest  : Starting UserRepositoryDockerTest using Java 21.0.8 with PID 9586 (started by putinan in /Users/putinan/development/DevOps/develop/main_backend)
+2025-09-17T22:25:44.592+07:00 DEBUG 9586 --- [           main] c.c.repository.UserRepositoryDockerTest  : Running with Spring Boot v3.2.0, Spring v6.1.1
+2025-09-17T22:25:44.593+07:00  INFO 9586 --- [           main] c.c.repository.UserRepositoryDockerTest  : The following 1 profile is active: "docker"
+2025-09-17T22:25:44.617+07:00 DEBUG 9586 --- [           main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@2836374
+2025-09-17T22:25:45.100+07:00  INFO 9586 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-17T22:25:45.136+07:00  INFO 9586 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 1 JPA repository interface.
+2025-09-17T22:25:45.518+07:00  INFO 9586 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-17T22:25:45.549+07:00  INFO 9586 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-09-17T22:25:45.580+07:00  INFO 9586 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-17T22:25:45.729+07:00  INFO 9586 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-17T22:25:45.759+07:00  INFO 9586 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-17T22:25:45.857+07:00  INFO 9586 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@47ba506f
+2025-09-17T22:25:45.858+07:00  INFO 9586 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-17T22:25:45.885+07:00  WARN 9586 --- [           main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-17T22:25:46.331+07:00  INFO 9586 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
 Hibernate: 
     drop table if exists users
 Hibernate: 
@@ -143,21 +143,21 @@ Hibernate:
 Hibernate: 
     alter table users 
        add constraint UK_r43af9ap4edm43mmtq01oddj6 unique (username)
-2025-09-17T22:21:01.232+07:00  INFO 8640 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-09-17T22:21:01.450+07:00  WARN 8640 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-09-17T22:21:01.468+07:00  WARN 8640 --- [           main] .s.s.UserDetailsServiceAutoConfiguration : 
+2025-09-17T22:25:46.398+07:00  INFO 9586 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-17T22:25:46.630+07:00  WARN 9586 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-17T22:25:46.650+07:00  WARN 9586 --- [           main] .s.s.UserDetailsServiceAutoConfiguration : 
 
-Using generated security password: 0705cd27-15a1-4760-a396-16fbcb453dfc
+Using generated security password: bc822fcd-fc1c-4281-be7a-03b3f618059a
 
 This generated password is for development use only. Your security configuration must be updated before running your application in production.
 
-2025-09-17T22:21:01.587+07:00 DEBUG 8640 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : 8 mappings in 'requestMappingHandlerMapping'
-2025-09-17T22:21:01.660+07:00 DEBUG 8640 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
-2025-09-17T22:21:01.723+07:00  INFO 8640 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
-2025-09-17T22:21:01.745+07:00  INFO 8640 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@494754f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4e692717, org.springframework.security.web.context.SecurityContextHolderFilter@1035d6a1, org.springframework.security.web.header.HeaderWriterFilter@66bd3f86, org.springframework.web.filter.CorsFilter@63e6247b, org.springframework.security.web.authentication.logout.LogoutFilter@16df623d, com.concert.security.JwtAuthenticationFilter@7a853d3d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3930afed, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@42b05e0d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2e86c629, org.springframework.security.web.session.SessionManagementFilter@26af38f1, org.springframework.security.web.access.ExceptionTranslationFilter@3389e535, org.springframework.security.web.access.intercept.AuthorizationFilter@760aca4f]
-2025-09-17T22:21:01.843+07:00 DEBUG 8640 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2025-09-17T22:21:01.862+07:00 DEBUG 8640 --- [           main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
-2025-09-17T22:21:01.983+07:00  INFO 8640 --- [           main] c.c.repository.UserRepositoryDockerTest  : Started UserRepositoryDockerTest in 2.27 seconds (process running for 8.503)
+2025-09-17T22:25:46.787+07:00 DEBUG 9586 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : 8 mappings in 'requestMappingHandlerMapping'
+2025-09-17T22:25:46.866+07:00 DEBUG 9586 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-09-17T22:25:46.938+07:00  INFO 9586 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-09-17T22:25:46.959+07:00  INFO 9586 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6143c8bf, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7e326bf2, org.springframework.security.web.context.SecurityContextHolderFilter@6d376327, org.springframework.security.web.header.HeaderWriterFilter@6aa13003, org.springframework.web.filter.CorsFilter@61a5d76e, org.springframework.security.web.authentication.logout.LogoutFilter@66976d7c, com.concert.security.JwtAuthenticationFilter@774ccf0f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@65a33116, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3bd67948, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1dcc825, org.springframework.security.web.session.SessionManagementFilter@5e0fd605, org.springframework.security.web.access.ExceptionTranslationFilter@1dcf7c57, org.springframework.security.web.access.intercept.AuthorizationFilter@25b0eccd]
+2025-09-17T22:25:47.056+07:00 DEBUG 9586 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-09-17T22:25:47.084+07:00 DEBUG 9586 --- [           main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-09-17T22:25:47.202+07:00  INFO 9586 --- [           main] c.c.repository.UserRepositoryDockerTest  : Started UserRepositoryDockerTest in 2.76 seconds (process running for 9.695)
 Hibernate: 
     select
         u1_0.user_id,
@@ -191,7 +191,7 @@ WARNING: If a serviceability tool is not in use, please run with -Djdk.instrumen
 WARNING: Dynamic loading of agents will be disallowed by default in a future release
 ]]></system-err>
   </testcase>
-  <testcase name="testUserCreationTime" classname="com.concert.repository.UserRepositoryDockerTest" time="0.009">
+  <testcase name="testUserCreationTime" classname="com.concert.repository.UserRepositoryDockerTest" time="0.008">
     <system-out><![CDATA[Hibernate: 
     select
         u1_0.user_id,
@@ -220,7 +220,7 @@ Hibernate:
         (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
 ]]></system-out>
   </testcase>
-  <testcase name="testFindByUsername" classname="com.concert.repository.UserRepositoryDockerTest" time="0.026">
+  <testcase name="testFindByUsername" classname="com.concert.repository.UserRepositoryDockerTest" time="0.029">
     <system-out><![CDATA[Hibernate: 
     select
         u1_0.user_id,
@@ -291,7 +291,7 @@ Hibernate:
         u1_0.username=?
 ]]></system-out>
   </testcase>
-  <testcase name="testExistsByUsername" classname="com.concert.repository.UserRepositoryDockerTest" time="0.014">
+  <testcase name="testExistsByUsername" classname="com.concert.repository.UserRepositoryDockerTest" time="0.013">
     <system-out><![CDATA[Hibernate: 
     select
         u1_0.user_id,
@@ -338,7 +338,7 @@ Hibernate:
         ?
 ]]></system-out>
   </testcase>
-  <testcase name="testFindByEmail" classname="com.concert.repository.UserRepositoryDockerTest" time="0.014">
+  <testcase name="testFindByEmail" classname="com.concert.repository.UserRepositoryDockerTest" time="0.012">
     <system-out><![CDATA[Hibernate: 
     select
         u1_0.user_id,
@@ -409,7 +409,7 @@ Hibernate:
         u1_0.email=?
 ]]></system-out>
   </testcase>
-  <testcase name="testFindByUsernameOrEmail" classname="com.concert.repository.UserRepositoryDockerTest" time="0.015">
+  <testcase name="testFindByUsernameOrEmail" classname="com.concert.repository.UserRepositoryDockerTest" time="0.016">
     <system-out><![CDATA[Hibernate: 
     select
         u1_0.user_id,
@@ -504,7 +504,7 @@ Hibernate:
         or u1_0.email=?
 ]]></system-out>
   </testcase>
-  <testcase name="testExistsByEmail" classname="com.concert.repository.UserRepositoryDockerTest" time="0.011">
+  <testcase name="testExistsByEmail" classname="com.concert.repository.UserRepositoryDockerTest" time="0.01">
     <system-out><![CDATA[Hibernate: 
     select
         u1_0.user_id,
@@ -580,7 +580,7 @@ Hibernate:
         (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
 ]]></system-out>
   </testcase>
-  <testcase name="testMultipleUsersInDocker" classname="com.concert.repository.UserRepositoryDockerTest" time="0.149">
+  <testcase name="testMultipleUsersInDocker" classname="com.concert.repository.UserRepositoryDockerTest" time="0.136">
     <system-out><![CDATA[Hibernate: 
     select
         u1_0.user_id,
