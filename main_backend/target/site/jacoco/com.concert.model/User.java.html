@@ -62,12 +62,12 @@ public class User {
 <span class="fc" id="L62">    }</span>
     
     public User(String name, String username, String email, String password) {
-<span class="fc" id="L65">        this();</span>
-<span class="fc" id="L66">        this.name = name;</span>
-<span class="fc" id="L67">        this.username = username;</span>
-<span class="fc" id="L68">        this.email = email;</span>
-<span class="fc" id="L69">        this.password = password;</span>
-<span class="fc" id="L70">    }</span>
+<span class="nc" id="L65">        this();</span>
+<span class="nc" id="L66">        this.name = name;</span>
+<span class="nc" id="L67">        this.username = username;</span>
+<span class="nc" id="L68">        this.email = email;</span>
+<span class="nc" id="L69">        this.password = password;</span>
+<span class="nc" id="L70">    }</span>
     
     // Getters and Setters
     public Long getId() {
@@ -75,8 +75,8 @@ public class User {
     }
     
     public void setId(Long id) {
-<span class="fc" id="L78">        this.id = id;</span>
-<span class="fc" id="L79">    }</span>
+<span class="nc" id="L78">        this.id = id;</span>
+<span class="nc" id="L79">    }</span>
     
     public String getName() {
 <span class="fc" id="L82">        return name;</span>
@@ -111,68 +111,68 @@ public class User {
 <span class="fc" id="L111">    }</span>
     
     public String getProfilePhoto() {
-<span class="fc" id="L114">        return profilePhoto;</span>
+<span class="nc" id="L114">        return profilePhoto;</span>
     }
     
     public void setProfilePhoto(String profilePhoto) {
-<span class="fc" id="L118">        this.profilePhoto = profilePhoto;</span>
-<span class="fc" id="L119">    }</span>
+<span class="nc" id="L118">        this.profilePhoto = profilePhoto;</span>
+<span class="nc" id="L119">    }</span>
     
     public String getCompany() {
-<span class="fc" id="L122">        return company;</span>
+<span class="nc" id="L122">        return company;</span>
     }
     
     public void setCompany(String company) {
-<span class="fc" id="L126">        this.company = company;</span>
-<span class="fc" id="L127">    }</span>
+<span class="nc" id="L126">        this.company = company;</span>
+<span class="nc" id="L127">    }</span>
     
     public String getWebsite() {
-<span class="fc" id="L130">        return website;</span>
+<span class="nc" id="L130">        return website;</span>
     }
     
     public void setWebsite(String website) {
-<span class="fc" id="L134">        this.website = website;</span>
-<span class="fc" id="L135">    }</span>
+<span class="nc" id="L134">        this.website = website;</span>
+<span class="nc" id="L135">    }</span>
     
     public String getPhone() {
-<span class="fc" id="L138">        return phone;</span>
+<span class="nc" id="L138">        return phone;</span>
     }
     
     public void setPhone(String phone) {
-<span class="fc" id="L142">        this.phone = phone;</span>
-<span class="fc" id="L143">    }</span>
+<span class="nc" id="L142">        this.phone = phone;</span>
+<span class="nc" id="L143">    }</span>
     
     public String getAddress() {
-<span class="fc" id="L146">        return address;</span>
+<span class="nc" id="L146">        return address;</span>
     }
     
     public void setAddress(String address) {
-<span class="fc" id="L150">        this.address = address;</span>
-<span class="fc" id="L151">    }</span>
+<span class="nc" id="L150">        this.address = address;</span>
+<span class="nc" id="L151">    }</span>
     
     public String getCity() {
-<span class="fc" id="L154">        return city;</span>
+<span class="nc" id="L154">        return city;</span>
     }
     
     public void setCity(String city) {
-<span class="fc" id="L158">        this.city = city;</span>
-<span class="fc" id="L159">    }</span>
+<span class="nc" id="L158">        this.city = city;</span>
+<span class="nc" id="L159">    }</span>
     
     public String getCountry() {
-<span class="fc" id="L162">        return country;</span>
+<span class="nc" id="L162">        return country;</span>
     }
     
     public void setCountry(String country) {
-<span class="fc" id="L166">        this.country = country;</span>
-<span class="fc" id="L167">    }</span>
+<span class="nc" id="L166">        this.country = country;</span>
+<span class="nc" id="L167">    }</span>
     
     public String getPincode() {
-<span class="fc" id="L170">        return pincode;</span>
+<span class="nc" id="L170">        return pincode;</span>
     }
     
     public void setPincode(String pincode) {
-<span class="fc" id="L174">        this.pincode = pincode;</span>
-<span class="fc" id="L175">    }</span>
+<span class="nc" id="L174">        this.pincode = pincode;</span>
+<span class="nc" id="L175">    }</span>
     
     public LocalDateTime getCreatedAt() {
 <span class="fc" id="L178">        return createdAt;</span>
@@ -187,12 +187,12 @@ public class User {
     }
     
     public void setUpdatedAt(LocalDateTime updatedAt) {
-<span class="fc" id="L190">        this.updatedAt = updatedAt;</span>
-<span class="fc" id="L191">    }</span>
+<span class="nc" id="L190">        this.updatedAt = updatedAt;</span>
+<span class="nc" id="L191">    }</span>
     
     @PreUpdate
     public void preUpdate() {
-<span class="fc" id="L195">        this.updatedAt = LocalDateTime.now();</span>
-<span class="fc" id="L196">    }</span>
+<span class="nc" id="L195">        this.updatedAt = LocalDateTime.now();</span>
+<span class="nc" id="L196">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.10.202304240956</span></div></body></html>
