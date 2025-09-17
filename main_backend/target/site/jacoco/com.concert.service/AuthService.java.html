@@ -79,14 +79,14 @@ public class AuthService {
     }
     
     public AuthResponse getCurrentUser(String username) {
-<span class="fc" id="L82">        Optional&lt;User&gt; userOptional = userRepository.findByUsername(username);</span>
+<span class="nc" id="L82">        Optional&lt;User&gt; userOptional = userRepository.findByUsername(username);</span>
         
-<span class="fc bfc" id="L84" title="All 2 branches covered.">        if (userOptional.isEmpty()) {</span>
-<span class="fc" id="L85">            return new AuthResponse(&quot;User not found&quot;);</span>
+<span class="nc bnc" id="L84" title="All 2 branches missed.">        if (userOptional.isEmpty()) {</span>
+<span class="nc" id="L85">            return new AuthResponse(&quot;User not found&quot;);</span>
         }
         
-<span class="fc" id="L88">        User user = userOptional.get();</span>
-<span class="fc" id="L89">        return new AuthResponse(null, user.getUsername(), user.getEmail());</span>
+<span class="nc" id="L88">        User user = userOptional.get();</span>
+<span class="nc" id="L89">        return new AuthResponse(null, user.getUsername(), user.getEmail());</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.10.202304240956</span></div></body></html>

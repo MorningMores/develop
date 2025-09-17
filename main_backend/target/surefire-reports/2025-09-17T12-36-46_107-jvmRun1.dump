@@ -1,5 +1,5 @@
-# Created at 2025-09-17T02:49:52.550
-Thread dump for process (72@4ef116a5b160) after 30 seconds shutdown timeout:
+# Created at 2025-09-17T12:37:38.353
+Thread dump for process (69@27eebf81c325) after 30 seconds shutdown timeout:
 "main" 
    java.lang.Thread.State: WAITING
         at java.base@17.0.15/java.lang.Object.wait(Native Method)
@@ -85,32 +85,7 @@ Thread dump for process (72@4ef116a5b160) after 30 seconds shutdown timeout:
 "Attach Listener" 
    java.lang.Thread.State: RUNNABLE
 
-"HikariPool-2 housekeeper" 
-   java.lang.Thread.State: TIMED_WAITING
-        at java.base@17.0.15/jdk.internal.misc.Unsafe.park(Native Method)
-        at java.base@17.0.15/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
-        at java.base@17.0.15/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1679)
-        at java.base@17.0.15/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
-        at java.base@17.0.15/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
-        at java.base@17.0.15/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
-        at java.base@17.0.15/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
-        at java.base@17.0.15/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-        at java.base@17.0.15/java.lang.Thread.run(Thread.java:840)
-
 "Catalina-utility-1" 
-   java.lang.Thread.State: TIMED_WAITING
-        at java.base@17.0.15/jdk.internal.misc.Unsafe.park(Native Method)
-        at java.base@17.0.15/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
-        at java.base@17.0.15/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1679)
-        at java.base@17.0.15/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
-        at java.base@17.0.15/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
-        at java.base@17.0.15/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
-        at java.base@17.0.15/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
-        at java.base@17.0.15/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-        at app//org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-        at java.base@17.0.15/java.lang.Thread.run(Thread.java:840)
-
-"Catalina-utility-2" 
    java.lang.Thread.State: WAITING
         at java.base@17.0.15/jdk.internal.misc.Unsafe.park(Native Method)
         at java.base@17.0.15/java.util.concurrent.locks.LockSupport.park(LockSupport.java:341)
@@ -126,13 +101,26 @@ Thread dump for process (72@4ef116a5b160) after 30 seconds shutdown timeout:
         at app//org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
         at java.base@17.0.15/java.lang.Thread.run(Thread.java:840)
 
+"Catalina-utility-2" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@17.0.15/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@17.0.15/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+        at java.base@17.0.15/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1679)
+        at java.base@17.0.15/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+        at java.base@17.0.15/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+        at java.base@17.0.15/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+        at java.base@17.0.15/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+        at java.base@17.0.15/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+        at app//org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+        at java.base@17.0.15/java.lang.Thread.run(Thread.java:840)
+
 "container-0" 
    java.lang.Thread.State: TIMED_WAITING
         at java.base@17.0.15/java.lang.Thread.sleep(Native Method)
         at app//org.apache.catalina.core.StandardServer.await(StandardServer.java:564)
         at app//org.springframework.boot.web.embedded.tomcat.TomcatWebServer$1.run(TomcatWebServer.java:197)
 
-"HikariPool-3 housekeeper" 
+"HikariPool-2 housekeeper" 
    java.lang.Thread.State: TIMED_WAITING
         at java.base@17.0.15/jdk.internal.misc.Unsafe.park(Native Method)
         at java.base@17.0.15/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
@@ -333,32 +321,7 @@ Thread dump for process (72@4ef116a5b160) after 30 seconds shutdown timeout:
         at app//org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:128)
         at java.base@17.0.15/java.lang.Thread.run(Thread.java:840)
 
-"HikariPool-5 housekeeper" 
-   java.lang.Thread.State: TIMED_WAITING
-        at java.base@17.0.15/jdk.internal.misc.Unsafe.park(Native Method)
-        at java.base@17.0.15/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
-        at java.base@17.0.15/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1679)
-        at java.base@17.0.15/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
-        at java.base@17.0.15/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
-        at java.base@17.0.15/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
-        at java.base@17.0.15/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
-        at java.base@17.0.15/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-        at java.base@17.0.15/java.lang.Thread.run(Thread.java:840)
-
 "Catalina-utility-1" 
-   java.lang.Thread.State: TIMED_WAITING
-        at java.base@17.0.15/jdk.internal.misc.Unsafe.park(Native Method)
-        at java.base@17.0.15/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
-        at java.base@17.0.15/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1679)
-        at java.base@17.0.15/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
-        at java.base@17.0.15/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
-        at java.base@17.0.15/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
-        at java.base@17.0.15/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
-        at java.base@17.0.15/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-        at app//org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-        at java.base@17.0.15/java.lang.Thread.run(Thread.java:840)
-
-"Catalina-utility-2" 
    java.lang.Thread.State: WAITING
         at java.base@17.0.15/jdk.internal.misc.Unsafe.park(Native Method)
         at java.base@17.0.15/java.util.concurrent.locks.LockSupport.park(LockSupport.java:341)
@@ -374,13 +337,26 @@ Thread dump for process (72@4ef116a5b160) after 30 seconds shutdown timeout:
         at app//org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
         at java.base@17.0.15/java.lang.Thread.run(Thread.java:840)
 
+"Catalina-utility-2" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@17.0.15/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@17.0.15/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+        at java.base@17.0.15/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1679)
+        at java.base@17.0.15/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+        at java.base@17.0.15/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+        at java.base@17.0.15/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+        at java.base@17.0.15/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+        at java.base@17.0.15/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+        at app//org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+        at java.base@17.0.15/java.lang.Thread.run(Thread.java:840)
+
 "container-1" 
    java.lang.Thread.State: TIMED_WAITING
         at java.base@17.0.15/java.lang.Thread.sleep(Native Method)
         at app//org.apache.catalina.core.StandardServer.await(StandardServer.java:564)
         at app//org.springframework.boot.web.embedded.tomcat.TomcatWebServer$1.run(TomcatWebServer.java:197)
 
-"HikariPool-6 housekeeper" 
+"HikariPool-3 housekeeper" 
    java.lang.Thread.State: TIMED_WAITING
         at java.base@17.0.15/jdk.internal.misc.Unsafe.park(Native Method)
         at java.base@17.0.15/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
@@ -621,7 +597,7 @@ Thread dump for process (72@4ef116a5b160) after 30 seconds shutdown timeout:
         at java.base@17.0.15/java.lang.reflect.Method.invoke(Method.java:569)
         at app//org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.invokeProxyMethod(AbstractEntityManagerFactoryBean.java:519)
         at app//org.springframework.orm.jpa.AbstractEntityManagerFactoryBean$ManagedEntityManagerFactoryInvocationHandler.invoke(AbstractEntityManagerFactoryBean.java:733)
-        at app/jdk.proxy2/jdk.proxy2.$Proxy165.close(Unknown Source)
+        at app/jdk.proxy2/jdk.proxy2.$Proxy159.close(Unknown Source)
         at app//org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.destroy(AbstractEntityManagerFactoryBean.java:652)
         at app//org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:211)
         at app//org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
@@ -633,7 +609,7 @@ Thread dump for process (72@4ef116a5b160) after 30 seconds shutdown timeout:
         at app//org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1086)
         at app//org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1037)
         at app//org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:145)
-        at app//org.springframework.boot.SpringApplicationShutdownHook$$Lambda$2673/0x0000007801f7f668.accept(Unknown Source)
+        at app//org.springframework.boot.SpringApplicationShutdownHook$$Lambda$2568/0x000000e001e532d8.accept(Unknown Source)
         at java.base@17.0.15/java.lang.Iterable.forEach(Iterable.java:75)
         at app//org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:114)
         at java.base@17.0.15/java.lang.Thread.run(Thread.java:840)
