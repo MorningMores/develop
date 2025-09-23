@@ -42,9 +42,9 @@ import java.util.ArrayList;
 <span class="fc bfc" id="L42" title="All 4 branches covered.">        if (username != null &amp;&amp; SecurityContextHolder.getContext().getAuthentication() == null) {</span>
 <span class="fc bfc" id="L43" title="All 2 branches covered.">            if (jwtService.isTokenValid(jwt, username)) {</span>
 <span class="fc" id="L44">                UsernamePasswordAuthenticationToken authToken = new UsernamePasswordAuthenticationToken(</span>
-<span class="fc" id="L45">                        username,</span>
-<span class="fc" id="L46">                        null,</span>
-<span class="fc" id="L47">                        new ArrayList&lt;&gt;()</span>
+                        username,
+                        null,
+                        new ArrayList&lt;&gt;()
                 );
 <span class="fc" id="L49">                authToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));</span>
 <span class="fc" id="L50">                SecurityContextHolder.getContext().setAuthentication(authToken);</span>
@@ -53,4 +53,4 @@ import java.util.ArrayList;
 <span class="fc" id="L53">        filterChain.doFilter(request, response);</span>
 <span class="fc" id="L54">    }</span>
 }
-</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.10.202304240956</span></div></body></html>
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>
