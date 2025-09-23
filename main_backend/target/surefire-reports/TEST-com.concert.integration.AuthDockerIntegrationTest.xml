@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.concert.integration.AuthDockerIntegrationTest" time="26.198" tests="10" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.concert.integration.AuthDockerIntegrationTest" time="24.341" tests="10" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -16,7 +16,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="/opt/java/openjdk/lib"/>
-    <property name="sun.java.command" value="/workspace/main_backend/target/surefire/surefirebooter-20250923035052882_23.jar /workspace/main_backend/target/surefire 2025-09-23T03-50-52_574-jvmRun2 surefire-20250923035052882_7tmp surefire_5-20250923035052882_18tmp"/>
+    <property name="sun.java.command" value="/workspace/main_backend/target/surefire/surefirebooter-20250923040449086_25.jar /workspace/main_backend/target/surefire 2025-09-23T04-04-48_795-jvmRun10 surefire-20250923040449086_7tmp surefire_6-20250923040449086_20tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/workspace/main_backend/target/test-classes:/workspace/main_backend/target/classes:/root/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.2.0/spring-boot-starter-web-3.2.0.jar:/root/.m2/repository/org/springframework/boot/spring-boot-starter/3.2.0/spring-boot-starter-3.2.0.jar:/root/.m2/repository/org/springframework/boot/spring-boot/3.2.0/spring-boot-3.2.0.jar:/root/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.2.0/spring-boot-autoconfigure-3.2.0.jar:/root/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.2.0/spring-boot-starter-logging-3.2.0.jar:/root/.m2/repository/ch/qos/logback/logback-classic/1.4.11/logback-classic-1.4.11.jar:/root/.m2/repository/ch/qos/logback/logback-core/1.4.11/logback-core-1.4.11.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.21.1/log4j-to-slf4j-2.21.1.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-api/2.21.1/log4j-api-2.21.1.jar:/root/.m2/repository/org/slf4j/jul-to-slf4j/2.0.9/jul-to-slf4j-2.0.9.jar:/root/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/root/.m2/repository/org/yaml/snakeyaml/2.2/snakeyaml-2.2.jar:/root/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.2.0/spring-boot-starter-json-3.2.0.jar:/root/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.15.3/jackson-datatype-jdk8-2.15.3.jar:/root/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.15.3/jackson-datatype-jsr310-2.15.3.jar:/root/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.15.3/jackson-module-parameter-names-2.15.3.jar:/root/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.2.0/spring-boot-starter-tomcat-3.2.0.jar:/root/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.16/tomcat-embed-core-10.1.16.jar:/root/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.16/tomcat-embed-websocket-10.1.16.jar:/root/.m2/repository/org/springframework/spring-web/6.1.1/spring-web-6.1.1.jar:/root/.m2/repository/org/springframework/spring-beans/6.1.1/spring-beans-6.1.1.jar:/root/.m2/repository/org/springframework/spring-webmvc/6.1.1/spring-webmvc-6.1.1.jar:/root/.m2/repository/org/springframework/spring-context/6.1.1/spring-context-6.1.1.jar:/root/.m2/repository/org/springframework/spring-expression/6.1.1/spring-expression-6.1.1.jar:/root/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/3.2.0/spring-boot-starter-data-jpa-3.2.0.jar:/root/.m2/repository/org/springframework/boot/spring-boot-starter-aop/3.2.0/spring-boot-starter-aop-3.2.0.jar:/root/.m2/repository/org/aspectj/aspectjweaver/1.9.20.1/aspectjweaver-1.9.20.1.jar:/root/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.2.0/spring-boot-starter-jdbc-3.2.0.jar:/root/.m2/repository/com/zaxxer/HikariCP/5.0.1/HikariCP-5.0.1.jar:/root/.m2/repository/org/springframework/spring-jdbc/6.1.1/spring-jdbc-6.1.1.jar:/root/.m2/repository/org/hibernate/orm/hibernate-core/6.3.1.Final/hibernate-core-6.3.1.Final.jar:/root/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar:/root/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/root/.m2/repository/org/jboss/logging/jboss-logging/3.5.3.Final/jboss-logging-3.5.3.Final.jar:/root/.m2/repository/org/hibernate/common/hibernate-commons-annotations/6.0.6.Final/hibernate-commons-annotations-6.0.6.Final.jar:/root/.m2/repository/io/smallrye/jandex/3.1.2/jandex-3.1.2.jar:/root/.m2/repository/com/fasterxml/classmate/1.6.0/classmate-1.6.0.jar:/root/.m2/repository/net/bytebuddy/byte-buddy/1.14.10/byte-buddy-1.14.10.jar:/root/.m2/repository/org/glassfish/jaxb/jaxb-runtime/4.0.4/jaxb-runtime-4.0.4.jar:/root/.m2/repository/org/glassfish/jaxb/jaxb-core/4.0.4/jaxb-core-4.0.4.jar:/root/.m2/repository/org/eclipse/angus/angus-activation/2.0.1/angus-activation-2.0.1.jar:/root/.m2/repository/org/glassfish/jaxb/txw2/4.0.4/txw2-4.0.4.jar:/root/.m2/repository/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar:/root/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/root/.m2/repository/org/antlr/antlr4-runtime/4.10.1/antlr4-runtime-4.10.1.jar:/root/.m2/repository/org/springframework/data/spring-data-jpa/3.2.0/spring-data-jpa-3.2.0.jar:/root/.m2/repository/org/springframework/data/spring-data-commons/3.2.0/spring-data-commons-3.2.0.jar:/root/.m2/repository/org/springframework/spring-orm/6.1.1/spring-orm-6.1.1.jar:/root/.m2/repository/org/springframework/spring-tx/6.1.1/spring-tx-6.1.1.jar:/root/.m2/repository/org/slf4j/slf4j-api/2.0.9/slf4j-api-2.0.9.jar:/root/.m2/repository/org/springframework/spring-aspects/6.1.1/spring-aspects-6.1.1.jar:/root/.m2/repository/org/springframework/boot/spring-boot-starter-security/3.2.0/spring-boot-starter-security-3.2.0.jar:/root/.m2/repository/org/springframework/spring-aop/6.1.1/spring-aop-6.1.1.jar:/root/.m2/repository/org/springframework/security/spring-security-config/6.2.0/spring-security-config-6.2.0.jar:/root/.m2/repository/org/springframework/security/spring-security-web/6.2.0/spring-security-web-6.2.0.jar:/root/.m2/repository/org/springframework/boot/spring-boot-starter-validation/3.2.0/spring-boot-starter-validation-3.2.0.jar:/root/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.16/tomcat-embed-el-10.1.16.jar:/root/.m2/repository/org/hibernate/validator/hibernate-validator/8.0.1.Final/hibernate-validator-8.0.1.Final.jar:/root/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar:/root/.m2/repository/org/springframework/boot/spring-boot-starter-actuator/3.2.0/spring-boot-starter-actuator-3.2.0.jar:/root/.m2/repository/org/springframework/boot/spring-boot-actuator-autoconfigure/3.2.0/spring-boot-actuator-autoconfigure-3.2.0.jar:/root/.m2/repository/org/springframework/boot/spring-boot-actuator/3.2.0/spring-boot-actuator-3.2.0.jar:/root/.m2/repository/io/micrometer/micrometer-observation/1.12.0/micrometer-observation-1.12.0.jar:/root/.m2/repository/io/micrometer/micrometer-commons/1.12.0/micrometer-commons-1.12.0.jar:/root/.m2/repository/io/micrometer/micrometer-jakarta9/1.12.0/micrometer-jakarta9-1.12.0.jar:/root/.m2/repository/io/micrometer/micrometer-core/1.12.0/micrometer-core-1.12.0.jar:/root/.m2/repository/org/hdrhistogram/HdrHistogram/2.1.12/HdrHistogram-2.1.12.jar:/root/.m2/repository/org/latencyutils/LatencyUtils/2.0.3/LatencyUtils-2.0.3.jar:/root/.m2/repository/com/mysql/mysql-connector-j/8.1.0/mysql-connector-j-8.1.0.jar:/root/.m2/repository/com/h2database/h2/2.2.224/h2-2.2.224.jar:/root/.m2/repository/io/jsonwebtoken/jjwt-api/0.11.5/jjwt-api-0.11.5.jar:/root/.m2/repository/io/jsonwebtoken/jjwt-impl/0.11.5/jjwt-impl-0.11.5.jar:/root/.m2/repository/io/jsonwebtoken/jjwt-jackson/0.11.5/jjwt-jackson-0.11.5.jar:/root/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.3/jackson-databind-2.15.3.jar:/root/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.3/jackson-annotations-2.15.3.jar:/root/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.3/jackson-core-2.15.3.jar:/root/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.2.0/spring-boot-starter-test-3.2.0.jar:/root/.m2/repository/org/springframework/boot/spring-boot-test/3.2.0/spring-boot-test-3.2.0.jar:/root/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.2.0/spring-boot-test-autoconfigure-3.2.0.jar:/root/.m2/repository/com/jayway/jsonpath/json-path/2.8.0/json-path-2.8.0.jar:/root/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.1/jakarta.xml.bind-api-4.0.1.jar:/root/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.2/jakarta.activation-api-2.1.2.jar:/root/.m2/repository/net/minidev/json-smart/2.5.0/json-smart-2.5.0.jar:/root/.m2/repository/net/minidev/accessors-smart/2.5.0/accessors-smart-2.5.0.jar:/root/.m2/repository/org/ow2/asm/asm/9.3/asm-9.3.jar:/root/.m2/repository/org/assertj/assertj-core/3.24.2/assertj-core-3.24.2.jar:/root/.m2/repository/org/awaitility/awaitility/4.2.0/awaitility-4.2.0.jar:/root/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/root/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.1/junit-jupiter-5.10.1.jar:/root/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.1/junit-jupiter-api-5.10.1.jar:/root/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.1/junit-jupiter-params-5.10.1.jar:/root/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.1/junit-jupiter-engine-5.10.1.jar:/root/.m2/repository/org/mockito/mockito-core/5.7.0/mockito-core-5.7.0.jar:/root/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.10/byte-buddy-agent-1.14.10.jar:/root/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/root/.m2/repository/org/mockito/mockito-junit-jupiter/5.7.0/mockito-junit-jupiter-5.7.0.jar:/root/.m2/repository/org/skyscreamer/jsonassert/1.5.1/jsonassert-1.5.1.jar:/root/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/root/.m2/repository/org/springframework/spring-core/6.1.1/spring-core-6.1.1.jar:/root/.m2/repository/org/springframework/spring-jcl/6.1.1/spring-jcl-6.1.1.jar:/root/.m2/repository/org/springframework/spring-test/6.1.1/spring-test-6.1.1.jar:/root/.m2/repository/org/xmlunit/xmlunit-core/2.9.1/xmlunit-core-2.9.1.jar:/root/.m2/repository/org/springframework/security/spring-security-test/6.2.0/spring-security-test-6.2.0.jar:/root/.m2/repository/org/springframework/security/spring-security-core/6.2.0/spring-security-core-6.2.0.jar:/root/.m2/repository/org/springframework/security/spring-security-crypto/6.2.0/spring-security-crypto-6.2.0.jar:/root/.m2/repository/org/junit/platform/junit-platform-suite-engine/1.10.1/junit-platform-suite-engine-1.10.1.jar:/root/.m2/repository/org/junit/platform/junit-platform-engine/1.10.1/junit-platform-engine-1.10.1.jar:/root/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/root/.m2/repository/org/junit/platform/junit-platform-commons/1.10.1/junit-platform-commons-1.10.1.jar:/root/.m2/repository/org/junit/platform/junit-platform-suite-api/1.10.1/junit-platform-suite-api-1.10.1.jar:/root/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/root/.m2/repository/org/junit/platform/junit-platform-suite-commons/1.10.1/junit-platform-suite-commons-1.10.1.jar:/root/.m2/repository/org/junit/platform/junit-platform-launcher/1.10.1/junit-platform-launcher-1.10.1.jar:/root/.m2/repository/org/testcontainers/junit-jupiter/1.19.3/junit-jupiter-1.19.3.jar:/root/.m2/repository/org/testcontainers/testcontainers/1.19.3/testcontainers-1.19.3.jar:/root/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/root/.m2/repository/org/hamcrest/hamcrest-core/2.2/hamcrest-core-2.2.jar:/root/.m2/repository/org/apache/commons/commons-compress/1.24.0/commons-compress-1.24.0.jar:/root/.m2/repository/org/rnorth/duct-tape/duct-tape/1.0.8/duct-tape-1.0.8.jar:/root/.m2/repository/org/jetbrains/annotations/17.0.0/annotations-17.0.0.jar:/root/.m2/repository/com/github/docker-java/docker-java-api/3.3.4/docker-java-api-3.3.4.jar:/root/.m2/repository/com/github/docker-java/docker-java-transport-zerodep/3.3.4/docker-java-transport-zerodep-3.3.4.jar:/root/.m2/repository/com/github/docker-java/docker-java-transport/3.3.4/docker-java-transport-3.3.4.jar:/root/.m2/repository/net/java/dev/jna/jna/5.13.0/jna-5.13.0.jar:/root/.m2/repository/org/testcontainers/mysql/1.19.3/mysql-1.19.3.jar:/root/.m2/repository/org/testcontainers/jdbc/1.19.3/jdbc-1.19.3.jar:/root/.m2/repository/org/testcontainers/database-commons/1.19.3/database-commons-1.19.3.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -34,7 +34,7 @@
     <property name="FILE_LOG_CHARSET" value="UTF-8"/>
     <property name="java.awt.headless" value="true"/>
     <property name="testcontainers.ryuk.disabled" value="true"/>
-    <property name="surefire.real.class.path" value="/workspace/main_backend/target/surefire/surefirebooter-20250923035052882_23.jar"/>
+    <property name="surefire.real.class.path" value="/workspace/main_backend/target/surefire/surefirebooter-20250923040449086_25.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.7+6-LTS"/>
     <property name="user.name" value="root"/>
@@ -49,15 +49,15 @@
     <property name="localRepository" value="/root/.m2/repository"/>
     <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
     <property name="java.io.tmpdir" value="/tmp"/>
-    <property name="catalina.home" value="/tmp/tomcat.0.17011078322989501945"/>
+    <property name="catalina.home" value="/tmp/tomcat.0.2312371008602247972"/>
     <property name="com.zaxxer.hikari.pool_number" value="1"/>
     <property name="java.version" value="21.0.7"/>
     <property name="user.dir" value="/workspace/main_backend"/>
     <property name="os.arch" value="aarch64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="PID" value="96"/>
+    <property name="PID" value="101"/>
     <property name="CONSOLE_LOG_CHARSET" value="UTF-8"/>
-    <property name="catalina.base" value="/tmp/tomcat.0.17011078322989501945"/>
+    <property name="catalina.base" value="/tmp/tomcat.0.2312371008602247972"/>
     <property name="native.encoding" value="UTF-8"/>
     <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
     <property name="java.vm.info" value="mixed mode, sharing"/>
@@ -68,28 +68,28 @@
     <property name="java.class.version" value="65.0"/>
     <property name="testcontainers.checks.disable" value="true"/>
   </properties>
-  <testcase name="testUserLoginValidationFailure" classname="com.concert.integration.AuthDockerIntegrationTest" time="0.991">
-    <system-out><![CDATA[03:50:55.052 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.concert.integration.AuthDockerIntegrationTest]: AuthDockerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-03:50:55.478 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.concert.ConcertBackendApplication for test class com.concert.integration.AuthDockerIntegrationTest
-03:50:56.097 [main] INFO org.testcontainers.images.PullPolicy -- Image pull policy will be performed by: DefaultPullPolicy()
-03:50:56.110 [main] INFO org.testcontainers.utility.ImageNameSubstitutor -- Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
-03:50:58.246 [main] INFO org.testcontainers.dockerclient.DockerClientProviderStrategy -- Found Docker environment with Environment variables, system properties and defaults. Resolved dockerHost=unix:///var/run/docker.sock
-03:50:58.252 [main] INFO org.testcontainers.DockerClientFactory -- Docker host IP address is host.docker.internal
-03:50:58.295 [main] INFO org.testcontainers.DockerClientFactory -- Connected to docker: 
+  <testcase name="testUserLoginValidationFailure" classname="com.concert.integration.AuthDockerIntegrationTest" time="0.877">
+    <system-out><![CDATA[04:04:51.302 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.concert.integration.AuthDockerIntegrationTest]: AuthDockerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+04:04:51.699 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.concert.ConcertBackendApplication for test class com.concert.integration.AuthDockerIntegrationTest
+04:04:52.311 [main] INFO org.testcontainers.images.PullPolicy -- Image pull policy will be performed by: DefaultPullPolicy()
+04:04:52.333 [main] INFO org.testcontainers.utility.ImageNameSubstitutor -- Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+04:04:54.213 [main] INFO org.testcontainers.dockerclient.DockerClientProviderStrategy -- Found Docker environment with Environment variables, system properties and defaults. Resolved dockerHost=unix:///var/run/docker.sock
+04:04:54.216 [main] INFO org.testcontainers.DockerClientFactory -- Docker host IP address is host.docker.internal
+04:04:54.273 [main] INFO org.testcontainers.DockerClientFactory -- Connected to docker: 
   Server Version: 28.3.3
   API Version: 1.51
   Operating System: Docker Desktop
   Total Memory: 7837 MB
-03:50:58.302 [main] WARN org.testcontainers.utility.ResourceReaper -- 
+04:04:54.283 [main] WARN org.testcontainers.utility.ResourceReaper -- 
 ********************************************************************************
 Ryuk has been disabled. This can cause unexpected behavior in your environment.
 ********************************************************************************
-03:50:58.541 [main] INFO tc.mysql:8.0 -- Creating container for image: mysql:8.0
-03:50:58.562 [main] INFO org.testcontainers.utility.RegistryAuthLocator -- Failure when attempting to lookup auth config. Please ignore if you don't have images in an authenticated registry. Details: (dockerImageName: mysql:8.0, configFile: /root/.docker/config.json, configEnv: DOCKER_AUTH_CONFIG). Falling back to docker-java default behaviour. Exception message: Status 404: No config supplied. Checked in order: /root/.docker/config.json (file not found), DOCKER_AUTH_CONFIG (not set)
-03:50:59.189 [main] INFO tc.mysql:8.0 -- Container mysql:8.0 is starting: 1e28aa8dafc5be7d95c01b741eef8d155fa748e650b7d3fa2ac292ddaaf8dac9
-03:51:00.171 [main] INFO tc.mysql:8.0 -- Waiting for database connection to become available at jdbc:mysql://host.docker.internal:55373/testdb using query 'SELECT 1'
-03:51:09.463 [main] INFO tc.mysql:8.0 -- Container mysql:8.0 started in PT10.921791881S
-03:51:09.464 [main] INFO tc.mysql:8.0 -- Container is started (JDBC URL: jdbc:mysql://host.docker.internal:55373/testdb)
+04:04:54.568 [main] INFO tc.mysql:8.0 -- Creating container for image: mysql:8.0
+04:04:54.607 [main] INFO org.testcontainers.utility.RegistryAuthLocator -- Failure when attempting to lookup auth config. Please ignore if you don't have images in an authenticated registry. Details: (dockerImageName: mysql:8.0, configFile: /root/.docker/config.json, configEnv: DOCKER_AUTH_CONFIG). Falling back to docker-java default behaviour. Exception message: Status 404: No config supplied. Checked in order: /root/.docker/config.json (file not found), DOCKER_AUTH_CONFIG (not set)
+04:04:55.241 [main] INFO tc.mysql:8.0 -- Container mysql:8.0 is starting: 1dd5ebd008eadf72c9493e1195d2406401ce99dea5d416acd8fc3051f0fc9c89
+04:04:55.964 [main] INFO tc.mysql:8.0 -- Waiting for database connection to become available at jdbc:mysql://host.docker.internal:55797/testdb using query 'SELECT 1'
+04:05:03.906 [main] INFO tc.mysql:8.0 -- Container mysql:8.0 started in PT9.338138157S
+04:05:03.906 [main] INFO tc.mysql:8.0 -- Container is started (JDBC URL: jdbc:mysql://host.docker.internal:55797/testdb)
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -99,27 +99,27 @@ Ryuk has been disabled. This can cause unexpected behavior in your environment.
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.2.0)
 
-2025-09-23T03:51:10.343Z  INFO 96 --- [           main] c.c.i.AuthDockerIntegrationTest          : Starting AuthDockerIntegrationTest using Java 21.0.7 with PID 96 (started by root in /workspace/main_backend)
-2025-09-23T03:51:10.345Z DEBUG 96 --- [           main] c.c.i.AuthDockerIntegrationTest          : Running with Spring Boot v3.2.0, Spring v6.1.1
-2025-09-23T03:51:10.345Z  INFO 96 --- [           main] c.c.i.AuthDockerIntegrationTest          : The following 1 profile is active: "docker"
-2025-09-23T03:51:12.191Z  INFO 96 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-09-23T03:51:12.284Z  INFO 96 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 87 ms. Found 1 JPA repository interface.
-2025-09-23T03:51:13.528Z  INFO 96 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
-2025-09-23T03:51:13.542Z  INFO 96 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-09-23T03:51:13.542Z  INFO 96 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
-2025-09-23T03:51:13.637Z  INFO 96 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-09-23T03:51:13.638Z  INFO 96 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3240 ms
-2025-09-23T03:51:14.030Z DEBUG 96 --- [           main] c.c.security.JwtAuthenticationFilter     : Filter 'jwtAuthenticationFilter' configured for use
-2025-09-23T03:51:14.032Z DEBUG 96 --- [           main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
-2025-09-23T03:51:14.183Z  INFO 96 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-09-23T03:51:14.290Z  INFO 96 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
-2025-09-23T03:51:14.346Z  INFO 96 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-09-23T03:51:14.765Z  INFO 96 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-09-23T03:51:14.827Z  INFO 96 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-09-23T03:51:14.915Z  INFO 96 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6b247ef6
-2025-09-23T03:51:14.917Z  INFO 96 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-09-23T03:51:15.003Z  WARN 96 --- [           main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-09-23T03:51:16.135Z  INFO 96 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-23T04:05:04.671Z  INFO 101 --- [           main] c.c.i.AuthDockerIntegrationTest          : Starting AuthDockerIntegrationTest using Java 21.0.7 with PID 101 (started by root in /workspace/main_backend)
+2025-09-23T04:05:04.672Z DEBUG 101 --- [           main] c.c.i.AuthDockerIntegrationTest          : Running with Spring Boot v3.2.0, Spring v6.1.1
+2025-09-23T04:05:04.672Z  INFO 101 --- [           main] c.c.i.AuthDockerIntegrationTest          : The following 1 profile is active: "docker"
+2025-09-23T04:05:07.049Z  INFO 101 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-23T04:05:07.137Z  INFO 101 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 74 ms. Found 1 JPA repository interface.
+2025-09-23T04:05:08.310Z  INFO 101 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2025-09-23T04:05:08.323Z  INFO 101 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-23T04:05:08.323Z  INFO 101 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-09-23T04:05:08.359Z  INFO 101 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-23T04:05:08.360Z  INFO 101 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3643 ms
+2025-09-23T04:05:08.696Z DEBUG 101 --- [           main] c.c.security.JwtAuthenticationFilter     : Filter 'jwtAuthenticationFilter' configured for use
+2025-09-23T04:05:08.699Z DEBUG 101 --- [           main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2025-09-23T04:05:08.946Z  INFO 101 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-23T04:05:09.041Z  INFO 101 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-09-23T04:05:09.166Z  INFO 101 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-23T04:05:09.518Z  INFO 101 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-23T04:05:09.541Z  INFO 101 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-23T04:05:09.652Z  INFO 101 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3bdc8975
+2025-09-23T04:05:09.655Z  INFO 101 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-23T04:05:09.699Z  WARN 101 --- [           main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-23T04:05:10.720Z  INFO 101 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
 Hibernate: 
     drop table if exists users
 Hibernate: 
@@ -147,27 +147,27 @@ Hibernate:
 Hibernate: 
     alter table users 
        add constraint UK_r43af9ap4edm43mmtq01oddj6 unique (username)
-2025-09-23T03:51:16.225Z  INFO 96 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-09-23T03:51:17.081Z  WARN 96 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-09-23T03:51:17.173Z  WARN 96 --- [           main] .s.s.UserDetailsServiceAutoConfiguration : 
+2025-09-23T04:05:10.816Z  INFO 101 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-23T04:05:11.444Z  WARN 101 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-23T04:05:11.522Z  WARN 101 --- [           main] .s.s.UserDetailsServiceAutoConfiguration : 
 
-Using generated security password: c2d5157e-7ea0-4a4b-a1a9-434d6feaef25
+Using generated security password: b364f489-193b-4b75-a87b-eb3fab081e8a
 
 This generated password is for development use only. Your security configuration must be updated before running your application in production.
 
-2025-09-23T03:51:17.502Z DEBUG 96 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : 8 mappings in 'requestMappingHandlerMapping'
-2025-09-23T03:51:17.706Z DEBUG 96 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
-2025-09-23T03:51:17.899Z  INFO 96 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
-2025-09-23T03:51:17.935Z  INFO 96 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7537f638, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4a842e8a, org.springframework.security.web.context.SecurityContextHolderFilter@5434de8, org.springframework.security.web.header.HeaderWriterFilter@65c2610f, org.springframework.web.filter.CorsFilter@6b909973, org.springframework.security.web.authentication.logout.LogoutFilter@7b4fbedb, com.concert.security.JwtAuthenticationFilter@4fce3ed7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1768c77f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1b60c196, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@458044df, org.springframework.security.web.session.SessionManagementFilter@6fad6743, org.springframework.security.web.access.ExceptionTranslationFilter@625439ba, org.springframework.security.web.access.intercept.AuthorizationFilter@23110196]
-2025-09-23T03:51:18.045Z DEBUG 96 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2025-09-23T03:51:18.093Z DEBUG 96 --- [           main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
-2025-09-23T03:51:18.322Z DEBUG 96 --- [           main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
-2025-09-23T03:51:18.323Z DEBUG 96 --- [           main] c.c.security.JwtAuthenticationFilter     : Filter 'jwtAuthenticationFilter' configured for use
-2025-09-23T03:51:18.324Z  INFO 96 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring TestDispatcherServlet ''
-2025-09-23T03:51:18.324Z  INFO 96 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2025-09-23T03:51:18.324Z  INFO 96 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
-2025-09-23T03:51:18.388Z  INFO 96 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 37437 (http) with context path ''
-2025-09-23T03:51:18.397Z  INFO 96 --- [           main] c.c.i.AuthDockerIntegrationTest          : Started AuthDockerIntegrationTest in 8.853 seconds (process running for 25.433)
+2025-09-23T04:05:11.815Z DEBUG 101 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : 8 mappings in 'requestMappingHandlerMapping'
+2025-09-23T04:05:12.020Z DEBUG 101 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-09-23T04:05:12.210Z  INFO 101 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-09-23T04:05:12.263Z  INFO 101 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@554f6e30, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7537f638, org.springframework.security.web.context.SecurityContextHolderFilter@376ba8e3, org.springframework.security.web.header.HeaderWriterFilter@2d4df467, org.springframework.web.filter.CorsFilter@4a842e8a, org.springframework.security.web.authentication.logout.LogoutFilter@7c305624, com.concert.security.JwtAuthenticationFilter@2568611c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@55e073c8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1638fa8b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6b909973, org.springframework.security.web.session.SessionManagementFilter@54c3bae, org.springframework.security.web.access.ExceptionTranslationFilter@623dac3, org.springframework.security.web.access.intercept.AuthorizationFilter@25a2702c]
+2025-09-23T04:05:12.397Z DEBUG 101 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-09-23T04:05:12.444Z DEBUG 101 --- [           main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-09-23T04:05:12.771Z DEBUG 101 --- [           main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2025-09-23T04:05:12.771Z DEBUG 101 --- [           main] c.c.security.JwtAuthenticationFilter     : Filter 'jwtAuthenticationFilter' configured for use
+2025-09-23T04:05:12.773Z  INFO 101 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring TestDispatcherServlet ''
+2025-09-23T04:05:12.773Z  INFO 101 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-09-23T04:05:12.774Z  INFO 101 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2025-09-23T04:05:12.871Z  INFO 101 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 41017 (http) with context path ''
+2025-09-23T04:05:12.884Z  INFO 101 --- [           main] c.c.i.AuthDockerIntegrationTest          : Started AuthDockerIntegrationTest in 8.845 seconds (process running for 23.71)
 Hibernate: 
     select
         u1_0.user_id,
@@ -187,13 +187,13 @@ Hibernate:
         u1_0.website 
     from
         users u1_0
-2025-09-23T03:51:19.119Z DEBUG 96 --- [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
-2025-09-23T03:51:19.127Z DEBUG 96 --- [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-09-23T03:51:19.128Z  WARN 96 --- [           main] o.s.w.s.h.HandlerMappingIntrospector     : Cache miss for REQUEST dispatch to '/api/auth/login' (previous null). Performing MatchableHandlerMapping lookup. This is logged once only at WARN level, and every time at TRACE.
-2025-09-23T03:51:19.134Z DEBUG 96 --- [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
-2025-09-23T03:51:19.138Z DEBUG 96 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.concert.controller.AuthController#login(LoginRequest)
-2025-09-23T03:51:19.217Z DEBUG 96 --- [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.concert.dto.LoginRequest@4c59c76c]
-2025-09-23T03:51:19.396Z  WARN 96 --- [           main] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.concert.dto.AuthResponse> com.concert.controller.AuthController.login(com.concert.dto.LoginRequest) with 2 errors: [Field error in object 'loginRequest' on field 'password': rejected value []; codes [NotBlank.loginRequest.password,NotBlank.password,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [loginRequest.password,password]; arguments []; default message [password]]; default message [Password is required]] [Field error in object 'loginRequest' on field 'usernameOrEmail': rejected value []; codes [NotBlank.loginRequest.usernameOrEmail,NotBlank.usernameOrEmail,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [loginRequest.usernameOrEmail,usernameOrEmail]; arguments []; default message [usernameOrEmail]]; default message [Username or email is required]] ]
+2025-09-23T04:05:13.730Z DEBUG 101 --- [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2025-09-23T04:05:13.742Z DEBUG 101 --- [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-09-23T04:05:13.743Z  WARN 101 --- [           main] o.s.w.s.h.HandlerMappingIntrospector     : Cache miss for REQUEST dispatch to '/api/auth/login' (previous null). Performing MatchableHandlerMapping lookup. This is logged once only at WARN level, and every time at TRACE.
+2025-09-23T04:05:13.750Z DEBUG 101 --- [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2025-09-23T04:05:13.754Z DEBUG 101 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.concert.controller.AuthController#login(LoginRequest)
+2025-09-23T04:05:13.776Z DEBUG 101 --- [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.concert.dto.LoginRequest@364f0a6f]
+2025-09-23T04:05:13.806Z  WARN 101 --- [           main] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.concert.dto.AuthResponse> com.concert.controller.AuthController.login(com.concert.dto.LoginRequest) with 2 errors: [Field error in object 'loginRequest' on field 'usernameOrEmail': rejected value []; codes [NotBlank.loginRequest.usernameOrEmail,NotBlank.usernameOrEmail,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [loginRequest.usernameOrEmail,usernameOrEmail]; arguments []; default message [usernameOrEmail]]; default message [Username or email is required]] [Field error in object 'loginRequest' on field 'password': rejected value []; codes [NotBlank.loginRequest.password,NotBlank.password,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [loginRequest.password,password]; arguments []; default message [password]]; default message [Password is required]] ]
 ]]></system-out>
     <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (/root/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.10/byte-buddy-agent-1.14.10.jar)
 WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
@@ -201,7 +201,7 @@ WARNING: If a serviceability tool is not in use, please run with -Djdk.instrumen
 WARNING: Dynamic loading of agents will be disallowed by default in a future release
 ]]></system-err>
   </testcase>
-  <testcase name="testDuplicateEmailRegistration" classname="com.concert.integration.AuthDockerIntegrationTest" time="0.24">
+  <testcase name="testDuplicateEmailRegistration" classname="com.concert.integration.AuthDockerIntegrationTest" time="0.256">
     <system-out><![CDATA[Hibernate: 
     select
         u1_0.user_id,
@@ -221,11 +221,11 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
         u1_0.website 
     from
         users u1_0
-2025-09-23T03:51:19.450Z DEBUG 96 --- [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/register
-2025-09-23T03:51:19.451Z DEBUG 96 --- [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-09-23T03:51:19.452Z DEBUG 96 --- [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/register
-2025-09-23T03:51:19.453Z DEBUG 96 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.concert.controller.AuthController#register(RegisterRequest)
-2025-09-23T03:51:19.454Z DEBUG 96 --- [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.concert.dto.RegisterRequest@77431f12]
+2025-09-23T04:05:13.846Z DEBUG 101 --- [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/register
+2025-09-23T04:05:13.847Z DEBUG 101 --- [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-09-23T04:05:13.848Z DEBUG 101 --- [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/register
+2025-09-23T04:05:13.848Z DEBUG 101 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.concert.controller.AuthController#register(RegisterRequest)
+2025-09-23T04:05:13.850Z DEBUG 101 --- [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.concert.dto.RegisterRequest@163427b6]
 Hibernate: 
     select
         u1_0.user_id 
@@ -251,13 +251,13 @@ Hibernate:
         (address, city, company, country, created_at, email, name, password, phone, pincode, profile_photo, updated_at, username, website) 
     values
         (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-2025-09-23T03:51:19.662Z DEBUG 96 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2025-09-23T03:51:19.662Z DEBUG 96 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.concert.dto.AuthResponse@12af47f4]
-2025-09-23T03:51:19.665Z DEBUG 96 --- [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/register
-2025-09-23T03:51:19.666Z DEBUG 96 --- [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-09-23T03:51:19.666Z DEBUG 96 --- [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/register
-2025-09-23T03:51:19.666Z DEBUG 96 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.concert.controller.AuthController#register(RegisterRequest)
-2025-09-23T03:51:19.667Z DEBUG 96 --- [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.concert.dto.RegisterRequest@3116e9f2]
+2025-09-23T04:05:14.069Z DEBUG 101 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-23T04:05:14.070Z DEBUG 101 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.concert.dto.AuthResponse@5839bf99]
+2025-09-23T04:05:14.074Z DEBUG 101 --- [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/register
+2025-09-23T04:05:14.074Z DEBUG 101 --- [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-09-23T04:05:14.074Z DEBUG 101 --- [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/register
+2025-09-23T04:05:14.074Z DEBUG 101 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.concert.controller.AuthController#register(RegisterRequest)
+2025-09-23T04:05:14.075Z DEBUG 101 --- [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.concert.dto.RegisterRequest@1bd95764]
 Hibernate: 
     select
         u1_0.user_id 
@@ -276,11 +276,11 @@ Hibernate:
         u1_0.email=? 
     limit
         ?
-2025-09-23T03:51:19.673Z DEBUG 96 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2025-09-23T03:51:19.674Z DEBUG 96 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.concert.dto.AuthResponse@4d55b63d]
+2025-09-23T04:05:14.083Z DEBUG 101 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-23T04:05:14.084Z DEBUG 101 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.concert.dto.AuthResponse@7a96e17e]
 ]]></system-out>
   </testcase>
-  <testcase name="testDuplicateUsernameRegistration" classname="com.concert.integration.AuthDockerIntegrationTest" time="0.087">
+  <testcase name="testDuplicateUsernameRegistration" classname="com.concert.integration.AuthDockerIntegrationTest" time="0.08">
     <system-out><![CDATA[Hibernate: 
     select
         u1_0.user_id,
@@ -300,11 +300,11 @@ Hibernate:
         u1_0.website 
     from
         users u1_0
-2025-09-23T03:51:19.682Z DEBUG 96 --- [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/register
-2025-09-23T03:51:19.682Z DEBUG 96 --- [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-09-23T03:51:19.683Z DEBUG 96 --- [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/register
-2025-09-23T03:51:19.683Z DEBUG 96 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.concert.controller.AuthController#register(RegisterRequest)
-2025-09-23T03:51:19.683Z DEBUG 96 --- [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.concert.dto.RegisterRequest@772dfe03]
+2025-09-23T04:05:14.091Z DEBUG 101 --- [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/register
+2025-09-23T04:05:14.092Z DEBUG 101 --- [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-09-23T04:05:14.092Z DEBUG 101 --- [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/register
+2025-09-23T04:05:14.092Z DEBUG 101 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.concert.controller.AuthController#register(RegisterRequest)
+2025-09-23T04:05:14.092Z DEBUG 101 --- [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.concert.dto.RegisterRequest@7bd804ed]
 Hibernate: 
     select
         u1_0.user_id 
@@ -330,13 +330,13 @@ Hibernate:
         (address, city, company, country, created_at, email, name, password, phone, pincode, profile_photo, updated_at, username, website) 
     values
         (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-2025-09-23T03:51:19.754Z DEBUG 96 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2025-09-23T03:51:19.755Z DEBUG 96 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.concert.dto.AuthResponse@3dc961f5]
-2025-09-23T03:51:19.756Z DEBUG 96 --- [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/register
-2025-09-23T03:51:19.757Z DEBUG 96 --- [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-09-23T03:51:19.757Z DEBUG 96 --- [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/register
-2025-09-23T03:51:19.759Z DEBUG 96 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.concert.controller.AuthController#register(RegisterRequest)
-2025-09-23T03:51:19.759Z DEBUG 96 --- [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.concert.dto.RegisterRequest@229e9280]
+2025-09-23T04:05:14.160Z DEBUG 101 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-23T04:05:14.160Z DEBUG 101 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.concert.dto.AuthResponse@2fa46f2f]
+2025-09-23T04:05:14.161Z DEBUG 101 --- [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/register
+2025-09-23T04:05:14.162Z DEBUG 101 --- [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-09-23T04:05:14.162Z DEBUG 101 --- [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/register
+2025-09-23T04:05:14.162Z DEBUG 101 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.concert.controller.AuthController#register(RegisterRequest)
+2025-09-23T04:05:14.163Z DEBUG 101 --- [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.concert.dto.RegisterRequest@9bec662]
 Hibernate: 
     select
         u1_0.user_id 
@@ -346,11 +346,11 @@ Hibernate:
         u1_0.username=? 
     limit
         ?
-2025-09-23T03:51:19.762Z DEBUG 96 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2025-09-23T03:51:19.762Z DEBUG 96 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.concert.dto.AuthResponse@27946cee]
+2025-09-23T04:05:14.165Z DEBUG 101 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-23T04:05:14.165Z DEBUG 101 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.concert.dto.AuthResponse@915ac5c]
 ]]></system-out>
   </testcase>
-  <testcase name="testUserLoginFailureWrongPassword" classname="com.concert.integration.AuthDockerIntegrationTest" time="0.18">
+  <testcase name="testUserLoginFailureWrongPassword" classname="com.concert.integration.AuthDockerIntegrationTest" time="0.153">
     <system-out><![CDATA[Hibernate: 
     select
         u1_0.user_id,
@@ -370,11 +370,11 @@ Hibernate:
         u1_0.website 
     from
         users u1_0
-2025-09-23T03:51:19.771Z DEBUG 96 --- [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/register
-2025-09-23T03:51:19.773Z DEBUG 96 --- [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-09-23T03:51:19.773Z DEBUG 96 --- [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/register
-2025-09-23T03:51:19.774Z DEBUG 96 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.concert.controller.AuthController#register(RegisterRequest)
-2025-09-23T03:51:19.774Z DEBUG 96 --- [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.concert.dto.RegisterRequest@1492d58d]
+2025-09-23T04:05:14.172Z DEBUG 101 --- [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/register
+2025-09-23T04:05:14.172Z DEBUG 101 --- [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-09-23T04:05:14.173Z DEBUG 101 --- [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/register
+2025-09-23T04:05:14.173Z DEBUG 101 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.concert.controller.AuthController#register(RegisterRequest)
+2025-09-23T04:05:14.173Z DEBUG 101 --- [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.concert.dto.RegisterRequest@15769719]
 Hibernate: 
     select
         u1_0.user_id 
@@ -400,13 +400,13 @@ Hibernate:
         (address, city, company, country, created_at, email, name, password, phone, pincode, profile_photo, updated_at, username, website) 
     values
         (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-2025-09-23T03:51:19.839Z DEBUG 96 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2025-09-23T03:51:19.839Z DEBUG 96 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.concert.dto.AuthResponse@31cced7]
-2025-09-23T03:51:19.840Z DEBUG 96 --- [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
-2025-09-23T03:51:19.840Z DEBUG 96 --- [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-09-23T03:51:19.841Z DEBUG 96 --- [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
-2025-09-23T03:51:19.841Z DEBUG 96 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.concert.controller.AuthController#login(LoginRequest)
-2025-09-23T03:51:19.841Z DEBUG 96 --- [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.concert.dto.LoginRequest@2928c493]
+2025-09-23T04:05:14.242Z DEBUG 101 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-23T04:05:14.242Z DEBUG 101 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.concert.dto.AuthResponse@75b45343]
+2025-09-23T04:05:14.243Z DEBUG 101 --- [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2025-09-23T04:05:14.243Z DEBUG 101 --- [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-09-23T04:05:14.244Z DEBUG 101 --- [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2025-09-23T04:05:14.244Z DEBUG 101 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.concert.controller.AuthController#login(LoginRequest)
+2025-09-23T04:05:14.244Z DEBUG 101 --- [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.concert.dto.LoginRequest@553fdf58]
 Hibernate: 
     select
         u1_0.user_id,
@@ -429,11 +429,11 @@ Hibernate:
     where
         u1_0.username=? 
         or u1_0.email=?
-2025-09-23T03:51:19.927Z DEBUG 96 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2025-09-23T03:51:19.928Z DEBUG 96 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.concert.dto.AuthResponse@206e080]
+2025-09-23T04:05:14.316Z DEBUG 101 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-23T04:05:14.316Z DEBUG 101 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.concert.dto.AuthResponse@7f2c223b]
 ]]></system-out>
   </testcase>
-  <testcase name="testUserLoginWithEmail" classname="com.concert.integration.AuthDockerIntegrationTest" time="0.233">
+  <testcase name="testUserLoginWithEmail" classname="com.concert.integration.AuthDockerIntegrationTest" time="0.184">
     <system-out><![CDATA[Hibernate: 
     select
         u1_0.user_id,
@@ -453,11 +453,11 @@ Hibernate:
         u1_0.website 
     from
         users u1_0
-2025-09-23T03:51:19.958Z DEBUG 96 --- [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/register
-2025-09-23T03:51:19.960Z DEBUG 96 --- [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-09-23T03:51:19.960Z DEBUG 96 --- [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/register
-2025-09-23T03:51:19.961Z DEBUG 96 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.concert.controller.AuthController#register(RegisterRequest)
-2025-09-23T03:51:19.961Z DEBUG 96 --- [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.concert.dto.RegisterRequest@3230d2b2]
+2025-09-23T04:05:14.326Z DEBUG 101 --- [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/register
+2025-09-23T04:05:14.326Z DEBUG 101 --- [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-09-23T04:05:14.327Z DEBUG 101 --- [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/register
+2025-09-23T04:05:14.327Z DEBUG 101 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.concert.controller.AuthController#register(RegisterRequest)
+2025-09-23T04:05:14.327Z DEBUG 101 --- [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.concert.dto.RegisterRequest@1ccb0482]
 Hibernate: 
     select
         u1_0.user_id 
@@ -483,13 +483,13 @@ Hibernate:
         (address, city, company, country, created_at, email, name, password, phone, pincode, profile_photo, updated_at, username, website) 
     values
         (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-2025-09-23T03:51:20.073Z DEBUG 96 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2025-09-23T03:51:20.074Z DEBUG 96 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.concert.dto.AuthResponse@6f9329f3]
-2025-09-23T03:51:20.075Z DEBUG 96 --- [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
-2025-09-23T03:51:20.075Z DEBUG 96 --- [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-09-23T03:51:20.075Z DEBUG 96 --- [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
-2025-09-23T03:51:20.075Z DEBUG 96 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.concert.controller.AuthController#login(LoginRequest)
-2025-09-23T03:51:20.076Z DEBUG 96 --- [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.concert.dto.LoginRequest@2f7aab02]
+2025-09-23T04:05:14.401Z DEBUG 101 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-23T04:05:14.402Z DEBUG 101 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.concert.dto.AuthResponse@62b8904c]
+2025-09-23T04:05:14.403Z DEBUG 101 --- [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2025-09-23T04:05:14.403Z DEBUG 101 --- [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-09-23T04:05:14.403Z DEBUG 101 --- [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2025-09-23T04:05:14.403Z DEBUG 101 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.concert.controller.AuthController#login(LoginRequest)
+2025-09-23T04:05:14.404Z DEBUG 101 --- [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.concert.dto.LoginRequest@1a900a73]
 Hibernate: 
     select
         u1_0.user_id,
@@ -512,11 +512,11 @@ Hibernate:
     where
         u1_0.username=? 
         or u1_0.email=?
-2025-09-23T03:51:20.140Z DEBUG 96 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2025-09-23T03:51:20.140Z DEBUG 96 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.concert.dto.AuthResponse@25386a90]
+2025-09-23T04:05:14.471Z DEBUG 101 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-23T04:05:14.471Z DEBUG 101 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.concert.dto.AuthResponse@75591913]
 ]]></system-out>
   </testcase>
-  <testcase name="testUserLoginSuccess" classname="com.concert.integration.AuthDockerIntegrationTest" time="0.153">
+  <testcase name="testUserLoginSuccess" classname="com.concert.integration.AuthDockerIntegrationTest" time="0.171">
     <system-out><![CDATA[Hibernate: 
     select
         u1_0.user_id,
@@ -536,11 +536,11 @@ Hibernate:
         u1_0.website 
     from
         users u1_0
-2025-09-23T03:51:20.187Z DEBUG 96 --- [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/register
-2025-09-23T03:51:20.187Z DEBUG 96 --- [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-09-23T03:51:20.188Z DEBUG 96 --- [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/register
-2025-09-23T03:51:20.188Z DEBUG 96 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.concert.controller.AuthController#register(RegisterRequest)
-2025-09-23T03:51:20.188Z DEBUG 96 --- [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.concert.dto.RegisterRequest@4022a256]
+2025-09-23T04:05:14.511Z DEBUG 101 --- [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/register
+2025-09-23T04:05:14.511Z DEBUG 101 --- [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-09-23T04:05:14.511Z DEBUG 101 --- [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/register
+2025-09-23T04:05:14.512Z DEBUG 101 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.concert.controller.AuthController#register(RegisterRequest)
+2025-09-23T04:05:14.512Z DEBUG 101 --- [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.concert.dto.RegisterRequest@76982efa]
 Hibernate: 
     select
         u1_0.user_id 
@@ -566,13 +566,13 @@ Hibernate:
         (address, city, company, country, created_at, email, name, password, phone, pincode, profile_photo, updated_at, username, website) 
     values
         (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-2025-09-23T03:51:20.259Z DEBUG 96 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2025-09-23T03:51:20.259Z DEBUG 96 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.concert.dto.AuthResponse@6c53ce34]
-2025-09-23T03:51:20.260Z DEBUG 96 --- [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
-2025-09-23T03:51:20.260Z DEBUG 96 --- [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-09-23T03:51:20.260Z DEBUG 96 --- [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
-2025-09-23T03:51:20.260Z DEBUG 96 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.concert.controller.AuthController#login(LoginRequest)
-2025-09-23T03:51:20.261Z DEBUG 96 --- [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.concert.dto.LoginRequest@64ec804f]
+2025-09-23T04:05:14.582Z DEBUG 101 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-23T04:05:14.582Z DEBUG 101 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.concert.dto.AuthResponse@3fbeaa03]
+2025-09-23T04:05:14.583Z DEBUG 101 --- [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2025-09-23T04:05:14.583Z DEBUG 101 --- [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-09-23T04:05:14.584Z DEBUG 101 --- [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2025-09-23T04:05:14.584Z DEBUG 101 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.concert.controller.AuthController#login(LoginRequest)
+2025-09-23T04:05:14.584Z DEBUG 101 --- [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.concert.dto.LoginRequest@78e547aa]
 Hibernate: 
     select
         u1_0.user_id,
@@ -595,11 +595,11 @@ Hibernate:
     where
         u1_0.username=? 
         or u1_0.email=?
-2025-09-23T03:51:20.328Z DEBUG 96 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2025-09-23T03:51:20.328Z DEBUG 96 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.concert.dto.AuthResponse@66e478c7]
+2025-09-23T04:05:14.654Z DEBUG 101 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-23T04:05:14.655Z DEBUG 101 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.concert.dto.AuthResponse@2dadadd9]
 ]]></system-out>
   </testcase>
-  <testcase name="testUserRegistrationValidationFailure" classname="com.concert.integration.AuthDockerIntegrationTest" time="0.007">
+  <testcase name="testUserRegistrationValidationFailure" classname="com.concert.integration.AuthDockerIntegrationTest" time="0.018">
     <system-out><![CDATA[Hibernate: 
     select
         u1_0.user_id,
@@ -619,15 +619,15 @@ Hibernate:
         u1_0.website 
     from
         users u1_0
-2025-09-23T03:51:20.339Z DEBUG 96 --- [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/register
-2025-09-23T03:51:20.339Z DEBUG 96 --- [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-09-23T03:51:20.339Z DEBUG 96 --- [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/register
-2025-09-23T03:51:20.339Z DEBUG 96 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.concert.controller.AuthController#register(RegisterRequest)
-2025-09-23T03:51:20.340Z DEBUG 96 --- [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.concert.dto.RegisterRequest@4db7fe2c]
-2025-09-23T03:51:20.340Z  WARN 96 --- [           main] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.concert.dto.AuthResponse> com.concert.controller.AuthController.register(com.concert.dto.RegisterRequest) with 4 errors: [Field error in object 'registerRequest' on field 'username': rejected value []; codes [Size.registerRequest.username,Size.username,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [registerRequest.username,username]; arguments []; default message [username],50,3]; default message [Username must be between 3 and 50 characters]] [Field error in object 'registerRequest' on field 'email': rejected value [invalid-email]; codes [Email.registerRequest.email,Email.email,Email.java.lang.String,Email]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [registerRequest.email,email]; arguments []; default message [email],[Ljakarta.validation.constraints.Pattern$Flag;@16db679e,.*]; default message [Email should be valid]] [Field error in object 'registerRequest' on field 'username': rejected value []; codes [NotBlank.registerRequest.username,NotBlank.username,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [registerRequest.username,username]; arguments []; default message [username]]; default message [Username is required]] [Field error in object 'registerRequest' on field 'password': rejected value [123]; codes [Size.registerRequest.password,Size.password,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [registerRequest.password,password]; arguments []; default message [password],2147483647,6]; default message [Password must be at least 6 characters]] ]
+2025-09-23T04:05:14.687Z DEBUG 101 --- [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/register
+2025-09-23T04:05:14.687Z DEBUG 101 --- [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-09-23T04:05:14.687Z DEBUG 101 --- [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/register
+2025-09-23T04:05:14.687Z DEBUG 101 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.concert.controller.AuthController#register(RegisterRequest)
+2025-09-23T04:05:14.688Z DEBUG 101 --- [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.concert.dto.RegisterRequest@3a182eaf]
+2025-09-23T04:05:14.690Z  WARN 101 --- [           main] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.concert.dto.AuthResponse> com.concert.controller.AuthController.register(com.concert.dto.RegisterRequest) with 4 errors: [Field error in object 'registerRequest' on field 'password': rejected value [123]; codes [Size.registerRequest.password,Size.password,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [registerRequest.password,password]; arguments []; default message [password],2147483647,6]; default message [Password must be at least 6 characters]] [Field error in object 'registerRequest' on field 'email': rejected value [invalid-email]; codes [Email.registerRequest.email,Email.email,Email.java.lang.String,Email]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [registerRequest.email,email]; arguments []; default message [email],[Ljakarta.validation.constraints.Pattern$Flag;@1940cb2b,.*]; default message [Email should be valid]] [Field error in object 'registerRequest' on field 'username': rejected value []; codes [NotBlank.registerRequest.username,NotBlank.username,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [registerRequest.username,username]; arguments []; default message [username]]; default message [Username is required]] [Field error in object 'registerRequest' on field 'username': rejected value []; codes [Size.registerRequest.username,Size.username,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [registerRequest.username,username]; arguments []; default message [username],50,3]; default message [Username must be between 3 and 50 characters]] ]
 ]]></system-out>
   </testcase>
-  <testcase name="testUserNotFoundLogin" classname="com.concert.integration.AuthDockerIntegrationTest" time="0.009">
+  <testcase name="testUserNotFoundLogin" classname="com.concert.integration.AuthDockerIntegrationTest" time="0.015">
     <system-out><![CDATA[Hibernate: 
     select
         u1_0.user_id,
@@ -647,11 +647,11 @@ Hibernate:
         u1_0.website 
     from
         users u1_0
-2025-09-23T03:51:20.347Z DEBUG 96 --- [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
-2025-09-23T03:51:20.347Z DEBUG 96 --- [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-09-23T03:51:20.348Z DEBUG 96 --- [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
-2025-09-23T03:51:20.348Z DEBUG 96 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.concert.controller.AuthController#login(LoginRequest)
-2025-09-23T03:51:20.348Z DEBUG 96 --- [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.concert.dto.LoginRequest@d4a1d38]
+2025-09-23T04:05:14.704Z DEBUG 101 --- [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2025-09-23T04:05:14.705Z DEBUG 101 --- [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-09-23T04:05:14.705Z DEBUG 101 --- [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2025-09-23T04:05:14.705Z DEBUG 101 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.concert.controller.AuthController#login(LoginRequest)
+2025-09-23T04:05:14.706Z DEBUG 101 --- [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.concert.dto.LoginRequest@7b31281b]
 Hibernate: 
     select
         u1_0.user_id,
@@ -674,11 +674,11 @@ Hibernate:
     where
         u1_0.username=? 
         or u1_0.email=?
-2025-09-23T03:51:20.350Z DEBUG 96 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2025-09-23T03:51:20.350Z DEBUG 96 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.concert.dto.AuthResponse@5073b0b8]
+2025-09-23T04:05:14.709Z DEBUG 101 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-23T04:05:14.709Z DEBUG 101 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.concert.dto.AuthResponse@211e1b51]
 ]]></system-out>
   </testcase>
-  <testcase name="testUserRegistrationSuccess" classname="com.concert.integration.AuthDockerIntegrationTest" time="0.073">
+  <testcase name="testUserRegistrationSuccess" classname="com.concert.integration.AuthDockerIntegrationTest" time="0.097">
     <system-out><![CDATA[Hibernate: 
     select
         u1_0.user_id,
@@ -698,11 +698,11 @@ Hibernate:
         u1_0.website 
     from
         users u1_0
-2025-09-23T03:51:20.356Z DEBUG 96 --- [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/register
-2025-09-23T03:51:20.356Z DEBUG 96 --- [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-09-23T03:51:20.357Z DEBUG 96 --- [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/register
-2025-09-23T03:51:20.357Z DEBUG 96 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.concert.controller.AuthController#register(RegisterRequest)
-2025-09-23T03:51:20.357Z DEBUG 96 --- [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.concert.dto.RegisterRequest@7af65b49]
+2025-09-23T04:05:14.718Z DEBUG 101 --- [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/register
+2025-09-23T04:05:14.719Z DEBUG 101 --- [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-09-23T04:05:14.719Z DEBUG 101 --- [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/register
+2025-09-23T04:05:14.719Z DEBUG 101 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.concert.controller.AuthController#register(RegisterRequest)
+2025-09-23T04:05:14.720Z DEBUG 101 --- [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.concert.dto.RegisterRequest@5073b0b8]
 Hibernate: 
     select
         u1_0.user_id 
@@ -728,8 +728,8 @@ Hibernate:
         (address, city, company, country, created_at, email, name, password, phone, pincode, profile_photo, updated_at, username, website) 
     values
         (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-2025-09-23T03:51:20.421Z DEBUG 96 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2025-09-23T03:51:20.422Z DEBUG 96 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.concert.dto.AuthResponse@20461e2b]
+2025-09-23T04:05:14.805Z DEBUG 101 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-23T04:05:14.805Z DEBUG 101 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.concert.dto.AuthResponse@6d0e90d5]
 Hibernate: 
     select
         u1_0.user_id 
@@ -741,7 +741,7 @@ Hibernate:
         ?
 ]]></system-out>
   </testcase>
-  <testcase name="testCompleteAuthFlowWithDocker" classname="com.concert.integration.AuthDockerIntegrationTest" time="0.136">
+  <testcase name="testCompleteAuthFlowWithDocker" classname="com.concert.integration.AuthDockerIntegrationTest" time="0.158">
     <system-out><![CDATA[Hibernate: 
     select
         u1_0.user_id,
@@ -761,11 +761,11 @@ Hibernate:
         u1_0.website 
     from
         users u1_0
-2025-09-23T03:51:20.429Z DEBUG 96 --- [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/register
-2025-09-23T03:51:20.429Z DEBUG 96 --- [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-09-23T03:51:20.430Z DEBUG 96 --- [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/register
-2025-09-23T03:51:20.430Z DEBUG 96 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.concert.controller.AuthController#register(RegisterRequest)
-2025-09-23T03:51:20.430Z DEBUG 96 --- [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.concert.dto.RegisterRequest@39008911]
+2025-09-23T04:05:14.816Z DEBUG 101 --- [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/register
+2025-09-23T04:05:14.817Z DEBUG 101 --- [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-09-23T04:05:14.817Z DEBUG 101 --- [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/register
+2025-09-23T04:05:14.817Z DEBUG 101 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.concert.controller.AuthController#register(RegisterRequest)
+2025-09-23T04:05:14.818Z DEBUG 101 --- [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.concert.dto.RegisterRequest@72c743f4]
 Hibernate: 
     select
         u1_0.user_id 
@@ -791,13 +791,13 @@ Hibernate:
         (address, city, company, country, created_at, email, name, password, phone, pincode, profile_photo, updated_at, username, website) 
     values
         (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-2025-09-23T03:51:20.493Z DEBUG 96 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2025-09-23T03:51:20.493Z DEBUG 96 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.concert.dto.AuthResponse@73a4efb4]
-2025-09-23T03:51:20.493Z DEBUG 96 --- [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
-2025-09-23T03:51:20.494Z DEBUG 96 --- [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-09-23T03:51:20.494Z DEBUG 96 --- [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
-2025-09-23T03:51:20.494Z DEBUG 96 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.concert.controller.AuthController#login(LoginRequest)
-2025-09-23T03:51:20.494Z DEBUG 96 --- [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.concert.dto.LoginRequest@253a2bfa]
+2025-09-23T04:05:14.890Z DEBUG 101 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-23T04:05:14.890Z DEBUG 101 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.concert.dto.AuthResponse@109f7381]
+2025-09-23T04:05:14.891Z DEBUG 101 --- [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2025-09-23T04:05:14.891Z DEBUG 101 --- [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-09-23T04:05:14.892Z DEBUG 101 --- [           main] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2025-09-23T04:05:14.892Z DEBUG 101 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.concert.controller.AuthController#login(LoginRequest)
+2025-09-23T04:05:14.892Z DEBUG 101 --- [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.concert.dto.LoginRequest@d5f3118]
 Hibernate: 
     select
         u1_0.user_id,
@@ -820,8 +820,8 @@ Hibernate:
     where
         u1_0.username=? 
         or u1_0.email=?
-2025-09-23T03:51:20.556Z DEBUG 96 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2025-09-23T03:51:20.556Z DEBUG 96 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.concert.dto.AuthResponse@6911005b]
+2025-09-23T04:05:14.958Z DEBUG 101 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-23T04:05:14.958Z DEBUG 101 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.concert.dto.AuthResponse@4fa0e166]
 Hibernate: 
     select
         u1_0.user_id 
