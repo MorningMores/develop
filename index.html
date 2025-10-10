@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Finder</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        /* --- General & Global Styles --- */
+        :root {
+            --primary-color: #4A90E2;
+            --dark-blue: #2C2C3E;
+            --text-dark: #333;
+            --text-light: #666;
+            --border-color: #EAEAEA;
+            --bg-light: #F9F9F9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-dark);
+            background-color: #fff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            text-align: left;
+            margin-bottom: 40px;
+        }
+
+        /* --- Header --- */
+        header {
+            background-color: #2B293D; 
+            padding: 15px 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 500;
+            color: #fff;
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .btn-create {
+            background-image: linear-gradient(45deg, #2B293D 0%, #4e4a71 100%);
+            color: #fff;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-create:hover {
+            transform: translateY(-3px);
+        }
+
+        .nav-actions .icon-link {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: #fff;
+        }
+        /* --- Categories Section --- */
+        .categories {
+            padding: 60px 0;
+        }
+
+        .category-list {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .category-item {
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .category-item img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .category-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .category-item p {
+            font-weight: 500;
+        }
+
+
+        /* --- Popular Events Section --- */
+        .popular-events {
+            background-color: var(--bg-light);
+            padding: 60px 20px;
+        }
+
+        .event-filters {
+            display: flex;
+            justify-content: flex-start;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .filter-btn {
+            background: none;
+            border: 1px solid var(--border-color);
+            padding: 10px 25px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 1rem;
+            color: var(--text-light);
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background-color: var(--primary-color);
+            color: #fff;
+            border-color: var(--primary-color);
+        }
+
+        .event-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        /* --- Redesigned Event Card --- */
+        .event-card {
+            background-color: #fff;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .tag {
+            color: #fff;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .tag.travel { background-color: #007991; }
+        .tag.cultural { background-color: #7b4397; }
+        .tag.education { background-color: #d35400; }
+        .tag.sports { background-color: #27ae60; }
+
+        .interest-btn {
+            background: none;
+            border: none;
+            color: var(--text-light);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        .interest-btn:hover {
+            color: var(--primary-color);
+        }
+
+        .card-content {
+            display: flex;
+            gap: 20px;
+            padding-top: 15px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .date {
+            text-align: center;
+            color: var(--primary-color);
+        }
+
+        .date .month {
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .date .day {
+            font-size: 2rem;
+            font-weight: 600;
+            display: block;
+            line-height: 1;
+        }
+
+        .details h3 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        .details p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 5px;
+        }
+
+        .details .interested {
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        .details .interested i {
+            color: #f1c40f;
+        }
+
+        .see-more {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .btn-secondary {
+            background-color: #fff;
+            color: var(--text-dark);
+            border: 1px solid var(--border-color);
+            padding: 12px 40px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 1rem;
+        }
+
+
+        /* --- Footer --- */
+        footer {
+            background-color: var(--dark-blue);
+            color: #fff;
+            padding: 60px 0;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .footer-column {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .footer-column h4 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul a {
+            color: #ccc;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">LOGO</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="my-events.html">Events</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="create-event.html" class="btn-create">Create Event</a>
+                <a href="#" class="icon-link"><i class="fa-regular fa-star"></i> Interested</a>
+                <a href="profile.html" class="icon-link"><i class="fa-regular fa-user"></i> Profile</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Categories Section -->
+        <section class="categories container">
+            <h2>Explore Categories</h2>
+            <div class="category-list">
+                <div class="category-item">
+                    <img src="https://picsum.photos/id/1011/200/200" alt="Entertainment">
+                    <p>Entertainment</p>
+                </div>
+                <div class="category-item">
+                    <img src="https://picsum.photos/id/1076/200/200" alt="Educational & Business">
+                    <p>Educational & Business</p>
+                </div>
+                <div class="category-item">
+                    <img src="https://picsum.photos/id/10/200/200" alt="Cultural & Arts">
+                    <p>Cultural & Arts</p>
+                </div>
+                <div class="category-item">
+                    <img src="https://picsum.photos/id/146/200/200" alt="Sports & Fitness">
+                    <p>Sports & Fitness</p>
+                </div>
+                <div class="category-item">
+                    <img src="https://picsum.photos/id/180/200/200" alt="Technology & Innovation">
+                    <p>Technology & Innovation</p>
+                </div>
+                <div class="category-item">
+                    <img src="https://picsum.photos/id/20/200/200" alt="Travel & Adventure">
+                    <p>Travel & Adventure</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Popular Events Section -->
+        <section class="popular-events container">
+            <h2>Popular Events</h2>
+            <div class="event-filters">
+                <button class="filter-btn active">All</button>
+                <button class="filter-btn">Today</button>
+                <button class="filter-btn">Tomorrow</button>
+                <button class="filter-btn">This Weekend</button>
+                <button class="filter-btn">Free</button>
+            </div>
+
+            <div class="event-grid">
+                <!-- Event Card 1 -->
+                <div class="event-card">
+                    <div class="card-header">
+                        <span class="tag travel">Travel & Adventure</span>
+                        <button class="interest-btn"><i class="fa-regular fa-star"></i></button>
+                    </div>
+                    <div class="card-content">
+                        <div class="date">
+                            <span class="month">NOV</span>
+                            <span class="day">25 - 26</span>
+                        </div>
+                        <div class="details">
+                            <h3>Lakeside Camping</h3>
+                            <p class="description">Adventure Geek - Explore the Unexplore..</p>
+                            <p class="time">6:30 AM - 7:30 PM</p>
+                            <p class="interested"><i class="fa-solid fa-star"></i> 14 Interested</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Card 2 -->
+                <div class="event-card">
+                    <div class="card-header">
+                        <span class="tag cultural">Cultural & Arts</span>
+                        <button class="interest-btn"><i class="fa-regular fa-star"></i></button>
+                    </div>
+                    <div class="card-content">
+                        <div class="date">
+                            <span class="month">DEC</span>
+                            <span class="day">02</span>
+                        </div>
+                        <div class="details">
+                            <h3>Sound Of Christmas</h3>
+                            <p class="description">Description</p>
+                            <p class="time">6:30 PM - 9:30 PM</p>
+                            <p class="interested"><i class="fa-solid fa-star"></i> 18 Interested</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Card 3 -->
+                <div class="event-card">
+                    <div class="card-header">
+                        <span class="tag cultural">Cultural & Arts</span>
+                        <button class="interest-btn"><i class="fa-regular fa-star"></i></button>
+                    </div>
+                     <div class="card-content">
+                        <div class="date">
+                            <span class="month">DEC</span>
+                            <span class="day">02</span>
+                        </div>
+                        <div class="details">
+                            <h3>Arts in Salaya</h3>
+                            <p class="description">Description</p>
+                            <p class="time">10 AM - 5 PM</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Card 4 -->
+                 <div class="event-card">
+                    <div class="card-header">
+                        <span class="tag education">Educational & Business</span>
+                        <button class="interest-btn"><i class="fa-regular fa-star"></i></button>
+                    </div>
+                    <div class="card-content">
+                        <div class="date">
+                            <span class="month">DEC</span>
+                            <span class="day">03</span>
+                        </div>
+                        <div class="details">
+                            <h3>Study Engineering</h3>
+                            <p class="description">Meet us at...</p>
+                            <p class="time">10 AM - 2 PM</p>
+                            <p class="interested"><i class="fa-solid fa-star"></i> 48 Interested</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Card 5 -->
+                 <div class="event-card">
+                    <div class="card-header">
+                        <span class="tag sports">Sports & Fitness</span>
+                        <button class="interest-btn"><i class="fa-regular fa-star"></i></button>
+                    </div>
+                    <div class="card-content">
+                        <div class="date">
+                            <span class="month">DEC</span>
+                            <span class="day">08</span>
+                        </div>
+                        <div class="details">
+                            <h3>Soccer team meetup</h3>
+                            <p class="description">Play at Mahidol</p>
+                            <p class="time">6:30 PM - 9:30 PM</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Card 6 -->
+                 <div class="event-card">
+                    <div class="card-header">
+                        <span class="tag travel">Travel & Adventure</span>
+                        <button class="interest-btn"><i class="fa-regular fa-star"></i></button>
+                    </div>
+                    <div class="card-content">
+                        <div class="date">
+                            <span class="month">FEB</span>
+                            <span class="day">14</span>
+                        </div>
+                        <div class="details">
+                            <h3>Valentine's Day</h3>
+                            <p class="description">Description</p>
+                            <p class="time">7 AM - 8 PM</p>
+                            <p class="interested"><i class="fa-solid fa-star"></i> 160 Interested</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="see-more">
+                <button class="btn-secondary">See More</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container container">
+            <div class="footer-column">
+                <h4>Company Info</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Help</h4>
+                <ul>
+                    <li><a href="#">Account Support</a></li>
+                    <li><a href="#">Listing Events</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Categories</h4>
+                <ul>
+                    <li><a href="#">Concerts & Gigs</a></li>
+                    <li><a href="#">Festivals & Lifestyle</a></li>
+                    <li><a href="#">Business & Networking</a></li>
+                    <li><a href="#">Food & Drinks</a></li>
+                    <li><a href="#">Performing Arts</a></li>
+                    <li><a href="#">Sports & Outdoors</a></li>
+                    <li><a href="#">Exhibitions</a></li>
+                    <li><a href="#">Workshops, Conferences & Classes</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+

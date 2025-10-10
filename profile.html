@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Settings</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        /* --- General & Global Styles --- */
+        :root {
+            --primary-color: #4A90E2;
+            --dark-blue: #2C2C3E;
+            --text-dark: #333;
+            --text-light: #666;
+            --border-color: #EAEAEA;
+            --bg-light: #F9F9F9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-dark);
+            background-color: #fff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- Header --- */
+        header {
+            background-color: #2B293D;
+            padding: 15px 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 500;
+            color: #fff;
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .btn-create {
+            background-image: linear-gradient(45deg, #2B293D 0%, #4e4a71 100%);
+            color: #fff;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-create:hover {
+            transform: translateY(-3px);
+        }
+
+        .nav-actions .icon-link {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: #fff;
+        }
+
+        /* --- Profile Page Styles --- */
+        .profile-page-container {
+            display: flex;
+            max-width: 1200px;
+            margin: 40px auto;
+            gap: 30px;
+            padding: 0 20px;
+        }
+
+        /* --- Sidebar --- */
+        .profile-sidebar {
+            flex: 0 0 250px;
+        }
+
+        .profile-sidebar h2 {
+            font-size: 1.5rem;
+            background-color: #f0f0f0;
+            padding: 20px;
+            margin: 0;
+            text-align: left;
+            border-radius: 8px 8px 0 0;
+            font-weight: 600;
+        }
+
+        .sidebar-nav {
+            display: flex;
+            flex-direction: column;
+            background-color: #f9f9f9;
+            border-radius: 0 0 8px 8px;
+            padding: 10px 0;
+        }
+
+        .sidebar-nav a {
+            text-decoration: none;
+            color: var(--text-dark);
+            padding: 15px 20px;
+            font-weight: 500;
+            border-left: 3px solid transparent;
+            cursor: pointer;
+        }
+
+        .sidebar-nav a.active,
+        .sidebar-nav a:hover {
+            background-color: #f0f0f0;
+            color: var(--primary-color);
+            border-left: 3px solid var(--primary-color);
+        }
+        
+        /* Styles for the signout button */
+        #nav-signout {
+            margin-top: 10px;
+            padding-top: 15px;
+            border-top: 1px solid var(--border-color);
+            color: #dc3545;
+            font-weight: 600;
+        }
+
+        #nav-signout:hover {
+            background-color: #f8d7da;
+            border-left-color: #dc3545;
+            color: #dc3545;
+        }
+
+        /* --- Main Content --- */
+        .profile-content {
+            flex: 1;
+            background-color: #fff;
+            padding: 30px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+        }
+
+        .profile-content h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        /* --- Form Styles --- */
+        .form-section {
+            display: none; /* Hide all sections by default */
+        }
+        .form-section.active {
+            display: block; /* Show active section */
+        }
+        
+        .profile-photo-section {
+            margin-bottom: 40px;
+        }
+
+        .profile-photo-section h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .photo-uploader {
+            width: 120px;
+            height: 120px;
+            background-color: #e9ecef;
+            border-radius: 50%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .photo-uploader .user-icon {
+            font-size: 4rem;
+            color: #ced4da;
+        }
+
+        .photo-uploader .camera-btn {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: #fff;
+            border: 1px solid #dee2e6;
+            color: var(--text-dark);
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .form-subsection {
+            margin-bottom: 30px;
+        }
+
+        .form-subsection h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .form-description, .current-email-display {
+            color: var(--text-light);
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .current-email-display span {
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 20px;
+        }
+
+        .form-group {
+            flex: 1;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #495057;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ced4da;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .form-group input::placeholder {
+            color: #adb5bd;
+        }
+
+        .btn-save-profile {
+            background-color: #343a40;
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: background-color 0.2s;
+        }
+
+        .btn-save-profile:hover {
+            background-color: #495057;
+        }
+        
+        /* --- Confirmation Modal Styles --- */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            display: none; /* Initially hidden */
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+            transform: translateY(-20px);
+            transition: transform 0.3s ease;
+        }
+
+        .modal-overlay.active .modal-content {
+            transform: translateY(0);
+        }
+
+        .modal-content h2 {
+            margin-top: 0;
+            font-size: 1.5rem;
+            color: var(--text-dark);
+        }
+
+        .modal-content p {
+            margin-bottom: 25px;
+            color: var(--text-light);
+        }
+
+        .modal-actions {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .modal-actions button {
+            padding: 12px 25px;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: background-color 0.2s;
+        }
+
+        .btn-modal-secondary {
+            background-color: #e9ecef;
+            color: var(--text-dark);
+            border: 1px solid #ced4da;
+        }
+
+        .btn-modal-secondary:hover {
+            background-color: #dee2e6;
+        }
+
+        .btn-modal-danger {
+            background-color: #dc3545;
+            color: #fff;
+        }
+
+        .btn-modal-danger:hover {
+            background-color: #c82333;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Section (Same as index.html) -->
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">LOGO</a> <!-- Link back to home -->
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li> <!-- Link back to home -->
+                <li><a href="#">Events</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="btn-create">Create Event</button>
+                <a href="#" class="icon-link"><i class="fa-regular fa-star"></i> Interested</a>
+                <a href="profile.html" class="icon-link"><i class="fa-regular fa-user"></i> Profile</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="profile-page-container">
+        <!-- Sidebar Navigation -->
+        <aside class="profile-sidebar">
+            <h2>Account Settings</h2>
+            <nav class="sidebar-nav">
+                <a id="nav-account-info" class="active">Account Info</a>
+                <a id="nav-change-email">Change Email</a>
+                <a id="nav-password">Password</a>
+                <a href="login.html" id="nav-signout">Sign Out</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="profile-content">
+            
+            <!-- Account Info Section -->
+            <section id="account-info-content" class="form-section active">
+                <h2>Account Information</h2>
+                <div class="profile-photo-section">
+                    <h3>Profile Photo</h3>
+                    <div class="photo-uploader">
+                        <i class="fa-solid fa-user user-icon"></i>
+                        <button class="camera-btn"><i class="fa-solid fa-camera"></i></button>
+                    </div>
+                </div>
+                <form>
+                    <div class="form-subsection">
+                        <h3>Profile Information</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="first-name">First Name:</label>
+                                <input type="text" id="first-name" placeholder="Enter first name">
+                            </div>
+                            <div class="form-group">
+                                <label for="last-name">Last Name:</label>
+                                <input type="text" id="last-name" placeholder="Enter last name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="website">Website:</label>
+                            <input type="url" id="website" placeholder="Enter website">
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Company:</label>
+                            <input type="text" id="company" placeholder="Enter company name">
+                        </div>
+                    </div>
+                    <div class="form-subsection">
+                        <h3>Contact Details</h3>
+                        <p class="form-description">These details are private and only used to contact you for ticketing or prizes.</p>
+                        <div class="form-group">
+                            <label for="phone">Phone Number:</label>
+                            <input type="tel" id="phone" placeholder="Enter phone number">
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Address:</label>
+                            <input type="text" id="address" placeholder="Enter address">
+                        </div>
+                         <div class="form-row">
+                            <div class="form-group">
+                                <label for="city">City/Town:</label>
+                                <input type="text" id="city" placeholder="Enter city">
+                            </div>
+                            <div class="form-group">
+                                <label for="country">Country:</label>
+                                <input type="text" id="country" placeholder="Enter country">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="pincode">Pincode:</label>
+                            <input type="text" id="pincode" placeholder="Enter pincode">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-save-profile">Save My Profile</button>
+                </form>
+            </section>
+
+            <!-- Change Email Section -->
+            <section id="change-email-content" class="form-section">
+                <h2>Change Email</h2>
+                <form>
+                    <p class="current-email-display">Current Email: <span>andreasgomez@example.com</span></p>
+                     <div class="form-group">
+                        <label for="new-email">New Email:</label>
+                        <input type="email" id="new-email" placeholder="Enter new email">
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-email">Confirm Email:</label>
+                        <input type="email" id="confirm-email" placeholder="Enter again">
+                    </div>
+                    <button type="submit" class="btn-save-profile">Save New Email</button>
+                </form>
+            </section>
+
+            <!-- Password Section -->
+            <section id="password-content" class="form-section">
+                <h2>Change Password</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="new-password">New Password:</label>
+                        <input type="password" id="new-password" placeholder="Enter new password">
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm New Password:</label>
+                        <input type="password" id="confirm-password" placeholder="Enter again">
+                    </div>
+                    <button type="submit" class="btn-save-profile">Save New Password</button>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div id="signout-modal" class="modal-overlay">
+        <div class="modal-content">
+            <h2>Confirm Sign Out</h2>
+            <p>Are you sure you want to sign out?</p>
+            <div class="modal-actions">
+                <button id="cancel-signout-btn" class="btn-modal-secondary">Cancel</button>
+                <button id="confirm-signout-btn" class="btn-modal-danger">Sign Out</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = {
+                accountInfo: document.getElementById('nav-account-info'),
+                changeEmail: document.getElementById('nav-change-email'),
+                password: document.getElementById('nav-password'),
+            };
+
+            const contentSections = {
+                accountInfo: document.getElementById('account-info-content'),
+                changeEmail: document.getElementById('change-email-content'),
+                password: document.getElementById('password-content'),
+            };
+
+            function showSection(sectionToShow) {
+                // Hide all content sections
+                Object.values(contentSections).forEach(section => {
+                    section.classList.remove('active');
+                });
+                
+                // Remove active class from all nav links
+                Object.values(navLinks).forEach(link => {
+                    link.classList.remove('active');
+                });
+
+                // Show the target section and set its nav link to active
+                contentSections[sectionToShow].classList.add('active');
+                navLinks[sectionToShow].classList.add('active');
+            }
+
+            navLinks.accountInfo.addEventListener('click', () => showSection('accountInfo'));
+            navLinks.changeEmail.addEventListener('click', () => showSection('changeEmail'));
+            navLinks.password.addEventListener('click', () => showSection('password'));
+
+            // Sign Out Confirmation Logic
+            const signOutLink = document.getElementById('nav-signout');
+            const signOutModal = document.getElementById('signout-modal');
+            const confirmSignOutBtn = document.getElementById('confirm-signout-btn');
+            const cancelSignOutBtn = document.getElementById('cancel-signout-btn');
+
+            if (signOutLink && signOutModal) {
+                signOutLink.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    signOutModal.style.display = 'flex';
+                    setTimeout(() => signOutModal.classList.add('active'), 10);
+                });
+
+                const closeModal = () => {
+                    signOutModal.classList.remove('active');
+                    setTimeout(() => {
+                        signOutModal.style.display = 'none';
+                    }, 300);
+                };
+
+                cancelSignOutBtn.addEventListener('click', closeModal);
+                signOutModal.addEventListener('click', (event) => {
+                    if (event.target === signOutModal) {
+                        closeModal();
+                    }
+                });
+
+                confirmSignOutBtn.addEventListener('click', () => {
+                    window.location.href = signOutLink.href;
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
+

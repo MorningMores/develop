@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Events</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #4A90E2;
+            --dark-blue: #2C2C3E;
+            --text-dark: #333;
+            --text-light: #666;
+            --border-color: #EAEAEA;
+            --bg-light: #F9F9F9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-dark);
+            background-color: #fff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- Header --- */
+        header {
+            background-color: #2B293D; 
+            padding: 15px 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 500;
+            color: #fff;
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .btn-create {
+            background-image: linear-gradient(45deg, #2B293D 0%, #4e4a71 100%);
+            color: #fff;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-create:hover {
+            transform: translateY(-3px);
+        }
+
+        .nav-actions .icon-link {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: #fff;
+        }
+
+        /* --- Main Content --- */
+        .main-content {
+            padding: 60px 0;
+        }
+
+        .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .page-header h2 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin: 0;
+        }
+        
+        .user-event-list {
+            display: grid;
+            gap: 20px;
+        }
+
+        .user-event-card {
+            background-color: #fff;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-decoration: none;
+            color: var(--text-dark);
+            transition: box-shadow 0.3s, transform 0.3s;
+        }
+        
+        .user-event-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
+
+        .event-info h3 {
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+        }
+
+        .event-info p {
+            color: var(--text-light);
+        }
+        
+        .event-status {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .status-tag {
+            background-color: #28a745;
+            color: #fff;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: var(--dark-blue);
+            color: #fff;
+            padding: 60px 0;
+            margin-top: 60px;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .footer-column {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .footer-column h4 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul a {
+            color: #ccc;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">LOGO</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="my-events.html">My Events</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="create-event.html" class="btn-create">Create Event</a>
+                <a href="#" class="icon-link"><i class="fa-regular fa-star"></i> Interested</a>
+                <a href="profile.html" class="icon-link"><i class="fa-regular fa-user"></i> Profile</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content container">
+        <div class="page-header">
+            <h2>My Events</h2>
+        </div>
+
+        <div class="user-event-list">
+            <!-- Example User Event Card -->
+            <a href="edit-event.html" class="user-event-card">
+                <div class="event-info">
+                    <h3>Lakeside Camping</h3>
+                    <p>NOV 25 - 26 | 6:30 AM - 7:30 PM</p>
+                </div>
+                <div class="event-status">
+                    <span class="status-tag">Published</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+            </a>
+            
+            <a href="edit-event.html" class="user-event-card">
+                <div class="event-info">
+                    <h3>Soccer team meetup</h3>
+                    <p>DEC 08 | 6:30 PM - 9:30 PM</p>
+                </div>
+                <div class="event-status">
+                    <span class="status-tag">Published</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+            </a>
+            
+            <!-- More events would be listed here -->
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container container">
+            <div class="footer-column">
+                <h4>Company Info</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Help</h4>
+                <ul>
+                    <li><a href="#">Account Support</a></li>
+                    <li><a href="#">Listing Events</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Categories</h4>
+                <ul>
+                    <li><a href="#">Concerts & Gigs</a></li>
+                    <li><a href="#">Festivals & Lifestyle</a></li>
+                    <!-- ... other categories ... -->
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+
