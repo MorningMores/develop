@@ -4,29 +4,6 @@
 
 <template>
   <div class="home-page">
-    <!-- Categories Section -->
-    <section class="categories container">
-      <h2>Explore Categories</h2>
-      <div class="category-list">
-        <div class="category-item">
-          <img src="/favicon.ico" alt="Category 1" />
-          <p>Concerts & Gigs</p>
-        </div>
-        <div class="category-item">
-          <img src="/favicon.ico" alt="Category 2" />
-          <p>Festivals & Lifestyle</p>
-        </div>
-        <div class="category-item">
-          <img src="/favicon.ico" alt="Category 3" />
-          <p>Sports & Fitness</p>
-        </div>
-        <div class="category-item">
-          <img src="/favicon.ico" alt="Category 4" />
-          <p>Education</p>
-        </div>
-      </div>
-    </section>
-
     <!-- Popular Events Section -->
     <section class="popular-events container">
       <h2>Popular Events</h2>
@@ -151,14 +128,6 @@
 }
 
 h2 { font-size: 2.5rem; font-weight: 600; text-align: left; margin-bottom: 40px; }
-
-/* Categories */
-.categories { padding: 60px 0; }
-.category-list { display: flex; justify-content: space-around; gap: 20px; flex-wrap: wrap; }
-.category-item { text-align: center; cursor: pointer; }
-.category-item img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; transition: transform 0.3s ease; }
-.category-item:hover img { transform: scale(1.05); }
-.category-item p { font-weight: 500; }
 
 /* Popular Events */
 .popular-events { background-color: var(--bg-light); padding: 60px 20px; margin-top: 30px; }

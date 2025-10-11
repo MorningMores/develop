@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ref, computed, watch, onMounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import ProductTag from '~/components/ProductTag.vue'
 
 interface Event {
   id: string;
@@ -20,8 +19,14 @@ const pageSize = 8
 const currentPage = ref<number>(parseInt((route.params.page as string) || '1', 10) || 1)
 
 async function fetchEvents() {
-  const { data } = await useFetch<Event[]>(`/api/product/data`)
-  if (data.value) allEvents.value = data.value
+  try {
+    const res: any = await $fetch('/api/events', { query: { page: 0, size: 200 } })
+    const items = Array.isArray(res) ? res : (res?.content ?? [])
+    allEvents.value = items as Event[]
+  } catch (e) {
+    console.error('Failed to load events', e)
+    allEvents.value = []
+  }
 }
 
 const totalPages = computed(() => Math.max(1, Math.ceil(allEvents.value.length / pageSize)))
@@ -49,16 +54,7 @@ function goToPage(n: number) {
 <template>
   <div class="bg-white rounded shadow-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-      <section class="my-16">
-        <div class="text-center">
-          <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight">Upcoming Events</h2>
-          <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-500">See what's trending and join the excitement.</p>
-        </div>
-
-        <div class="mt-8 mb-12 flex items-center justify-center">
-          <ProductTag />
-        </div>
-
+      <section>
         <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
           <div v-for="event in pagedEvents" :key="event.id">
             <ProductCard :event="event" />
