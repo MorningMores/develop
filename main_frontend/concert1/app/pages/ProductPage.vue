@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref,onMounted } from 'vue'
+import { useRouter } from 'vue-router'
 import ProductTag from '~/components/ProductTag.vue';
 
 interface Event {
@@ -31,6 +32,11 @@ onMounted(() => {
   fetchCartData()
 })
 
+const router = useRouter()
+
+onMounted(() => {
+  router.replace('/ProductPage/1')
+})
 </script>
 
 <template>
