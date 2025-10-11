@@ -1,71 +1,35 @@
-<script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
+<script setup lang="ts">
+import { ref } from 'vue';
+import RegisterCheck from './RegisterCheck.vue';
+import DatabaseInfo from '~/components/DatabaseInfo.vue';
 
-const show = ref(false)
-const show2 = ref(false)
-const currentSlide = ref(0)
+const pages = ref([
+    { text: 'Login', value: 'login'},
+    { text: 'Register', value: 'register'}
+])
 
-const slides = [
-  {
-    id: 1,
-    title: 'Welcome to ShopHub',
-    description: 'Discover amazing products at unbeatable prices',
-    buttonText: 'Start Shopping',
-    link: '/ProductPage',
-    gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
-  },
-  {
-    id: 2,
-    title: 'New Arrivals',
-    description: 'Check out our latest collection of trending items',
-    buttonText: 'View Collection',
-    link: '/ProductPage',
-    gradient: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)'
-  },
-  {
-    id: 3,
-    title: 'Special Offers',
-    description: 'Save big with our exclusive deals and discounts',
-    buttonText: 'Shop Now',
-    link: '/ProductPageDetail',
-    gradient: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)'
-  }
-]
+let show = ref<boolean>(false)
+let show2 = ref<boolean>(false)
+let show3 = ref<boolean>(false)
 
-let intervalId = null
-
-const click = () => {
-  show.value = !show.value
-  if (show.value) show2.value = false
+function click () {
+    show.value = !show.value
+    // console.log(show.value)
 }
 
-const click2 = () => {
-  show2.value = !show2.value
-  if (show2.value) show.value = false
+function click2 () {
+    show2.value = !show2.value
+    // console.log(show.value)
 }
 
-const nextSlide = () => {
-  currentSlide.value = (currentSlide.value + 1) % slides.length
+function click3 () {
+    show3.value = !show3.value
+    // console.log(show.value)
 }
-
-const prevSlide = () => {
-  currentSlide.value = (currentSlide.value - 1 + slides.length) % slides.length
-}
-
-onMounted(() => {
-  // Auto-advance carousel every 5 seconds
-  intervalId = setInterval(nextSlide, 5000)
-})
-
-onUnmounted(() => {
-  if (intervalId) clearInterval(intervalId)
-})
 </script>
-
 <template>
   <div class="">
     <!-- Navigation Header -->
-    
     <!-- Modals -->
     <transition name="fade">
       <div v-if="show" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4" @click.self="show = false">
@@ -172,7 +136,7 @@ onUnmounted(() => {
         </NuxtLink>
 
         <NuxtLink 
-          to="/ProductPageDetail/1"
+          to="/ProductPageDetail"
           class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-purple-500 to-purple-700 p-8 text-white shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
         >
           <div class="relative z-10">
@@ -191,46 +155,26 @@ onUnmounted(() => {
     </section>
   </div>
 </template>
+<!-- <template>
+    <h1>this is home</h1>
+    <h2>Carousel Section</h2>
+    <button>
+        <NuxtLink to="/ProductPage" class="text-red-500"> go to product</NuxtLink>
+        <NuxtLink to="/ProductPageDetail" class="text-blue-500"> go to product details</NuxtLink>
+    </button>
+    <div class="pt-20"></div>
+    <button class="pl-5 text-red-500 bg-amber-200 pointer cursor-pointer" @click="click">Login</button>
+    <div v-if=show>
+        <Login />
+    </div>
+    
+    <button class="pl-5 text-red-500 bg-gray-200 pointer cursor-pointer" @click="click2">Register</button>
+    <div v-if=show2>
+        <Register />
+    </div>
 
-<style scoped>
-.fade-enter-active, .fade-leave-active {
-  transition: opacity 0.3s ease;
-}
-
-.fade-enter-from, .fade-leave-to {
-  opacity: 0;
-}
-
-.slide-enter-active {
-  transition: all 0.6s ease;
-}
-
-.slide-leave-active {
-  transition: all 0.6s ease;
-}
-
-.slide-enter-from {
-  transform: translateX(100%);
-  opacity: 0;
-}
-
-.slide-leave-to {
-  transform: translateX(-100%);
-  opacity: 0;
-}
-
-@keyframes fade-in {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-fade-in {
-  animation: fade-in 0.8s ease-out;
-}
-</style>
+    <button class="pl-5 text-red-500 bg-gray-200 pointer cursor-pointer" @click="click3">check database</button>
+    <div v-if=show3>
+        <DatabaseInfo />
+    </div>
+</template> -->
