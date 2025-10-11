@@ -50,6 +50,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
         }
 
         .logo {
@@ -60,23 +61,34 @@
         }
 
         .nav-links {
-            display: flex;
+            display: none;
             list-style: none;
-            gap: 30px;
+            gap: 10px;
+            width: 100%;
+            flex-direction: column;
+            text-align: center;
+            margin-top: 15px;
         }
+        .nav-links.active { display: flex; }
 
         .nav-links a {
             text-decoration: none;
             font-weight: 500;
             color: #fff;
+            padding: 10px;
+            display: block;
         }
 
         .nav-actions {
-            display: flex;
-            align-items: center;
-            gap: 20px;
+            display: none;
+            flex-direction: column;
+            align-items: stretch;
+            width: 100%;
+            gap: 10px;
+            margin-top: 15px;
         }
-        
+        .nav-actions.active { display: flex; }
+
         .btn-create {
             background-image: linear-gradient(45deg, #2B293D 0%, #4e4a71 100%);
             color: #fff;
@@ -87,38 +99,45 @@
             font-weight: 600;
             font-size: 1rem;
             transition: all 0.3s ease;
+            text-decoration: none;
+            display: block;
+            text-align: center;
         }
-
-        .btn-create:hover {
-            transform: translateY(-3px);
-        }
+        .btn-create:hover { transform: translateY(-3px); }
 
         .nav-actions .icon-link {
             text-decoration: none;
             display: flex;
             align-items: center;
+            justify-content: center;
             gap: 5px;
             color: #fff;
+            padding: 10px;
+        }
+
+        .menu-toggle {
+            display: block;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 1.5rem;
+            cursor: pointer;
         }
 
         /* --- Profile Page Styles --- */
         .profile-page-container {
             display: flex;
-            max-width: 1200px;
-            margin: 40px auto;
-            gap: 30px;
-            padding: 0 20px;
+            flex-direction: column;
+            margin: 20px auto;
+            gap: 20px;
+            padding: 0 15px;
         }
 
         /* --- Sidebar --- */
-        .profile-sidebar {
-            flex: 0 0 250px;
-        }
-
         .profile-sidebar h2 {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             background-color: #f0f0f0;
-            padding: 20px;
+            padding: 15px;
             margin: 0;
             text-align: left;
             border-radius: 8px 8px 0 0;
@@ -149,7 +168,6 @@
             border-left: 3px solid var(--primary-color);
         }
         
-        /* Styles for the signout button */
         #nav-signout {
             margin-top: 10px;
             padding-top: 15px;
@@ -168,34 +186,34 @@
         .profile-content {
             flex: 1;
             background-color: #fff;
-            padding: 30px;
+            padding: 20px;
             border: 1px solid var(--border-color);
             border-radius: 8px;
         }
 
         .profile-content h2 {
-            font-size: 2rem;
+            font-size: 1.5rem;
             font-weight: 600;
             margin-bottom: 30px;
             text-align: left;
         }
 
         /* --- Form Styles --- */
-        .form-section {
-            display: none; /* Hide all sections by default */
-        }
-        .form-section.active {
-            display: block; /* Show active section */
-        }
+        .form-section { display: none; }
+        .form-section.active { display: block; }
         
         .profile-photo-section {
             margin-bottom: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .profile-photo-section h3 {
             font-size: 1.2rem;
             font-weight: 600;
             margin-bottom: 15px;
+            width: 100%;
         }
 
         .photo-uploader {
@@ -209,10 +227,7 @@
             align-items: center;
         }
 
-        .photo-uploader .user-icon {
-            font-size: 4rem;
-            color: #ced4da;
-        }
+        .photo-uploader .user-icon { font-size: 4rem; color: #ced4da; }
 
         .photo-uploader .camera-btn {
             width: 36px;
@@ -231,9 +246,7 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
-        .form-subsection {
-            margin-bottom: 30px;
-        }
+        .form-subsection { margin-bottom: 30px; }
 
         .form-subsection h3 {
             font-size: 1.2rem;
@@ -256,15 +269,17 @@
 
         .form-row {
             display: flex;
-            gap: 20px;
+            flex-direction: column;
+            gap: 0;
         }
-
+        
         .form-group {
             flex: 1;
             margin-bottom: 20px;
             display: flex;
             flex-direction: column;
         }
+        .form-row .form-group:last-child { margin-bottom: 0; }
 
         .form-group label {
             margin-bottom: 8px;
@@ -281,9 +296,7 @@
             font-family: 'Poppins', sans-serif;
         }
 
-        .form-group input::placeholder {
-            color: #adb5bd;
-        }
+        .form-group input::placeholder { color: #adb5bd; }
 
         .btn-save-profile {
             background-color: #343a40;
@@ -295,110 +308,79 @@
             font-size: 1rem;
             font-weight: 600;
             transition: background-color 0.2s;
+            width: 100%;
         }
-
-        .btn-save-profile:hover {
-            background-color: #495057;
-        }
+        .btn-save-profile:hover { background-color: #495057; }
         
         /* --- Confirmation Modal Styles --- */
         .modal-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
             background-color: rgba(0, 0, 0, 0.6);
-            display: none; /* Initially hidden */
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-            opacity: 0;
-            transition: opacity 0.3s ease;
+            display: none; justify-content: center; align-items: center;
+            z-index: 1000; opacity: 0; transition: opacity 0.3s ease;
         }
-
-        .modal-overlay.active {
-            opacity: 1;
-        }
+        .modal-overlay.active { opacity: 1; }
 
         .modal-content {
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-            text-align: center;
-            max-width: 400px;
-            width: 90%;
-            transform: translateY(-20px);
-            transition: transform 0.3s ease;
+            background-color: #fff; padding: 30px; border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3); text-align: center;
+            max-width: 400px; width: 90%;
+            transform: translateY(-20px); transition: transform 0.3s ease;
         }
-
-        .modal-overlay.active .modal-content {
-            transform: translateY(0);
-        }
-
-        .modal-content h2 {
-            margin-top: 0;
-            font-size: 1.5rem;
-            color: var(--text-dark);
-        }
-
-        .modal-content p {
-            margin-bottom: 25px;
-            color: var(--text-light);
-        }
-
-        .modal-actions {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-        }
-
+        .modal-overlay.active .modal-content { transform: translateY(0); }
+        .modal-content h2 { margin-top: 0; font-size: 1.5rem; }
+        .modal-content p { margin-bottom: 25px; color: var(--text-light); }
+        .modal-actions { display: flex; justify-content: center; gap: 15px; }
         .modal-actions button {
-            padding: 12px 25px;
-            border-radius: 6px;
-            border: none;
-            cursor: pointer;
-            font-weight: 600;
-            font-size: 1rem;
+            padding: 12px 25px; border-radius: 6px; border: none;
+            cursor: pointer; font-weight: 600; font-size: 1rem;
             transition: background-color 0.2s;
         }
+        .btn-modal-secondary { background-color: #e9ecef; border: 1px solid #ced4da; }
+        .btn-modal-secondary:hover { background-color: #dee2e6; }
+        .btn-modal-danger { background-color: #dc3545; color: #fff; }
+        .btn-modal-danger:hover { background-color: #c82333; }
 
-        .btn-modal-secondary {
-            background-color: #e9ecef;
-            color: var(--text-dark);
-            border: 1px solid #ced4da;
-        }
-
-        .btn-modal-secondary:hover {
-            background-color: #dee2e6;
-        }
-
-        .btn-modal-danger {
-            background-color: #dc3545;
-            color: #fff;
-        }
-
-        .btn-modal-danger:hover {
-            background-color: #c82333;
+        /* --- Responsive Styles --- */
+        @media (min-width: 768px) {
+            .menu-toggle { display: none; }
+            .nav-links { display: flex; flex-direction: row; width: auto; margin-top: 0; gap: 30px; }
+            .nav-links a { padding: 0; }
+            .nav-actions { display: flex; flex-direction: row; align-items: center; width: auto; margin-top: 0; gap: 20px; }
+            .btn-create { display: inline-block; width: auto; }
+            .nav-actions .icon-link { padding: 0; }
+            
+            .profile-page-container {
+                flex-direction: row;
+                margin: 40px auto;
+                gap: 30px;
+                padding: 0 20px;
+            }
+            .profile-sidebar { flex: 0 0 250px; }
+            .profile-content { padding: 30px; }
+            .profile-content h2 { font-size: 2rem; }
+            .form-row { flex-direction: row; gap: 20px; }
+            .form-row .form-group { margin-bottom: 20px; }
+            .btn-save-profile { width: auto; }
+            .profile-photo-section { align-items: flex-start; }
         }
 
     </style>
 </head>
 <body>
 
-    <!-- Header Section (Same as index.html) -->
     <header>
         <nav class="container">
-            <a href="index.html" class="logo">LOGO</a> <!-- Link back to home -->
+            <a href="index.html" class="logo">LOGO</a>
+            <button class="menu-toggle" aria-label="Toggle navigation"><i class="fa-solid fa-bars"></i></button>
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li> <!-- Link back to home -->
-                <li><a href="#">Events</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="my-events.html">Events</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
             <div class="nav-actions">
-                <button class="btn-create">Create Event</button>
+                <a href="create-event.html" class="btn-create">Create Event</a>
                 <a href="#" class="icon-link"><i class="fa-regular fa-star"></i> Interested</a>
                 <a href="profile.html" class="icon-link"><i class="fa-regular fa-user"></i> Profile</a>
             </div>
@@ -413,7 +395,7 @@
                 <a id="nav-account-info" class="active">Account Info</a>
                 <a id="nav-change-email">Change Email</a>
                 <a id="nav-password">Password</a>
-                <a href="login.html" id="nav-signout">Sign Out</a>
+                <a id="nav-signout">Sign Out</a>
             </nav>
         </aside>
 
@@ -430,7 +412,7 @@
                         <button class="camera-btn"><i class="fa-solid fa-camera"></i></button>
                     </div>
                 </div>
-                <form>
+                <form onsubmit="event.preventDefault();">
                     <div class="form-subsection">
                         <h3>Profile Information</h3>
                         <div class="form-row">
@@ -485,7 +467,7 @@
             <!-- Change Email Section -->
             <section id="change-email-content" class="form-section">
                 <h2>Change Email</h2>
-                <form>
+                <form onsubmit="event.preventDefault();">
                     <p class="current-email-display">Current Email: <span>andreasgomez@example.com</span></p>
                      <div class="form-group">
                         <label for="new-email">New Email:</label>
@@ -502,7 +484,7 @@
             <!-- Password Section -->
             <section id="password-content" class="form-section">
                 <h2>Change Password</h2>
-                <form>
+                <form onsubmit="event.preventDefault();">
                     <div class="form-group">
                         <label for="new-password">New Password:</label>
                         <input type="password" id="new-password" placeholder="Enter new password">
@@ -531,7 +513,20 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const navLinks = {
+            // Hamburger Menu Toggle
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            const navActions = document.querySelector('.nav-actions');
+
+            if(menuToggle && navLinks && navActions) {
+                menuToggle.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                    navActions.classList.toggle('active');
+                });
+            }
+
+            // Profile Page Tab Navigation
+            const tabLinks = {
                 accountInfo: document.getElementById('nav-account-info'),
                 changeEmail: document.getElementById('nav-change-email'),
                 password: document.getElementById('nav-password'),
@@ -544,24 +539,17 @@
             };
 
             function showSection(sectionToShow) {
-                // Hide all content sections
-                Object.values(contentSections).forEach(section => {
-                    section.classList.remove('active');
-                });
-                
-                // Remove active class from all nav links
-                Object.values(navLinks).forEach(link => {
-                    link.classList.remove('active');
-                });
-
-                // Show the target section and set its nav link to active
+                Object.values(contentSections).forEach(section => section.classList.remove('active'));
+                Object.values(tabLinks).forEach(link => link.classList.remove('active'));
                 contentSections[sectionToShow].classList.add('active');
-                navLinks[sectionToShow].classList.add('active');
+                tabLinks[sectionToShow].classList.add('active');
             }
 
-            navLinks.accountInfo.addEventListener('click', () => showSection('accountInfo'));
-            navLinks.changeEmail.addEventListener('click', () => showSection('changeEmail'));
-            navLinks.password.addEventListener('click', () => showSection('password'));
+            Object.keys(tabLinks).forEach(key => {
+                if (tabLinks[key]) {
+                    tabLinks[key].addEventListener('click', () => showSection(key));
+                }
+            });
 
             // Sign Out Confirmation Logic
             const signOutLink = document.getElementById('nav-signout');
@@ -578,9 +566,7 @@
 
                 const closeModal = () => {
                     signOutModal.classList.remove('active');
-                    setTimeout(() => {
-                        signOutModal.style.display = 'none';
-                    }, 300);
+                    setTimeout(() => { signOutModal.style.display = 'none'; }, 300);
                 };
 
                 cancelSignOutBtn.addEventListener('click', closeModal);
@@ -591,7 +577,7 @@
                 });
 
                 confirmSignOutBtn.addEventListener('click', () => {
-                    window.location.href = signOutLink.href;
+                    window.location.href = 'login.html';
                 });
             }
         });

@@ -224,6 +224,29 @@
             text-decoration: none;
             cursor: pointer;
         }
+        
+        /* --- Responsive Styles --- */
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+            .auth-container {
+                padding: 25px;
+            }
+            .auth-form h1 {
+                font-size: 1.5rem;
+            }
+            .form-options {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+            .social-login-btn {
+                font-size: 0.9rem;
+                padding: 12px;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -338,3 +361,4 @@
     </script>
 </body>
 </html>
+

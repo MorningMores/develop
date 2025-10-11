@@ -29,8 +29,8 @@
 
         .main-container {
             max-width: 900px;
-            margin: 40px auto;
-            padding: 20px;
+            margin: 20px auto;
+            padding: 10px;
         }
         
         /* --- Header --- */
@@ -44,11 +44,11 @@
             font-size: 1.5rem;
             color: var(--text-dark);
             text-decoration: none;
-            margin-right: 20px;
+            margin-right: 15px;
         }
 
         .header-info h1 {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             margin: 0 0 5px 0;
         }
         
@@ -63,7 +63,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
             position: relative;
         }
         
@@ -90,7 +90,7 @@
             align-items: center;
             z-index: 2;
             text-align: center;
-            width: 80px;
+            width: 60px;
         }
 
         .step-marker {
@@ -114,7 +114,7 @@
         }
 
         .step-name {
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             color: var(--medium-gray);
         }
         
@@ -128,7 +128,7 @@
         .step-content {
             display: none;
             background-color: #fff;
-            padding: 40px;
+            padding: 20px;
             border-radius: 8px;
             border: 1px solid #dee2e6;
         }
@@ -138,7 +138,7 @@
         }
         
         h2.section-title {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             margin-bottom: 25px;
             padding-bottom: 15px;
             border-bottom: 1px solid var(--border-color);
@@ -176,11 +176,17 @@
         
         .form-row {
             display: flex;
-            gap: 20px;
+            flex-direction: column;
+            gap: 0;
         }
         
         .form-row .form-group {
             flex: 1;
+            margin-bottom: 20px;
+        }
+
+        .form-row .form-group:last-child {
+            margin-bottom: 0;
         }
         
         .radio-group {
@@ -190,9 +196,10 @@
 
         .form-actions {
             display: flex;
+            flex-direction: column-reverse;
             justify-content: flex-end;
             align-items: center;
-            gap: 20px;
+            gap: 15px;
             margin-top: 40px;
         }
         
@@ -204,6 +211,8 @@
             font-weight: 600;
             font-size: 1rem;
             transition: all 0.3s;
+            width: 100%;
+            text-align: center;
         }
         
         .btn-primary {
@@ -228,7 +237,8 @@
         /* --- Step 2: Ticketing --- */
         .event-type-selection {
             display: flex;
-            gap: 20px;
+            flex-direction: column;
+            gap: 15px;
             margin-bottom: 30px;
         }
         
@@ -272,15 +282,19 @@
             background: none;
             border: none;
             color: var(--primary-blue);
-            font-size: 1.5rem;
+            font-size: 1rem;
             cursor: pointer;
-            margin-left: 10px;
-            align-self: center;
+            margin-top: 10px;
+            padding: 10px 0;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
         }
         
         .ticket-row {
             display: flex;
-            align-items: flex-end;
+            flex-direction: column;
+            align-items: flex-start;
         }
 
         /* --- Step 3: Review --- */
@@ -292,13 +306,13 @@
         }
         
         .review-title {
-            font-size: 2rem;
+            font-size: 1.5rem;
             margin-bottom: 20px;
         }
         
         .review-details {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr;
             gap: 20px;
             margin-bottom: 20px;
         }
@@ -312,7 +326,72 @@
         .review-item p {
             font-weight: 500;
         }
+        
+        /* --- Responsive Styles --- */
+        
+        /* Tablet Styles */
+        @media (min-width: 768px) {
+            .main-container {
+                margin: 40px auto;
+                padding: 20px;
+            }
 
+            .step-content {
+                padding: 40px;
+            }
+            
+            .header-info h1 {
+                font-size: 1.8rem;
+            }
+
+            .step-item {
+                width: 80px;
+            }
+
+            .step-name {
+                font-size: 0.9rem;
+            }
+
+            .form-row {
+                flex-direction: row;
+                gap: 20px;
+            }
+
+             .form-row .form-group {
+                margin-bottom: 0;
+            }
+
+            .event-type-selection {
+                flex-direction: row;
+                gap: 20px;
+            }
+
+            .review-details {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .review-title {
+                font-size: 2rem;
+            }
+
+            .form-actions {
+                flex-direction: row;
+            }
+            
+            .btn {
+                width: auto;
+            }
+            
+            #add-ticket-btn {
+                font-size: 1.5rem;
+                margin-left: 10px;
+                align-self: center;
+            }
+            
+            .ticket-row {
+                flex-direction: row;
+            }
+        }
 
     </style>
 </head>

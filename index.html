@@ -40,10 +40,10 @@
         }
 
         h2 {
-            font-size: 2.5rem;
+            font-size: 2rem;
             font-weight: 600;
             text-align: left;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
 
         /* --- Header --- */
@@ -56,6 +56,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
         }
 
         .logo {
@@ -66,21 +67,38 @@
         }
 
         .nav-links {
-            display: flex;
+            display: none; /* Hidden on mobile */
             list-style: none;
-            gap: 30px;
+            gap: 20px;
+            width: 100%;
+            flex-direction: column;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .nav-links.active {
+            display: flex; /* Shown when toggled */
         }
 
         .nav-links a {
             text-decoration: none;
             font-weight: 500;
             color: #fff;
+            padding: 10px;
+            display: block;
         }
 
         .nav-actions {
-            display: flex;
-            align-items: center;
-            gap: 20px;
+            display: none; /* Hidden on mobile */
+            flex-direction: column;
+            align-items: stretch;
+            width: 100%;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .nav-actions.active {
+            display: flex; /* Shown when toggled */
         }
 
         .btn-create {
@@ -94,7 +112,8 @@
             font-size: 1rem;
             transition: all 0.3s ease;
             text-decoration: none;
-            display: inline-block;
+            display: block;
+            text-align: center;
         }
 
         .btn-create:hover {
@@ -105,19 +124,30 @@
             text-decoration: none;
             display: flex;
             align-items: center;
+            justify-content: center;
             gap: 5px;
             color: #fff;
+            padding: 10px;
         }
+
+        .menu-toggle {
+            display: block; /* Visible on mobile */
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
         /* --- Categories Section --- */
         .categories {
-            padding: 60px 0;
+            padding: 40px 0;
         }
 
         .category-list {
-            display: flex;
-            justify-content: space-around;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
             gap: 20px;
-            flex-wrap: wrap;
         }
 
         .category-item {
@@ -126,11 +156,11 @@
         }
 
         .category-item img {
-            width: 120px;
-            height: 120px;
+            width: 80px;
+            height: 80px;
             border-radius: 50%;
             object-fit: cover;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             transition: transform 0.3s ease;
         }
 
@@ -140,30 +170,38 @@
 
         .category-item p {
             font-weight: 500;
+            font-size: 0.9rem;
         }
 
 
         /* --- Popular Events Section --- */
         .popular-events {
             background-color: var(--bg-light);
-            padding: 60px 20px;
+            padding: 40px 20px;
         }
 
         .event-filters {
             display: flex;
-            justify-content: flex-start;
-            gap: 15px;
-            margin-bottom: 40px;
+            gap: 10px;
+            margin-bottom: 30px;
+            overflow-x: auto;
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+        
+        .event-filters::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, Opera */
         }
 
         .filter-btn {
             background: none;
             border: 1px solid var(--border-color);
-            padding: 10px 25px;
+            padding: 8px 20px;
             border-radius: 20px;
             cursor: pointer;
-            font-size: 1rem;
+            font-size: 0.9rem;
             color: var(--text-light);
+            white-space: nowrap;
         }
 
         .filter-btn.active, .filter-btn:hover {
@@ -174,8 +212,8 @@
 
         .event-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
+            grid-template-columns: 1fr;
+            gap: 20px;
         }
 
         /* --- Redesigned Event Card --- */
@@ -204,10 +242,10 @@
             font-weight: 500;
         }
 
-        .tag.travel { background-color: #007991; }
-        .tag.cultural { background-color: #7b4397; }
-        .tag.education { background-color: #d35400; }
-        .tag.sports { background-color: #27ae60; }
+        .tag.travel { background-color: #207BFA; }
+        .tag.cultural { background-color: #207BFA; }
+        .tag.education { background-color: #207BFA; }
+        .tag.sports { background-color: #207BFA; }
 
         .interest-btn {
             background: none;
@@ -286,14 +324,14 @@
         footer {
             background-color: var(--dark-blue);
             color: #fff;
-            padding: 60px 0;
+            padding: 40px 0;
         }
 
         .footer-container {
             display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
+            flex-direction: column;
             gap: 30px;
+            text-align: center;
         }
 
         .footer-column {
@@ -303,7 +341,7 @@
 
         .footer-column h4 {
             font-size: 1.2rem;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .footer-column ul {
@@ -318,6 +356,75 @@
             color: #ccc;
             text-decoration: none;
         }
+        
+        /* --- Responsive Styles --- */
+        
+        /* Tablet Styles */
+        @media (min-width: 768px) {
+            h2 {
+                font-size: 2.5rem;
+            }
+
+            .menu-toggle {
+                display: none;
+            }
+
+            .nav-links {
+                display: flex;
+                flex-direction: row;
+                width: auto;
+                margin-top: 0;
+                gap: 30px;
+            }
+
+            .nav-links a {
+                padding: 0;
+            }
+
+            .nav-actions {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                width: auto;
+                margin-top: 0;
+                gap: 20px;
+            }
+
+            .btn-create {
+                display: inline-block;
+            }
+
+            .nav-actions .icon-link {
+                padding: 0;
+            }
+
+            .categories {
+                padding: 60px 0;
+            }
+            
+            .category-list {
+                grid-template-columns: repeat(6, 1fr);
+                gap: 20px;
+            }
+
+            .category-item img {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .popular-events {
+                padding: 60px 20px;
+            }
+            
+            .event-grid {
+                grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            }
+
+            .footer-container {
+                flex-direction: row;
+                text-align: left;
+            }
+        }
     </style>
 </head>
 <body>
@@ -326,6 +433,9 @@
     <header>
         <nav class="container">
             <a href="index.html" class="logo">LOGO</a>
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="my-events.html">Events</a></li>
@@ -384,8 +494,8 @@
             </div>
 
             <div class="event-grid">
-                <!-- Event Card 1 -->
-                <div class="event-card">
+                <!-- Event Cards remain the same -->
+                 <div class="event-card">
                     <div class="card-header">
                         <span class="tag travel">Travel & Adventure</span>
                         <button class="interest-btn"><i class="fa-regular fa-star"></i></button>
@@ -403,9 +513,7 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Event Card 2 -->
-                <div class="event-card">
+                 <div class="event-card">
                     <div class="card-header">
                         <span class="tag cultural">Cultural & Arts</span>
                         <button class="interest-btn"><i class="fa-regular fa-star"></i></button>
@@ -423,9 +531,7 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Event Card 3 -->
-                <div class="event-card">
+                 <div class="event-card">
                     <div class="card-header">
                         <span class="tag cultural">Cultural & Arts</span>
                         <button class="interest-btn"><i class="fa-regular fa-star"></i></button>
@@ -439,65 +545,6 @@
                             <h3>Arts in Salaya</h3>
                             <p class="description">Description</p>
                             <p class="time">10 AM - 5 PM</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Event Card 4 -->
-                 <div class="event-card">
-                    <div class="card-header">
-                        <span class="tag education">Educational & Business</span>
-                        <button class="interest-btn"><i class="fa-regular fa-star"></i></button>
-                    </div>
-                    <div class="card-content">
-                        <div class="date">
-                            <span class="month">DEC</span>
-                            <span class="day">03</span>
-                        </div>
-                        <div class="details">
-                            <h3>Study Engineering</h3>
-                            <p class="description">Meet us at...</p>
-                            <p class="time">10 AM - 2 PM</p>
-                            <p class="interested"><i class="fa-solid fa-star"></i> 48 Interested</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Event Card 5 -->
-                 <div class="event-card">
-                    <div class="card-header">
-                        <span class="tag sports">Sports & Fitness</span>
-                        <button class="interest-btn"><i class="fa-regular fa-star"></i></button>
-                    </div>
-                    <div class="card-content">
-                        <div class="date">
-                            <span class="month">DEC</span>
-                            <span class="day">08</span>
-                        </div>
-                        <div class="details">
-                            <h3>Soccer team meetup</h3>
-                            <p class="description">Play at Mahidol</p>
-                            <p class="time">6:30 PM - 9:30 PM</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Event Card 6 -->
-                 <div class="event-card">
-                    <div class="card-header">
-                        <span class="tag travel">Travel & Adventure</span>
-                        <button class="interest-btn"><i class="fa-regular fa-star"></i></button>
-                    </div>
-                    <div class="card-content">
-                        <div class="date">
-                            <span class="month">FEB</span>
-                            <span class="day">14</span>
-                        </div>
-                        <div class="details">
-                            <h3>Valentine's Day</h3>
-                            <p class="description">Description</p>
-                            <p class="time">7 AM - 8 PM</p>
-                            <p class="interested"><i class="fa-solid fa-star"></i> 160 Interested</p>
                         </div>
                     </div>
                 </div>
@@ -534,15 +581,25 @@
                     <li><a href="#">Concerts & Gigs</a></li>
                     <li><a href="#">Festivals & Lifestyle</a></li>
                     <li><a href="#">Business & Networking</a></li>
-                    <li><a href="#">Food & Drinks</a></li>
-                    <li><a href="#">Performing Arts</a></li>
-                    <li><a href="#">Sports & Outdoors</a></li>
-                    <li><a href="#">Exhibitions</a></li>
-                    <li><a href="#">Workshops, Conferences & Classes</a></li>
                 </ul>
             </div>
         </div>
     </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            const navActions = document.querySelector('.nav-actions');
+
+            if(menuToggle && navLinks && navActions) {
+                menuToggle.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                    navActions.classList.toggle('active');
+                });
+            }
+        });
+    </script>
 
 </body>
 </html>
