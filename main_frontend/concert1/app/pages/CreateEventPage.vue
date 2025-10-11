@@ -1,8 +1,12 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { reactive, ref, computed, onMounted } from 'vue'
+import { useRouter } from 'vue-router'
+import { useAuth } from '~/composables/useAuth'
 
-// Form model (skeleton aligned to provided design)
-const form = ref({
+const router = useRouter()
+const { loadFromStorage, isLoggedIn, user } = useAuth()
+
+const form = reactive({
   name: '',
   description: '',
   address: '',
@@ -10,12 +14,97 @@ const form = ref({
   country: '',
   capacity: 0,
   phone: '',
-  date: ''
+  startDate: '',
+  startTime: '',
+  endDate: '',
+  endTime: '',
+  ticketPrice: '',
+  category: ''
 })
 
-const handleSubmit = () => {
-  // TODO: wire to backend via Nuxt server route, e.g., /api/events (POST)
-  console.log('Submit event', form.value)
+const submitting = ref(false)
+const message = ref('')
+const isSuccess = ref(false)
+
+const startDateTime = computed(() => combineDateTime(form.startDate, form.startTime))
+const endDateTime = computed(() => combineDateTime(form.endDate || form.startDate, form.endTime))
+
+onMounted(() => {
+  loadFromStorage()
+  if (!isLoggedIn.value) {
+    router.push('/LoginPage')
+    return
+  }
+
+  const now = new Date()
+  const start = new Date(now.getTime() + 60 * 60 * 1000)
+  const end = new Date(start.getTime() + 2 * 60 * 60 * 1000)
+  form.startDate = start.toISOString().slice(0, 10)
+  form.startTime = start.toISOString().slice(11, 16)
+  form.endDate = end.toISOString().slice(0, 10)
+  form.endTime = end.toISOString().slice(11, 16)
+})
+
+function combineDateTime(date: string, time: string) {
+  if (!date || !time) return ''
+  return `${date}T${time}`
+}
+
+function validateForm() {
+  if (!form.name.trim()) return 'Event name is required'
+  if (!startDateTime.value || !endDateTime.value) return 'Start and end date/time are required'
+  if (new Date(endDateTime.value) <= new Date(startDateTime.value)) return 'End time must be after start time'
+  return ''
+}
+
+async function handleSubmit() {
+  message.value = ''
+  isSuccess.value = false
+
+  const validationError = validateForm()
+  if (validationError) {
+    message.value = validationError
+    return
+  }
+
+  const token = user.value?.token || localStorage.getItem('jwt_token') || sessionStorage.getItem('jwt_token')
+  if (!token) {
+    message.value = 'Please login again to create events.'
+    router.push('/LoginPage')
+    return
+  }
+
+  submitting.value = true
+  try {
+    const payload = {
+      name: form.name,
+      description: form.description,
+      address: form.address,
+      city: form.city,
+      country: form.country,
+      phone: form.phone,
+      personLimit: form.capacity || 0,
+      ticketPrice: form.ticketPrice ? Number(form.ticketPrice) : undefined,
+      category: form.category || undefined,
+      startDate: startDateTime.value,
+      endDate: endDateTime.value
+    }
+
+    await $fetch('/api/events', {
+      method: 'post',
+      body: payload,
+      headers: { Authorization: `Bearer ${token}` }
+    })
+
+    isSuccess.value = true
+    message.value = 'Event created successfully!'
+    setTimeout(() => router.push('/MyEventsPage'), 800)
+  } catch (error: any) {
+    console.error('Create event error', error)
+    message.value = error?.data?.message || error?.response?._data?.message || error?.message || 'Failed to create event.'
+  } finally {
+    submitting.value = false
+  }
 }
 </script>
 
@@ -41,6 +130,9 @@ const handleSubmit = () => {
     <div id="step-1" class="step-content active">
       <h2 class="section-title">Event Details</h2>
       <form @submit.prevent="handleSubmit">
+        <div v-if="message" :class="['alert', isSuccess ? 'success' : 'error']">
+          {{ message }}
+        </div>
         <div class="form-group">
           <label>Event Name <span>*</span></label>
           <input v-model="form.name" type="text" placeholder="Enter event name" required />
@@ -78,14 +170,43 @@ const handleSubmit = () => {
             <input v-model="form.phone" type="tel" placeholder="08x-xxx-xxxx" />
           </div>
           <div class="form-group">
-            <label>Date</label>
-            <input v-model="form.date" type="date" />
+            <label>Category</label>
+            <input v-model="form.category" type="text" placeholder="Concert, Workshop..." />
           </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Start Date</label>
+            <input v-model="form.startDate" type="date" required />
+          </div>
+          <div class="form-group">
+            <label>Start Time</label>
+            <input v-model="form.startTime" type="time" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>End Date</label>
+            <input v-model="form.endDate" type="date" required />
+          </div>
+          <div class="form-group">
+            <label>End Time</label>
+            <input v-model="form.endTime" type="time" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Ticket Price (THB)</label>
+          <input v-model="form.ticketPrice" type="number" min="0" step="0.01" placeholder="0.00" />
         </div>
 
         <div class="form-actions">
           <NuxtLink class="btn btn-secondary" to="/">Cancel</NuxtLink>
-          <button type="submit" class="btn btn-primary">Save & Continue</button>
+          <button type="submit" class="btn btn-primary" :disabled="submitting">
+            {{ submitting ? 'Saving...' : 'Save & Continue' }}
+          </button>
         </div>
       </form>
     </div>
@@ -130,4 +251,8 @@ const handleSubmit = () => {
 .btn { padding: 10px 22px; border-radius: 6px; border: none; cursor: pointer; font-weight: 600; font-size: 1rem; }
 .btn-primary { background: var(--primary-blue); color: #fff; }
 .btn-secondary { background: none; color: var(--text-light); text-decoration: none; }
+.btn[disabled] { opacity: 0.7; cursor: not-allowed; }
+.alert { padding: 12px; border-radius: 8px; margin-bottom: 16px; font-weight: 500; text-align: center; }
+.alert.success { background: #22c55e; color: #fff; }
+.alert.error { background: #ef4444; color: #fff; }
 </style>

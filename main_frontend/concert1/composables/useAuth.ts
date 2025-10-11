@@ -1,66 +1,94 @@
-// Authentication composable for managing user state
-import { ref, computed, readonly } from 'vue'
+import { ref, computed } from 'vue'
 
-const user = ref<any>(null)
-const token = ref<string | null>(null)
+export interface AuthState {
+  token?: string
+  email?: string
+  username?: string
+}
 
-export const useAuth = () => {
-  // Initialize from localStorage if available (client-side only)
-  if (typeof window !== 'undefined') {
-    const storedToken = localStorage.getItem('jwt_token')
-    const storedUsername = localStorage.getItem('username')
-    const storedEmail = localStorage.getItem('user_email')
-    
-    if (storedToken && storedUsername && storedEmail) {
-      token.value = storedToken
-      user.value = {
-        username: storedUsername,
-        email: storedEmail
+const user = ref<AuthState | null>(null)
+const remember = ref(false)
+
+function clearStorageKeys(storage: Storage) {
+  storage.removeItem('jwt_token')
+  storage.removeItem('user_email')
+  storage.removeItem('username')
+}
+
+export function useAuth() {
+  const isLoggedIn = computed(() => Boolean(user.value?.token))
+
+  function loadFromStorage() {
+    if (typeof window === 'undefined') return
+    try {
+      const rememberMe = localStorage.getItem('remember_me') === 'true'
+      remember.value = rememberMe
+
+      const primary = rememberMe ? localStorage : sessionStorage
+      const fallback = rememberMe ? sessionStorage : localStorage
+
+      const token = primary.getItem('jwt_token') || fallback.getItem('jwt_token') || undefined
+      const email = primary.getItem('user_email') || fallback.getItem('user_email') || undefined
+      const username = primary.getItem('username') || fallback.getItem('username') || undefined
+
+      if (token) {
+        user.value = { token, email, username }
       }
+    } catch (err) {
+      console.warn('Failed to restore auth from storage', err)
     }
   }
 
-  const isAuthenticated = computed(() => !!token.value)
+  function saveAuth(payload: { token: string; email?: string; username?: string }, rememberMe: boolean) {
+    if (typeof window === 'undefined') return
 
-  const setAuth = (authData: any) => {
-    user.value = {
-      username: authData.username,
-      email: authData.email
+    clearStorageKeys(localStorage)
+    clearStorageKeys(sessionStorage)
+
+    const storage = rememberMe ? localStorage : sessionStorage
+    storage.setItem('jwt_token', payload.token)
+    if (payload.email) storage.setItem('user_email', payload.email)
+    if (payload.username) storage.setItem('username', payload.username)
+
+    if (rememberMe) {
+      localStorage.setItem('remember_me', 'true')
+    } else {
+      localStorage.removeItem('remember_me')
     }
-    token.value = authData.token
-    
-    if (typeof window !== 'undefined') {
-      localStorage.setItem('jwt_token', authData.token)
-      localStorage.setItem('username', authData.username)
-      localStorage.setItem('user_email', authData.email)
-    }
+
+    user.value = { token: payload.token, email: payload.email, username: payload.username }
+    remember.value = rememberMe
   }
 
-  const clearAuth = () => {
+  function clearAuth() {
+    if (typeof window === 'undefined') return
+    clearStorageKeys(localStorage)
+    clearStorageKeys(sessionStorage)
+    localStorage.removeItem('remember_me')
     user.value = null
-    token.value = null
-    
-    if (typeof window !== 'undefined') {
-      localStorage.removeItem('jwt_token')
-      localStorage.removeItem('username')
-      localStorage.removeItem('user_email')
-    }
+    remember.value = false
   }
 
-  const logout = () => {
+  function shouldCompleteProfile(): boolean {
+    if (typeof window === 'undefined') return false
+    return localStorage.getItem('profile_completed') !== 'true'
+  }
+
+  function logout() {
     clearAuth()
-    // Redirect to login page or home
     if (typeof window !== 'undefined') {
-      window.location.href = '/concert/'
+      window.location.href = '/LoginPage'
     }
   }
 
   return {
-    user: readonly(user),
-    token: readonly(token),
-    isAuthenticated,
-    setAuth,
+    user,
+    remember,
+    isLoggedIn,
+    loadFromStorage,
+    saveAuth,
     clearAuth,
+    shouldCompleteProfile,
     logout
   }
 }
