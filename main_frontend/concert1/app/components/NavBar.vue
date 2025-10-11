@@ -8,16 +8,16 @@ const pages = ref([
     { text: 'Home', value: '/'},
     { text: 'Mapping', value: 'MapTestingPage'},
     { text: 'Account', value: 'AccountPage'},
-    { text: 'Contact', value:''}
 ])
 
 const pagess = ref([
     { text: 'Create Event', value: 'CreateEventPage'},
+    { text: 'My Events', value: 'MyEventsPage'},
     { text: 'Cart', value: 'CartPage'},
     { text: '', value: 'AccountPage'},
     { text: 'Login', value: 'LoginPage'},
     { text: 'Register', value: 'RegisterPage'},
-    { text: 'Profile', value:'AboutUS'}
+    { text: 'About Us', value:'AboutUS'}
 ])
 
 </script>

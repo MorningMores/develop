@@ -1,236 +1,196 @@
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
-
-const show = ref(false)
-const show2 = ref(false)
-const currentSlide = ref(0)
-
-const slides = [
-  {
-    id: 1,
-    title: 'Welcome to ShopHub',
-    description: 'Discover amazing products at unbeatable prices',
-    buttonText: 'Start Shopping',
-    link: '/ProductPage',
-    gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
-  },
-  {
-    id: 2,
-    title: 'New Arrivals',
-    description: 'Check out our latest collection of trending items',
-    buttonText: 'View Collection',
-    link: '/ProductPage',
-    gradient: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)'
-  },
-  {
-    id: 3,
-    title: 'Special Offers',
-    description: 'Save big with our exclusive deals and discounts',
-    buttonText: 'Shop Now',
-    link: '/ProductPageDetail',
-    gradient: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)'
-  }
-]
-
-let intervalId = null
-
-const click = () => {
-  show.value = !show.value
-  if (show.value) show2.value = false
-}
-
-const click2 = () => {
-  show2.value = !show2.value
-  if (show2.value) show.value = false
-}
-
-const nextSlide = () => {
-  currentSlide.value = (currentSlide.value + 1) % slides.length
-}
-
-const prevSlide = () => {
-  currentSlide.value = (currentSlide.value - 1 + slides.length) % slides.length
-}
-
-onMounted(() => {
-  // Auto-advance carousel every 5 seconds
-  intervalId = setInterval(nextSlide, 5000)
-})
-
-onUnmounted(() => {
-  if (intervalId) clearInterval(intervalId)
-})
+// No special logic required for static homepage sections from the provided design
 </script>
 
 <template>
-  <div class="">
-    <!-- Navigation Header -->
-    
-    <!-- Modals -->
-    <transition name="fade">
-      <div v-if="show" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4" @click.self="show = false">
-        <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full transform transition-all" @click.stop>
-          <Login @close="show = false" />
+  <div class="home-page">
+    <!-- Categories Section -->
+    <section class="categories container">
+      <h2>Explore Categories</h2>
+      <div class="category-list">
+        <div class="category-item">
+          <img src="/favicon.ico" alt="Category 1" />
+          <p>Concerts & Gigs</p>
+        </div>
+        <div class="category-item">
+          <img src="/favicon.ico" alt="Category 2" />
+          <p>Festivals & Lifestyle</p>
+        </div>
+        <div class="category-item">
+          <img src="/favicon.ico" alt="Category 3" />
+          <p>Sports & Fitness</p>
+        </div>
+        <div class="category-item">
+          <img src="/favicon.ico" alt="Category 4" />
+          <p>Education</p>
         </div>
       </div>
-    </transition>
+    </section>
 
-    <transition name="fade">
-      <div v-if="show2" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4" @click.self="show2 = false">
-        <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full transform transition-all" @click.stop>
-          <Register @close="show2 = false" />
-        </div>
+    <!-- Popular Events Section -->
+    <section class="popular-events container">
+      <h2>Popular Events</h2>
+      <div class="event-filters">
+        <button class="filter-btn active">All</button>
+        <button class="filter-btn">Today</button>
+        <button class="filter-btn">This Week</button>
+        <button class="filter-btn">Online</button>
       </div>
-    </transition>
 
-    <!-- Hero Carousel Section -->
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div class="relative rounded-3xl overflow-hidden shadow-2xl">
-        <!-- Carousel Container -->
-        <div class="relative h-[500px] sm:h-[600px]">
-          <!-- Slides -->
-          <transition-group name="slide">
-            <div
-              v-for="(slide, index) in slides"
-              :key="slide.id"
-              v-show="currentSlide === index"
-              class="absolute inset-0 w-full h-full"
-            >
-              <div 
-                class="w-full h-full bg-gradient-to-r flex items-center justify-center"
-                :style="{ background: slide.gradient }"
-              >
-                <div class="text-center text-white px-6 max-w-3xl">
-                  <h2 class="text-5xl sm:text-6xl font-bold mb-6 animate-fade-in">
-                    {{ slide.title }}
-                  </h2>
-                  <p class="text-xl sm:text-2xl mb-8 opacity-90">
-                    {{ slide.description }}
-                  </p>
-                  <NuxtLink 
-                    :to="slide.link"
-                    class="inline-block px-8 py-4 bg-white text-gray-900 rounded-full font-semibold text-lg hover:bg-opacity-90 transform hover:scale-105 transition-all duration-200 shadow-lg"
-                  >
-                    {{ slide.buttonText }}
-                  </NuxtLink>
-                </div>
-              </div>
+      <div class="event-grid">
+        <div class="event-card">
+          <div class="card-header">
+            <span class="tag travel">Travel</span>
+            <button class="interest-btn" aria-label="interest"><i class="fa-regular fa-star"></i></button>
+          </div>
+          <div class="card-content">
+            <div class="date">
+              <span class="month">OCT</span>
+              <span class="day">21</span>
             </div>
-          </transition-group>
+            <div class="details">
+              <h3>Mountain Hiking Adventure</h3>
+              <p>Chiang Mai, Thailand</p>
+              <p class="interested"><i class="fa-solid fa-user"></i> 230 interested</p>
+            </div>
+          </div>
+        </div>
 
-          <!-- Navigation Arrows -->
-          <button 
-            @click="prevSlide"
-            class="absolute left-4 top-1/2 -translate-y-1/2 bg-white bg-opacity-30 hover:bg-opacity-50 text-white rounded-full p-3 backdrop-blur-sm transition-all duration-200 z-10"
-          >
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-            </svg>
-          </button>
-          <button 
-            @click="nextSlide"
-            class="absolute right-4 top-1/2 -translate-y-1/2 bg-white bg-opacity-30 hover:bg-opacity-50 text-white rounded-full p-3 backdrop-blur-sm transition-all duration-200 z-10"
-          >
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
+        <div class="event-card">
+          <div class="card-header">
+            <span class="tag cultural">Cultural</span>
+            <button class="interest-btn" aria-label="interest"><i class="fa-regular fa-star"></i></button>
+          </div>
+          <div class="card-content">
+            <div class="date">
+              <span class="month">NOV</span>
+              <span class="day">03</span>
+            </div>
+            <div class="details">
+              <h3>Street Food Festival</h3>
+              <p>Bangkok, Thailand</p>
+              <p class="interested"><i class="fa-solid fa-user"></i> 1.1k interested</p>
+            </div>
+          </div>
+        </div>
 
-          <!-- Indicators -->
-          <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-3 z-10">
-            <button
-              v-for="(slide, index) in slides"
-              :key="slide.id"
-              @click="currentSlide = index"
-              class="transition-all duration-200"
-              :class="currentSlide === index ? 'w-12 bg-white' : 'w-3 bg-white bg-opacity-50 hover:bg-opacity-75'"
-              style="height: 12px; border-radius: 6px;"
-            />
+        <div class="event-card">
+          <div class="card-header">
+            <span class="tag education">Education</span>
+            <button class="interest-btn" aria-label="interest"><i class="fa-regular fa-star"></i></button>
+          </div>
+          <div class="card-content">
+            <div class="date">
+              <span class="month">NOV</span>
+              <span class="day">10</span>
+            </div>
+            <div class="details">
+              <h3>Intro to Web Development</h3>
+              <p>Online Workshop</p>
+              <p class="interested"><i class="fa-solid fa-user"></i> 540 interested</p>
+            </div>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- Quick Links Section -->
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <NuxtLink 
-          to="/ProductPage"
-          class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-blue-500 to-blue-700 p-8 text-white shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
-        >
-          <div class="relative z-10">
-            <h3 class="text-3xl font-bold mb-3">Browse Products</h3>
-            <p class="text-blue-100 mb-4">Discover our amazing collection</p>
-            <span class="inline-flex items-center text-sm font-semibold">
-              Explore Now
-              <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </span>
-          </div>
-          <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
-        </NuxtLink>
-
-        <NuxtLink 
-          to="/ProductPageDetail/1"
-          class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-purple-500 to-purple-700 p-8 text-white shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
-        >
-          <div class="relative z-10">
-            <h3 class="text-3xl font-bold mb-3">Product Details</h3>
-            <p class="text-purple-100 mb-4">View detailed information</p>
-            <span class="inline-flex items-center text-sm font-semibold">
-              View Details
-              <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </span>
-          </div>
-          <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
-        </NuxtLink>
+      <div class="see-more">
+        <NuxtLink to="/ProductPage" class="btn-secondary">See More</NuxtLink>
       </div>
     </section>
+
+    <!-- Footer Section (page-level) -->
+    <footer class="footer">
+      <div class="footer-container container">
+        <div class="footer-column">
+          <h4>Company Info</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Help</h4>
+          <ul>
+            <li><a href="#">Account Support</a></li>
+            <li><a href="#">Listing Events</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Categories</h4>
+          <ul>
+            <li><a href="#">Concerts & Gigs</a></li>
+            <li><a href="#">Festivals & Lifestyle</a></li>
+            <li><a href="#">Sports & Fitness</a></li>
+            <li><a href="#">Education</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
   </div>
 </template>
 
 <style scoped>
-.fade-enter-active, .fade-leave-active {
-  transition: opacity 0.3s ease;
+.home-page {
+  --primary-color: #4A90E2;
+  --dark-blue: #2C2C3E;
+  --text-dark: #333;
+  --text-light: #666;
+  --border-color: #EAEAEA;
+  --bg-light: #F9F9F9;
 }
 
-.fade-enter-from, .fade-leave-to {
-  opacity: 0;
+* { box-sizing: border-box; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-.slide-enter-active {
-  transition: all 0.6s ease;
-}
+h2 { font-size: 2.5rem; font-weight: 600; text-align: left; margin-bottom: 40px; }
 
-.slide-leave-active {
-  transition: all 0.6s ease;
-}
+/* Categories */
+.categories { padding: 60px 0; }
+.category-list { display: flex; justify-content: space-around; gap: 20px; flex-wrap: wrap; }
+.category-item { text-align: center; cursor: pointer; }
+.category-item img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; transition: transform 0.3s ease; }
+.category-item:hover img { transform: scale(1.05); }
+.category-item p { font-weight: 500; }
 
-.slide-enter-from {
-  transform: translateX(100%);
-  opacity: 0;
-}
+/* Popular Events */
+.popular-events { background-color: var(--bg-light); padding: 60px 20px; margin-top: 30px; }
+.event-filters { display: flex; justify-content: flex-start; gap: 15px; margin-bottom: 40px; }
+.filter-btn { background: none; border: 1px solid var(--border-color); padding: 10px 25px; border-radius: 20px; cursor: pointer; font-size: 1rem; color: var(--text-light); }
+.filter-btn.active, .filter-btn:hover { background-color: var(--primary-color); color: #fff; border-color: var(--primary-color); }
+.event-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
 
-.slide-leave-to {
-  transform: translateX(-100%);
-  opacity: 0;
-}
+.event-card { background-color: #fff; border-radius: 8px; border: 1px solid var(--border-color); box-shadow: 0 4px 12px rgba(0,0,0,0.05); padding: 20px; display: flex; flex-direction: column; gap: 15px; }
+.card-header { display: flex; justify-content: space-between; align-items: center; }
+.tag { color: #fff; padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500; }
+.tag.travel { background-color: #007991; }
+.tag.cultural { background-color: #7b4397; }
+.tag.education { background-color: #d35400; }
+.tag.sports { background-color: #27ae60; }
+.interest-btn { background: none; border: none; color: var(--text-light); font-size: 1.5rem; cursor: pointer; }
+.interest-btn:hover { color: var(--primary-color); }
+.card-content { display: flex; gap: 20px; padding-top: 15px; border-top: 1px solid var(--border-color); }
+.date { text-align: center; color: var(--primary-color); }
+.date .month { font-size: 0.9rem; font-weight: 500; }
+.date .day { font-size: 2rem; font-weight: 600; display: block; line-height: 1; }
+.details h3 { font-size: 1.2rem; margin-bottom: 5px; }
+.details p { font-size: 0.9rem; color: var(--text-light); margin-bottom: 5px; }
+.details .interested { color: var(--text-dark); font-weight: 500; }
+.details .interested i { color: #f1c40f; }
 
-@keyframes fade-in {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-fade-in {
-  animation: fade-in 0.8s ease-out;
-}
+/* Footer */
+.footer { background-color: var(--dark-blue); color: #fff; padding: 60px 0; margin-top: 60px; }
+.footer-container { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 30px; }
+.footer-column { flex: 1; min-width: 200px; }
+.footer-column h4 { font-size: 1.2rem; margin-bottom: 20px; }
+.footer-column ul { list-style: none; }
+.footer-column ul li { margin-bottom: 10px; }
+.footer-column ul a { color: #ccc; text-decoration: none; }
 </style>

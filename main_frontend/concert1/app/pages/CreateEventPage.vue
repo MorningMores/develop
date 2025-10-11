@@ -1,70 +1,133 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-const { data } = await useFetch(() => `/api/product/data`)
 
-console.log(data.value)
+// Form model (skeleton aligned to provided design)
+const form = ref({
+  name: '',
+  description: '',
+  address: '',
+  city: '',
+  country: '',
+  capacity: 0,
+  phone: '',
+  date: ''
+})
+
+const handleSubmit = () => {
+  // TODO: wire to backend via Nuxt server route, e.g., /api/events (POST)
+  console.log('Submit event', form.value)
+}
 </script>
 
 <template>
-  <div class="bg-white rounded shadow-sm py-12 sm:py-16">
-    <div class="flex items-center justify-center">
-      <form @submit.prevent="handleSubmit" class="w-full max-w-2xl">
-        <div class="p-6 md:p-8">
-          <h1 class="text-3xl font-bold text-gray-900">Create Event</h1>
+  <div class="main-container">
+    <header class="create-event-header">
+      <NuxtLink to="/" class="back-arrow"><i class="fa-solid fa-arrow-left"></i></NuxtLink>
+      <div class="header-info">
+        <h1>Create a New Event</h1>
+        <p>Fill out details and publish your event</p>
+      </div>
+    </header>
 
-          <div class="mt-10">
-            <h2 class="text-lg font-semibold leading-7 text-gray-800">Event Picture</h2>
-            <div class="mt-4 flex items-center justify-center mb-4">
-              <div class="relative w-32 h-32 bg-gray-200 rounded-full flex items-center justify-center text-gray-400">
-                <!-- <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg> -->
-              </div>
-            </div>
-          </div>
+    <!-- Stepper -->
+    <div class="stepper">
+      <div class="stepper-progress"><div class="stepper-progress-bar" style="width:33%"></div></div>
+      <div class="step-item active" data-step="1"><div class="step-marker"></div><div class="step-name">Details</div></div>
+      <div class="step-item" data-step="2"><div class="step-marker"></div><div class="step-name">Ticketing</div></div>
+      <div class="step-item" data-step="3"><div class="step-marker"></div><div class="step-name">Review</div></div>
+    </div>
 
+    <!-- Step 1: Event Details -->
+    <div id="step-1" class="step-content active">
+      <h2 class="section-title">Event Details</h2>
+      <form @submit.prevent="handleSubmit">
+        <div class="form-group">
+          <label>Event Name <span>*</span></label>
+          <input v-model="form.name" type="text" placeholder="Enter event name" required />
+        </div>
+        <div class="form-group">
+          <label>Description</label>
+          <textarea v-model="form.description" placeholder="Tell attendees about your event" />
+        </div>
 
-          <div class="mt-10">
-            <h2 class="text-xl font-semibold leading-7 text-gray-800">Event Details</h2>
-            <p class="mt-1 text-sm text-gray-500">Our team will carefully consider them and get back to you within 24 hours.</p>
-            <div class="mt-6 space-y-4">
-              <div class="grid grid-cols-1 md:grid-cols-3 gap-x-4 items-center">
-                <label for="phone" class="text-sm font-medium text-gray-700">Event Name</label>
-                <input v-model="phone" type="text" id="phone" placeholder="Enter Event name" class="md:col-span-2 mt-1 md:mt-0 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" />
-              </div>
-              <div class="grid grid-cols-1 md:grid-cols-3 gap-x-4 items-center">
-                <label for="address" class="text-sm font-medium text-gray-700">Address</label>
-                <input v-model="address" type="text" id="address" placeholder="Enter address" class="md:col-span-2 mt-1 md:mt-0 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" />
-              </div>
-              <div class="grid grid-cols-1 md:grid-cols-3 gap-x-4 items-center">
-                <label for="city" class="text-sm font-medium text-gray-700">City/Town</label>
-                <input v-model = "city" type="text" id="city" placeholder="Enter city" class="md:col-span-2 mt-1 md:mt-0 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" />
-              </div>
-              <div class="grid grid-cols-1 md:grid-cols-3 gap-x-4 items-center">
-                <label for="country" class="text-sm font-medium text-gray-700">Country</label>
-                <input v-model = "country" type="text" id="country" placeholder="Enter country" class="md:col-span-2 mt-1 md:mt-0 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" />
-              </div>
-              <div class="grid grid-cols-1 md:grid-cols-3 gap-x-4 items-center">
-                <label for="country" class="text-sm font-medium text-gray-700">People</label>
-                <input v-model = "p" type="number" id="country" placeholder="Enter Limit People" class="md:col-span-2 mt-1 md:mt-0 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" />
-              </div>              
-              <div class="grid grid-cols-1 md:grid-cols-3 gap-x-4 items-center">
-                <label for="country" class="text-sm font-medium text-gray-700">Phone Number</label>
-                <input v-model = "d" type="tel" id="phone" placeholder="Enter Phone Number" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" class="md:col-span-2 mt-1 md:mt-0 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" />
-              </div>                        
-              <div class="grid grid-cols-1 md:grid-cols-3 gap-x-4 items-center">
-                <label for="country" class="text-sm font-medium text-gray-700">Date</label>
-                <input v-model = "v" type="date" id="country" placeholder="Enter country" class="md:col-span-2 mt-1 md:mt-0 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" />
-              </div>              
-            </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Address</label>
+            <input v-model="form.address" type="text" placeholder="123 Main St" />
           </div>
-          
-          <div class="mt-10">
-            <button @click="saveProfile"  type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white transition-colors" style="background-color: #362e54;" onmouseover="this.style.backgroundColor='#4a3f70'" onmouseout="this.style.backgroundColor='#362e54'">Send</button>
+          <div class="form-group">
+            <label>City/Town</label>
+            <input v-model="form.city" type="text" placeholder="Bangkok" />
           </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Country</label>
+            <input v-model="form.country" type="text" placeholder="Thailand" />
+          </div>
+          <div class="form-group">
+            <label>People</label>
+            <input v-model.number="form.capacity" type="number" placeholder="Limit People" />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input v-model="form.phone" type="tel" placeholder="08x-xxx-xxxx" />
+          </div>
+          <div class="form-group">
+            <label>Date</label>
+            <input v-model="form.date" type="date" />
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <NuxtLink class="btn btn-secondary" to="/">Cancel</NuxtLink>
+          <button type="submit" class="btn btn-primary">Save & Continue</button>
         </div>
       </form>
     </div>
   </div>
 </template>
+
+<style scoped>
+.main-container { 
+  --primary-blue: #2F80ED;
+  --light-gray: #E0E0E0;
+  --medium-gray: #BDBDBD;
+  --dark-gray: #4F4F4F;
+  --text-dark: #333;
+  --text-light: #828282;
+  --border-color: #CED4DA;
+  --bg-color: #F8F9FA;
+}
+
+.main-container { max-width: 900px; margin: 20px auto; padding: 0 20px; }
+.create-event-header { display: flex; align-items: center; gap: 20px; margin-bottom: 20px; }
+.back-arrow { font-size: 1.2rem; color: var(--text-dark); text-decoration: none; }
+.header-info h1 { font-size: 1.6rem; margin: 0 0 4px; }
+.header-info p { font-size: 0.9rem; color: var(--text-light); margin: 0; }
+
+.stepper { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; position: relative; }
+.stepper-progress { position: absolute; top: 10px; left: 0; height: 2px; background: var(--light-gray); width: 100%; z-index: 1; }
+.stepper-progress-bar { height: 100%; background: var(--primary-blue); width: 33%; }
+.step-item { display: flex; flex-direction: column; align-items: center; z-index: 2; width: 80px; }
+.step-marker { width: 20px; height: 20px; border-radius: 50%; background: #fff; border: 2px solid var(--light-gray); margin-bottom: 8px; }
+.step-item.active .step-marker { border-color: var(--primary-blue); background: var(--primary-blue); }
+.step-name { font-size: 0.9rem; color: var(--medium-gray); }
+.step-item.active .step-name { color: var(--text-dark); font-weight: 500; }
+
+.step-content { background: #fff; padding: 24px; border-radius: 8px; border: 1px solid #dee2e6; }
+.section-title { font-size: 1.2rem; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid var(--border-color); }
+.form-group { margin-bottom: 16px; }
+.form-group label { display: block; margin-bottom: 8px; font-weight: 500; }
+.form-group input, .form-group textarea { width: 100%; padding: 12px; border: 1px solid var(--border-color); border-radius: 6px; font-size: 1rem; }
+.form-row { display: flex; gap: 16px; }
+.form-row .form-group { flex: 1; }
+.form-actions { display: flex; justify-content: flex-end; align-items: center; gap: 12px; margin-top: 16px; }
+.btn { padding: 10px 22px; border-radius: 6px; border: none; cursor: pointer; font-weight: 600; font-size: 1rem; }
+.btn-primary { background: var(--primary-blue); color: #fff; }
+.btn-secondary { background: none; color: var(--text-light); text-decoration: none; }
+</style>
