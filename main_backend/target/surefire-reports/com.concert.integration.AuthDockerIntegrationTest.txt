@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.concert.integration.AuthDockerIntegrationTest
 -------------------------------------------------------------------------------
-Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 29.226 s - in com.concert.integration.AuthDockerIntegrationTest
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 36.173 s - in com.concert.integration.AuthDockerIntegrationTest

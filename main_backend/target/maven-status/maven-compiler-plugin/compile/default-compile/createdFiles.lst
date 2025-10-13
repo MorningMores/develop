@@ -1,4 +1,6 @@
 com/concert/service/JwtService.class
+com/concert/dto/AuthResponse.class
+com/concert/ConcertBackendApplication.class
 com/concert/service/AuthService.class
 com/concert/repository/UserRepository.class
 com/concert/config/SecurityConfig.class
@@ -8,5 +10,3 @@ com/concert/controller/UserController.class
 com/concert/security/JwtAuthenticationFilter.class
 com/concert/dto/RegisterRequest.class
 com/concert/dto/LoginRequest.class
-com/concert/dto/AuthResponse.class
-com/concert/ConcertBackendApplication.class
