@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.concert.security.JwtAuthenticationFilterTest
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.443 s - in com.concert.security.JwtAuthenticationFilterTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.652 s - in com.concert.security.JwtAuthenticationFilterTest

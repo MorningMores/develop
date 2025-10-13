@@ -1,5 +1,6 @@
 com/concert/repository/UserRepositoryDockerTest.class
 com/concert/ConcertBackendTestSuite.class
+com/concert/service/BookingServiceTest.class
 com/concert/service/JwtServiceTest.class
 com/concert/controller/UserControllerTest.class
 com/concert/model/UserTest.class
@@ -16,8 +17,10 @@ com/concert/integration/BaseDockerIntegrationTest.class
 com/concert/controller/AuthControllerUnitTest.class
 com/concert/dto/AuthResponseTest.class
 com/concert/repository/UserRepositoryTest.class
+com/concert/service/EventServiceTest.class
 com/concert/security/JwtAuthenticationFilterTest.class
 com/concert/config/DockerTestConfig.class
 com/concert/controller/UserControllerExceptionTest.class
+com/concert/integration/EventRepositoryIntegrationTest.class
 com/concert/dto/RegisterRequestTest.class
 com/concert/ConcertBackendMainMethodTest.class
