@@ -3,6 +3,7 @@
 import com.concert.dto.AuthResponse;
 import com.concert.dto.LoginRequest;
 import com.concert.dto.RegisterRequest;
+import com.concert.dto.UserProfileResponse;
 import com.concert.model.User;
 import com.concert.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,72 +22,96 @@ public class AuthService {
     // Constructor for dependency injection
     public AuthService(UserRepository userRepository, 
                       PasswordEncoder passwordEncoder, 
-<span class="fc" id="L24">                      JwtService jwtService) {</span>
-<span class="fc" id="L25">        this.userRepository = userRepository;</span>
-<span class="fc" id="L26">        this.passwordEncoder = passwordEncoder;</span>
-<span class="fc" id="L27">        this.jwtService = jwtService;</span>
-<span class="fc" id="L28">    }</span>
+<span class="fc" id="L25">                      JwtService jwtService) {</span>
+<span class="fc" id="L26">        this.userRepository = userRepository;</span>
+<span class="fc" id="L27">        this.passwordEncoder = passwordEncoder;</span>
+<span class="fc" id="L28">        this.jwtService = jwtService;</span>
+<span class="fc" id="L29">    }</span>
     
     public AuthResponse register(RegisterRequest registerRequest) {
         // Check if username already exists
-<span class="fc bfc" id="L32" title="All 2 branches covered.">        if (userRepository.existsByUsername(registerRequest.getUsername())) {</span>
-<span class="fc" id="L33">            return new AuthResponse(&quot;Username is already taken!&quot;);</span>
+<span class="fc bfc" id="L33" title="All 2 branches covered.">        if (userRepository.existsByUsername(registerRequest.getUsername())) {</span>
+<span class="fc" id="L34">            return new AuthResponse(&quot;Username is already taken!&quot;);</span>
         }
         
         // Check if email already exists
-<span class="fc bfc" id="L37" title="All 2 branches covered.">        if (userRepository.existsByEmail(registerRequest.getEmail())) {</span>
-<span class="fc" id="L38">            return new AuthResponse(&quot;Email is already in use!&quot;);</span>
+<span class="fc bfc" id="L38" title="All 2 branches covered.">        if (userRepository.existsByEmail(registerRequest.getEmail())) {</span>
+<span class="fc" id="L39">            return new AuthResponse(&quot;Email is already in use!&quot;);</span>
         }
         
         // Create new user
-<span class="fc" id="L42">        User user = new User(</span>
-<span class="fc" id="L43">            registerRequest.getUsername(), // This will be the name</span>
-<span class="fc" id="L44">            registerRequest.getEmail(),</span>
-<span class="fc" id="L45">            passwordEncoder.encode(registerRequest.getPassword())</span>
+<span class="fc" id="L43">        User user = new User(</span>
+<span class="fc" id="L44">            registerRequest.getUsername(), // This will be the name</span>
+<span class="fc" id="L45">            registerRequest.getEmail(),</span>
+<span class="fc" id="L46">            passwordEncoder.encode(registerRequest.getPassword())</span>
         );
         
         // Set username if provided
-<span class="fc" id="L49">        user.setUsername(registerRequest.getUsername());</span>
+<span class="fc" id="L50">        user.setUsername(registerRequest.getUsername());</span>
         
-<span class="fc" id="L51">        User savedUser = userRepository.save(user);</span>
+<span class="fc" id="L52">        User savedUser = userRepository.save(user);</span>
         
         // Generate JWT token
-<span class="fc" id="L54">        String jwt = jwtService.generateToken(savedUser.getUsername());</span>
+<span class="fc" id="L55">        String jwt = jwtService.generateToken(savedUser.getUsername());</span>
         
-<span class="fc" id="L56">        return new AuthResponse(jwt, savedUser.getUsername(), savedUser.getEmail());</span>
+<span class="fc" id="L57">        return new AuthResponse(jwt, savedUser.getUsername(), savedUser.getEmail());</span>
     }
     
     public AuthResponse login(LoginRequest loginRequest) {
-<span class="fc" id="L60">        Optional&lt;User&gt; userOptional = userRepository.findByUsernameOrEmail(</span>
-<span class="fc" id="L61">            loginRequest.getUsernameOrEmail(),</span>
-<span class="fc" id="L62">            loginRequest.getUsernameOrEmail()</span>
+<span class="fc" id="L61">        Optional&lt;User&gt; userOptional = userRepository.findByUsernameOrEmail(</span>
+<span class="fc" id="L62">            loginRequest.getUsernameOrEmail(),</span>
+<span class="fc" id="L63">            loginRequest.getUsernameOrEmail()</span>
         );
         
-<span class="fc bfc" id="L65" title="All 2 branches covered.">        if (userOptional.isEmpty()) {</span>
-<span class="fc" id="L66">            return new AuthResponse(&quot;Invalid username/email or password!&quot;);</span>
+<span class="fc bfc" id="L66" title="All 2 branches covered.">        if (userOptional.isEmpty()) {</span>
+<span class="fc" id="L67">            return new AuthResponse(&quot;Invalid username/email or password!&quot;);</span>
         }
         
-<span class="fc" id="L69">        User user = userOptional.get();</span>
+<span class="fc" id="L70">        User user = userOptional.get();</span>
         
-<span class="fc bfc" id="L71" title="All 2 branches covered.">        if (!passwordEncoder.matches(loginRequest.getPassword(), user.getPassword())) {</span>
-<span class="fc" id="L72">            return new AuthResponse(&quot;Invalid username/email or password!&quot;);</span>
+<span class="fc bfc" id="L72" title="All 2 branches covered.">        if (!passwordEncoder.matches(loginRequest.getPassword(), user.getPassword())) {</span>
+<span class="fc" id="L73">            return new AuthResponse(&quot;Invalid username/email or password!&quot;);</span>
         }
         
         // Generate JWT token
-<span class="fc" id="L76">        String jwt = jwtService.generateToken(user.getUsername());</span>
+<span class="fc" id="L77">        String jwt = jwtService.generateToken(user.getUsername());</span>
         
-<span class="fc" id="L78">        return new AuthResponse(jwt, user.getUsername(), user.getEmail());</span>
+<span class="fc" id="L79">        return new AuthResponse(jwt, user.getUsername(), user.getEmail());</span>
     }
     
     public AuthResponse getCurrentUser(String username) {
-<span class="fc" id="L82">        Optional&lt;User&gt; userOptional = userRepository.findByUsername(username);</span>
+<span class="fc" id="L83">        Optional&lt;User&gt; userOptional = userRepository.findByUsername(username);</span>
         
-<span class="fc bfc" id="L84" title="All 2 branches covered.">        if (userOptional.isEmpty()) {</span>
-<span class="fc" id="L85">            return new AuthResponse(&quot;User not found&quot;);</span>
+<span class="fc bfc" id="L85" title="All 2 branches covered.">        if (userOptional.isEmpty()) {</span>
+<span class="fc" id="L86">            return new AuthResponse(&quot;User not found&quot;);</span>
         }
         
-<span class="fc" id="L88">        User user = userOptional.get();</span>
-<span class="fc" id="L89">        return new AuthResponse(null, user.getUsername(), user.getEmail());</span>
+<span class="fc" id="L89">        User user = userOptional.get();</span>
+<span class="fc" id="L90">        return new AuthResponse(null, user.getUsername(), user.getEmail());</span>
+    }
+    
+    public UserProfileResponse getUserProfile(String username) {
+<span class="nc" id="L94">        Optional&lt;User&gt; userOptional = userRepository.findByUsername(username);</span>
+        
+<span class="nc bnc" id="L96" title="All 2 branches missed.">        if (userOptional.isEmpty()) {</span>
+<span class="nc" id="L97">            return null;</span>
+        }
+        
+<span class="nc" id="L100">        User user = userOptional.get();</span>
+<span class="nc" id="L101">        return new UserProfileResponse(</span>
+<span class="nc" id="L102">            user.getId(),</span>
+<span class="nc" id="L103">            user.getUsername(),</span>
+<span class="nc" id="L104">            user.getEmail(),</span>
+<span class="nc" id="L105">            user.getName(),</span>
+<span class="nc" id="L106">            user.getPhone(),</span>
+<span class="nc" id="L107">            user.getAddress(),</span>
+<span class="nc" id="L108">            user.getCity(),</span>
+<span class="nc" id="L109">            user.getCountry(),</span>
+<span class="nc" id="L110">            user.getPincode(),</span>
+<span class="nc" id="L111">            user.getProfilePhoto(),</span>
+<span class="nc" id="L112">            user.getCompany(),</span>
+<span class="nc" id="L113">            user.getWebsite()</span>
+        );
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>
