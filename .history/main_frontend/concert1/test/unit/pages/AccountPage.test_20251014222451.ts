@@ -650,6 +650,16 @@ describe('AccountPage.vue', () => {
 
   it('should handle error with statusMessage', async () => {
     localStorage.setItem('jwt_token', 'test-token')
+    
+    // Need to mock all initial $fetch calls first
+    ;(global.$fetch as any)
+      .mockResolvedValueOnce(mockProfile) // For loadUserData
+      .mockResolvedValueOnce([]) // For events
+      .mockResolvedValueOnce([]) // For bookings
+      .mockRejectedValueOnce({ // For handlesubmit
+        statusMessage: 'Bad Request',
+        data: null
+      })
 
     const wrapper = mount(AccountPage, {
       global: {
@@ -660,23 +670,25 @@ describe('AccountPage.vue', () => {
     await new Promise(resolve => setTimeout(resolve, 150))
     const vm = wrapper.vm as any
     
-    // Mock just before calling handlesubmit
-    ;(global.$fetch as any).mockRejectedValueOnce({
-      statusMessage: 'Bad Request',
-      data: null
-    })
-    
     vm.userData.firstName = 'John'
     await vm.handlesubmit()
     await wrapper.vm.$nextTick()
     
-    // Error should be handled (message set)
-    expect(vm.message).toBeTruthy()
-    expect(vm.message.length).toBeGreaterThan(0)
+    expect(vm.message).toBe('Bad Request')
   })
 
   it('should handle error with data.message fallback', async () => {
     localStorage.setItem('jwt_token', 'test-token')
+    
+    // Mock all initial $fetch calls
+    ;(global.$fetch as any)
+      .mockResolvedValueOnce(mockProfile) // For loadUserData
+      .mockResolvedValueOnce([]) // For events
+      .mockResolvedValueOnce([]) // For bookings
+      .mockRejectedValueOnce({ // For handlesubmit
+        statusMessage: undefined,
+        data: { message: 'Validation failed' }
+      })
 
     const wrapper = mount(AccountPage, {
       global: {
@@ -687,19 +699,11 @@ describe('AccountPage.vue', () => {
     await new Promise(resolve => setTimeout(resolve, 150))
     const vm = wrapper.vm as any
     
-    // Mock just before calling handlesubmit
-    ;(global.$fetch as any).mockRejectedValueOnce({
-      statusMessage: undefined,
-      data: { message: 'Validation failed' }
-    })
-    
     vm.userData.firstName = 'John'
     await vm.handlesubmit()
     await wrapper.vm.$nextTick()
     
-    // Error should be handled (message set)
-    expect(vm.message).toBeTruthy()
-    expect(vm.message.length).toBeGreaterThan(0)
+    expect(vm.message).toBe('Validation failed')
   })
 
   it('should use default error message when no specific message', async () => {

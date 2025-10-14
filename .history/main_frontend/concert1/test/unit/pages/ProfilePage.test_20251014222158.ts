@@ -603,8 +603,7 @@ describe('ProfilePage.vue', () => {
     await new Promise(resolve => setTimeout(resolve, 100))
     await wrapper.vm.$nextTick()
 
-    // Profile data parsed
-    expect(wrapper.exists()).toBe(true)
+    expect(wrapper.html()).toContain('Jane')
   })
 
   it('should handle profile with partial data', async () => {
@@ -625,8 +624,9 @@ describe('ProfilePage.vue', () => {
     await new Promise(resolve => setTimeout(resolve, 100))
     await wrapper.vm.$nextTick()
 
-    // Partial data handled
-    expect(wrapper.exists()).toBe(true)
+    const html = wrapper.html()
+    expect(html).toContain('Bob')
+    expect(html).toContain('Phuket')
   })
 
   it('should render username from API response', async () => {
@@ -647,8 +647,7 @@ describe('ProfilePage.vue', () => {
     await new Promise(resolve => setTimeout(resolve, 100))
     await wrapper.vm.$nextTick()
 
-    // Username rendered
-    expect(wrapper.exists()).toBe(true)
+    expect(wrapper.html()).toContain('cooluser')
   })
 
   it('should display error message when present', async () => {
@@ -668,8 +667,8 @@ describe('ProfilePage.vue', () => {
     await new Promise(resolve => setTimeout(resolve, 100))
     await wrapper.vm.$nextTick()
 
-    // Error handled
-    expect(wrapper.exists()).toBe(true)
+    const html = wrapper.html()
+    expect(html).toContain('Session expired')
   })
 })
 
