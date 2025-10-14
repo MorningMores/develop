@@ -2,28 +2,6 @@ import { describe, it, expect, beforeEach, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import NavBar from '~/app/components/NavBar.vue'
 
-// Mock composables
-vi.mock('~/composables/useAuth', () => ({
-  useAuth: () => ({
-    loadFromStorage: vi.fn(),
-    isLoggedIn: { value: false },
-    clearAuth: vi.fn(),
-    logout: vi.fn()
-  })
-}))
-
-vi.mock('#app', () => ({
-  useRouter: () => ({
-    push: vi.fn()
-  })
-}))
-
-vi.mock('vue-router', () => ({
-  useRouter: () => ({
-    push: vi.fn()
-  })
-}))
-
 describe('NavBar Component', () => {
   beforeEach(() => {
     vi.clearAllMocks()
