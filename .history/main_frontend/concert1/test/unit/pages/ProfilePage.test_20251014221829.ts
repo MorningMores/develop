@@ -469,8 +469,9 @@ describe('ProfilePage.vue', () => {
     await new Promise(resolve => setTimeout(resolve, 100))
     await wrapper.vm.$nextTick()
 
-    // Token should be used, just verify component rendered
-    expect(wrapper.exists()).toBe(true)
+    expect(global.$fetch).toHaveBeenCalledWith('/api/auth/me', {
+      headers: { Authorization: 'Bearer local-token' }
+    })
   })
 
   it('should use sessionStorage token when localStorage is empty', async () => {
@@ -489,8 +490,9 @@ describe('ProfilePage.vue', () => {
     await new Promise(resolve => setTimeout(resolve, 100))
     await wrapper.vm.$nextTick()
 
-    // Session token should be used
-    expect(wrapper.exists()).toBe(true)
+    expect(global.$fetch).toHaveBeenCalledWith('/api/auth/me', {
+      headers: { Authorization: 'Bearer session-token' }
+    })
   })
 
   it('should use empty string when no token available', async () => {
@@ -509,8 +511,9 @@ describe('ProfilePage.vue', () => {
     await new Promise(resolve => setTimeout(resolve, 100))
     await wrapper.vm.$nextTick()
 
-    // Empty token case handled
-    expect(wrapper.exists()).toBe(true)
+    expect(global.$fetch).toHaveBeenCalledWith('/api/auth/me', {
+      headers: { Authorization: 'Bearer ' }
+    })
   })
 
   it('should display profile with all fields populated', async () => {
@@ -536,8 +539,9 @@ describe('ProfilePage.vue', () => {
     await new Promise(resolve => setTimeout(resolve, 100))
     await wrapper.vm.$nextTick()
 
-    // Profile data should be loaded
-    expect(wrapper.exists()).toBe(true)
+    const html = wrapper.html()
+    expect(html).toContain('John')
+    expect(html).toContain('Doe')
   })
 
   it('should display "-" for empty profile fields', async () => {
@@ -603,8 +607,7 @@ describe('ProfilePage.vue', () => {
     await new Promise(resolve => setTimeout(resolve, 100))
     await wrapper.vm.$nextTick()
 
-    // Profile data parsed
-    expect(wrapper.exists()).toBe(true)
+    expect(wrapper.html()).toContain('Jane')
   })
 
   it('should handle profile with partial data', async () => {
@@ -625,8 +628,9 @@ describe('ProfilePage.vue', () => {
     await new Promise(resolve => setTimeout(resolve, 100))
     await wrapper.vm.$nextTick()
 
-    // Partial data handled
-    expect(wrapper.exists()).toBe(true)
+    const html = wrapper.html()
+    expect(html).toContain('Bob')
+    expect(html).toContain('Phuket')
   })
 
   it('should render username from API response', async () => {
@@ -647,8 +651,7 @@ describe('ProfilePage.vue', () => {
     await new Promise(resolve => setTimeout(resolve, 100))
     await wrapper.vm.$nextTick()
 
-    // Username rendered
-    expect(wrapper.exists()).toBe(true)
+    expect(wrapper.html()).toContain('cooluser')
   })
 
   it('should display error message when present', async () => {
@@ -668,8 +671,8 @@ describe('ProfilePage.vue', () => {
     await new Promise(resolve => setTimeout(resolve, 100))
     await wrapper.vm.$nextTick()
 
-    // Error handled
-    expect(wrapper.exists()).toBe(true)
+    const html = wrapper.html()
+    expect(html).toContain('Session expired')
   })
 })
 

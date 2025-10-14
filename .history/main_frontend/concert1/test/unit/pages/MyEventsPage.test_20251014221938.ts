@@ -592,8 +592,9 @@ describe('MyEventsPage.vue', () => {
     await new Promise(resolve => setTimeout(resolve, 100))
     await wrapper.vm.$nextTick()
     
-    // User token should be used
-    expect(wrapper.exists()).toBe(true)
+    expect(global.$fetch).toHaveBeenCalledWith('/api/events/json/me', {
+      headers: { Authorization: 'Bearer test-token' }
+    })
   })
 
   it('should fallback to localStorage when user.value.token is empty', async () => {
@@ -648,9 +649,9 @@ describe('MyEventsPage.vue', () => {
     
     await new Promise(resolve => setTimeout(resolve, 100))
     await wrapper.vm.$nextTick()
-
-    // Empty message displayed
-    expect(wrapper.exists()).toBe(true)
+    
+    const html = wrapper.html()
+    expect(html).toContain('You have not created any events yet')
   })
 
   it('should use error.data.message when available', async () => {
@@ -668,8 +669,8 @@ describe('MyEventsPage.vue', () => {
     await new Promise(resolve => setTimeout(resolve, 100))
     await wrapper.vm.$nextTick()
     
-    // Error message handled
-    expect(wrapper.exists()).toBe(true)
+    const html = wrapper.html()
+    expect(html).toContain('Custom error message')
   })
 
   it('should fallback to error.response._data.message', async () => {
@@ -687,8 +688,8 @@ describe('MyEventsPage.vue', () => {
     await new Promise(resolve => setTimeout(resolve, 100))
     await wrapper.vm.$nextTick()
     
-    // Error response handled
-    expect(wrapper.exists()).toBe(true)
+    const html = wrapper.html()
+    expect(html).toContain('Response error')
   })
 
   it('should use default error message when no message in error', async () => {
@@ -704,8 +705,8 @@ describe('MyEventsPage.vue', () => {
     await new Promise(resolve => setTimeout(resolve, 100))
     await wrapper.vm.$nextTick()
     
-    // Default error message used
-    expect(wrapper.exists()).toBe(true)
+    const html = wrapper.html()
+    expect(html).toContain('Failed to load your events')
   })
 })
 

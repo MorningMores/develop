@@ -19,14 +19,15 @@ vi.mock('~/composables/useToast', () => ({
   })
 }))
 
-// Mock $fetch globally
-global.$fetch = vi.fn() as any
+// Mock fetch globally
+global.fetch = vi.fn()
 
 const mockProfile = {
-  name: 'Test User',
   email: 'test@test.com',
   username: 'testuser',
-  phone: '0812345678'
+  firstName: 'John',
+  lastName: 'Doe',
+  phoneNumber: '0812345678'
 }
 
 describe('AccountPage.vue', () => {
@@ -46,8 +47,11 @@ describe('AccountPage.vue', () => {
     localStorage.setItem('jwt_token', 'test-token')
     localStorage.setItem('profile', JSON.stringify(mockProfile))
     
-    // Mock $fetch API
-    ;(global.$fetch as any).mockResolvedValue(mockProfile)
+    // Mock profile API
+    ;(global.fetch as any).mockResolvedValue({
+      ok: true,
+      json: async () => mockProfile
+    })
   })
 
   it('should render account page', () => {
@@ -393,8 +397,12 @@ describe('AccountPage.vue', () => {
     await new Promise(resolve => setTimeout(resolve, 100))
     await wrapper.vm.$nextTick()
     
-    // Token should be used
-    expect(wrapper.exists()).toBe(true)
+    expect(global.$fetch).toHaveBeenCalledWith(
+      '/api/auth/me',
+      expect.objectContaining({
+        headers: { Authorization: 'Bearer local-token' }
+      })
+    )
   })
 
   it('should fallback to sessionStorage token', async () => {
@@ -433,8 +441,9 @@ describe('AccountPage.vue', () => {
     await new Promise(resolve => setTimeout(resolve, 150))
     await wrapper.vm.$nextTick()
     
-    // All fields loaded
-    expect(wrapper.exists()).toBe(true)
+    const vm = wrapper.vm as any
+    expect(vm.userData.firstName).toBe('John')
+    expect(vm.userData.lastName).toBe('Doe Smith')
   })
 
   it('should handle me response with empty fields', async () => {
@@ -454,8 +463,9 @@ describe('AccountPage.vue', () => {
     await new Promise(resolve => setTimeout(resolve, 150))
     await wrapper.vm.$nextTick()
     
-    // Empty fields handled
-    expect(wrapper.exists()).toBe(true)
+    const vm = wrapper.vm as any
+    expect(vm.userData.fullName).toBe('')
+    expect(vm.userData.phone).toBe('')
   })
 
   it('should handle fullName with single word', async () => {
@@ -473,8 +483,9 @@ describe('AccountPage.vue', () => {
     await new Promise(resolve => setTimeout(resolve, 150))
     await wrapper.vm.$nextTick()
     
-    // Single name handled
-    expect(wrapper.exists()).toBe(true)
+    const vm = wrapper.vm as any
+    expect(vm.userData.firstName).toBe('Madonna')
+    expect(vm.userData.lastName).toBe('')
   })
 
   it('should handle Array.isArray check for eventsRes', async () => {
@@ -492,8 +503,8 @@ describe('AccountPage.vue', () => {
     await new Promise(resolve => setTimeout(resolve, 200))
     await wrapper.vm.$nextTick()
     
-    // Non-array handled
-    expect(wrapper.exists()).toBe(true)
+    const vm = wrapper.vm as any
+    expect(vm.stats.eventsCreated).toBe(0)
   })
 
   it('should handle Array.isArray check for bookingsRes', async () => {
@@ -511,8 +522,8 @@ describe('AccountPage.vue', () => {
     await new Promise(resolve => setTimeout(resolve, 200))
     await wrapper.vm.$nextTick()
     
-    // Non-array handled
-    expect(wrapper.exists()).toBe(true)
+    const vm = wrapper.vm as any
+    expect(vm.stats.ticketsPurchased).toBe(0)
   })
 
   it('should filter upcoming events correctly', async () => {
@@ -539,8 +550,8 @@ describe('AccountPage.vue', () => {
     await new Promise(resolve => setTimeout(resolve, 200))
     await wrapper.vm.$nextTick()
     
-    // Future events filtered
-    expect(wrapper.exists()).toBe(true)
+    const vm = wrapper.vm as any
+    expect(vm.stats.upcomingEvents).toBe(1)
   })
 
   it('should handle bookings without eventStartDate', async () => {
@@ -561,8 +572,8 @@ describe('AccountPage.vue', () => {
     await new Promise(resolve => setTimeout(resolve, 200))
     await wrapper.vm.$nextTick()
     
-    // Null dates handled
-    expect(wrapper.exists()).toBe(true)
+    const vm = wrapper.vm as any
+    expect(vm.stats.upcomingEvents).toBe(0)
   })
 
   it('should handle empty firstName validation in submit', async () => {
@@ -622,8 +633,17 @@ describe('AccountPage.vue', () => {
     await vm.handlesubmit()
     await wrapper.vm.$nextTick()
     
-    // Null values sent for empty fields
-    expect(wrapper.exists()).toBe(true)
+    expect(global.$fetch).toHaveBeenCalledWith(
+      '/api/users/me',
+      expect.objectContaining({
+        method: 'PUT',
+        body: expect.objectContaining({
+          firstName: 'John',
+          lastName: null,
+          phone: null
+        })
+      })
+    )
   })
 
   it('should convert pincode to string when present', async () => {
@@ -644,12 +664,21 @@ describe('AccountPage.vue', () => {
     await vm.handlesubmit()
     await wrapper.vm.$nextTick()
     
-    // Pincode converted to string
-    expect(wrapper.exists()).toBe(true)
+    expect(global.$fetch).toHaveBeenCalledWith(
+      '/api/users/me',
+      expect.objectContaining({
+        body: expect.objectContaining({
+          pincode: '12345'
+        })
+      })
+    )
   })
 
   it('should handle error with statusMessage', async () => {
     localStorage.setItem('jwt_token', 'test-token')
+    ;(global.$fetch as any).mockRejectedValueOnce({
+      statusMessage: 'Bad Request'
+    })
 
     const wrapper = mount(AccountPage, {
       global: {
@@ -657,26 +686,21 @@ describe('AccountPage.vue', () => {
       }
     })
     
-    await new Promise(resolve => setTimeout(resolve, 150))
+    await new Promise(resolve => setTimeout(resolve, 100))
     const vm = wrapper.vm as any
-    
-    // Mock just before calling handlesubmit
-    ;(global.$fetch as any).mockRejectedValueOnce({
-      statusMessage: 'Bad Request',
-      data: null
-    })
     
     vm.userData.firstName = 'John'
     await vm.handlesubmit()
     await wrapper.vm.$nextTick()
     
-    // Error should be handled (message set)
-    expect(vm.message).toBeTruthy()
-    expect(vm.message.length).toBeGreaterThan(0)
+    expect(vm.message).toBe('Bad Request')
   })
 
   it('should handle error with data.message fallback', async () => {
     localStorage.setItem('jwt_token', 'test-token')
+    ;(global.$fetch as any).mockRejectedValueOnce({
+      data: { message: 'Validation failed' }
+    })
 
     const wrapper = mount(AccountPage, {
       global: {
@@ -684,22 +708,14 @@ describe('AccountPage.vue', () => {
       }
     })
     
-    await new Promise(resolve => setTimeout(resolve, 150))
+    await new Promise(resolve => setTimeout(resolve, 100))
     const vm = wrapper.vm as any
-    
-    // Mock just before calling handlesubmit
-    ;(global.$fetch as any).mockRejectedValueOnce({
-      statusMessage: undefined,
-      data: { message: 'Validation failed' }
-    })
     
     vm.userData.firstName = 'John'
     await vm.handlesubmit()
     await wrapper.vm.$nextTick()
     
-    // Error should be handled (message set)
-    expect(vm.message).toBeTruthy()
-    expect(vm.message.length).toBeGreaterThan(0)
+    expect(vm.message).toBe('Validation failed')
   })
 
   it('should use default error message when no specific message', async () => {

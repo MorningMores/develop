@@ -3,8 +3,8 @@ import { mount } from '@vue/test-utils'
 import { createRouter, createMemoryHistory } from 'vue-router'
 import ProductPage from '~/app/pages/ProductPage.vue'
 
-// Mock $fetch globally
-global.$fetch = vi.fn() as any
+// Mock fetch globally
+global.fetch = vi.fn()
 
 const mockEvents = [
   {
@@ -42,7 +42,10 @@ describe('ProductPage.vue', () => {
     vi.clearAllMocks()
     
     // Mock successful API response
-    ;(global.$fetch as any).mockResolvedValue(mockEvents)
+    ;(global.fetch as any).mockResolvedValue({
+      ok: true,
+      json: async () => mockEvents
+    })
   })
 
   it('should render product page', async () => {
