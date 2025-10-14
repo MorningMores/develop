@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>UserController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">concert-backend</a> &gt; <a href="index.source.html" class="el_package">com.concert.controller</a> &gt; <span class="el_source">UserController.java</span></div><h1>UserController.java</h1><pre class="source lang-java linenums">package com.concert.controller;
+
+import com.concert.dto.UpdateProfileRequest;
+import com.concert.dto.UserProfileResponse;
+import com.concert.model.User;
+import com.concert.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+@RequestMapping(&quot;/api/users&quot;)
+@CrossOrigin(origins = &quot;http://localhost:3000&quot;)
+<span class="fc" id="L17">public class UserController {</span>
+    
+    @Autowired
+    private UserRepository userRepository;
+    
+    @GetMapping
+    public ResponseEntity&lt;List&lt;User&gt;&gt; getAllUsers() {
+        try {
+<span class="fc" id="L25">            List&lt;User&gt; users = userRepository.findAll();</span>
+<span class="fc" id="L26">            return ResponseEntity.ok(users);</span>
+<span class="fc" id="L27">        } catch (Exception e) {</span>
+<span class="fc" id="L28">            return ResponseEntity.internalServerError().build();</span>
+        }
+    }
+    
+    @GetMapping(&quot;/{id}&quot;)
+    public ResponseEntity&lt;User&gt; getUserById(@PathVariable Long id) {
+        try {
+<span class="fc" id="L35">            return userRepository.findById(id)</span>
+<span class="fc" id="L36">                    .map(user -&gt; ResponseEntity.ok(user))</span>
+<span class="fc" id="L37">                    .orElse(ResponseEntity.notFound().build());</span>
+<span class="fc" id="L38">        } catch (Exception e) {</span>
+<span class="fc" id="L39">            return ResponseEntity.internalServerError().build();</span>
+        }
+    }
+
+    @PutMapping(&quot;/me&quot;)
+    public ResponseEntity&lt;?&gt; updateMe(Authentication authentication, @RequestBody UpdateProfileRequest req) {
+        try {
+<span class="nc" id="L46">            String username = authentication.getName();</span>
+<span class="nc" id="L47">            return userRepository.findByUsername(username)</span>
+<span class="nc" id="L48">                    .map(user -&gt; {</span>
+<span class="nc bnc" id="L49" title="All 4 branches missed.">                        if (req.getFirstName() != null || req.getLastName() != null) {</span>
+<span class="nc bnc" id="L50" title="All 4 branches missed.">                            String full = ((req.getFirstName() != null ? req.getFirstName() : &quot;&quot;).trim() + &quot; &quot; + (req.getLastName() != null ? req.getLastName() : &quot;&quot;).trim()).trim();</span>
+<span class="nc bnc" id="L51" title="All 2 branches missed.">                            if (!full.isEmpty()) user.setName(full);</span>
+                        }
+<span class="nc bnc" id="L53" title="All 2 branches missed.">                        if (req.getPhone() != null) user.setPhone(req.getPhone());</span>
+<span class="nc bnc" id="L54" title="All 2 branches missed.">                        if (req.getAddress() != null) user.setAddress(req.getAddress());</span>
+<span class="nc bnc" id="L55" title="All 2 branches missed.">                        if (req.getCity() != null) user.setCity(req.getCity());</span>
+<span class="nc bnc" id="L56" title="All 2 branches missed.">                        if (req.getCountry() != null) user.setCountry(req.getCountry());</span>
+<span class="nc bnc" id="L57" title="All 2 branches missed.">                        if (req.getPincode() != null) user.setPincode(req.getPincode());</span>
+<span class="nc bnc" id="L58" title="All 2 branches missed.">                        if (req.getProfilePhoto() != null) user.setProfilePhoto(req.getProfilePhoto());</span>
+<span class="nc bnc" id="L59" title="All 2 branches missed.">                        if (req.getCompany() != null) user.setCompany(req.getCompany());</span>
+<span class="nc bnc" id="L60" title="All 2 branches missed.">                        if (req.getWebsite() != null) user.setWebsite(req.getWebsite());</span>
+<span class="nc" id="L61">                        User saved = userRepository.save(user);</span>
+                        
+                        // Return full profile response
+<span class="nc" id="L64">                        UserProfileResponse profile = new UserProfileResponse(</span>
+<span class="nc" id="L65">                            saved.getId(),</span>
+<span class="nc" id="L66">                            saved.getUsername(),</span>
+<span class="nc" id="L67">                            saved.getEmail(),</span>
+<span class="nc" id="L68">                            saved.getName(),</span>
+<span class="nc" id="L69">                            saved.getPhone(),</span>
+<span class="nc" id="L70">                            saved.getAddress(),</span>
+<span class="nc" id="L71">                            saved.getCity(),</span>
+<span class="nc" id="L72">                            saved.getCountry(),</span>
+<span class="nc" id="L73">                            saved.getPincode(),</span>
+<span class="nc" id="L74">                            saved.getProfilePhoto(),</span>
+<span class="nc" id="L75">                            saved.getCompany(),</span>
+<span class="nc" id="L76">                            saved.getWebsite()</span>
+                        );
+<span class="nc" id="L78">                        return ResponseEntity.ok(profile);</span>
+                    })
+<span class="nc" id="L80">                    .orElse(ResponseEntity.notFound().build());</span>
+<span class="nc" id="L81">        } catch (Exception e) {</span>
+<span class="nc" id="L82">            return ResponseEntity.internalServerError().body(e.getMessage());</span>
+        }
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>
