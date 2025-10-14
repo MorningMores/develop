@@ -3,9 +3,6 @@ import { mount } from '@vue/test-utils'
 import { createRouter, createMemoryHistory } from 'vue-router'
 import MyBookingsPage from '~/app/pages/MyBookingsPage.vue'
 
-// Mock $fetch globally
-global.$fetch = vi.fn() as any
-
 // Mock fetch globally
 global.fetch = vi.fn()
 
@@ -261,9 +258,7 @@ describe('MyBookingsPage.vue', () => {
     if (vm.openCancelModal) {
       const mockBooking = {
         id: 1,
-        eventTitle: 'Test Event',
-        quantity: 2,
-        totalPrice: 1000
+        eventTitle: 'Test Event'
       }
       vm.openCancelModal(mockBooking)
       await wrapper.vm.$nextTick()
