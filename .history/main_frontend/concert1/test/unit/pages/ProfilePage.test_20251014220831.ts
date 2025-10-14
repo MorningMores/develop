@@ -322,7 +322,7 @@ describe('ProfilePage.vue', () => {
     await new Promise(resolve => setTimeout(resolve, 100))
     await wrapper.vm.$nextTick()
 
-    expect(wrapper.exists()).toBe(true)
+    expect(wrapper.html()).toContain('Failed to load profile')
   })
 
   it('should handle API error without message', async () => {
@@ -340,7 +340,7 @@ describe('ProfilePage.vue', () => {
     await new Promise(resolve => setTimeout(resolve, 100))
     await wrapper.vm.$nextTick()
 
-    expect(wrapper.exists()).toBe(true)
+    expect(wrapper.html()).toContain('Failed to load profile')
   })
 
   it('should show message when not logged in', async () => {
