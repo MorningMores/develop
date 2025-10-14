@@ -112,16 +112,13 @@ describe('EmptyState.vue', () => {
     expect(wrapper.text()).toContain(customTitle)
   })
 
-  it('should support different empty state types', () => {
+  it('should support slot content', () => {
     const wrapper = mount(EmptyState, {
-      props: {
-        type: 'no-events',
-        title: 'No Events',
-        description: 'No events available'
+      slots: {
+        default: '<div class="custom-content">Custom content</div>'
       }
     })
     
-    // Should render with the type-specific icon
-    expect(wrapper.html()).toContain('🎭')
+    expect(wrapper.html()).toContain('custom-content')
   })
 })

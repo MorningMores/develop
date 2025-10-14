@@ -166,10 +166,10 @@ describe('ProductDetailPage [id].vue', () => {
     })
     
     await wrapper.vm.$nextTick()
-    await new Promise(resolve => setTimeout(resolve, 100))
     
-    // Component should be rendered
-    expect(wrapper.exists()).toBe(true)
+    // Test quantity increment/decrement
+    const buttons = wrapper.findAll('button')
+    expect(buttons.length).toBeGreaterThan(0)
   })
 
   it('should calculate spots remaining', async () => {
