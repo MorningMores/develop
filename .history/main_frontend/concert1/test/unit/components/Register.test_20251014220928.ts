@@ -163,8 +163,7 @@ describe('Register Component', () => {
     
     await wrapper.find('form').trigger('submit.prevent')
     await wrapper.vm.$nextTick()
-    await new Promise(resolve => setTimeout(resolve, 100))
-    expect(wrapper.exists()).toBe(true)
+    expect(mockFetch).toHaveBeenCalled()
   })
 
   it('should handle network error during registration', async () => {
@@ -192,8 +191,7 @@ describe('Register Component', () => {
     
     await wrapper.find('form').trigger('submit.prevent')
     await wrapper.vm.$nextTick()
-    await new Promise(resolve => setTimeout(resolve, 100))
-    expect(wrapper.exists()).toBe(true)
+    expect(mockFetch).toHaveBeenCalled()
   })
 
   it('should handle empty email validation', async () => {
