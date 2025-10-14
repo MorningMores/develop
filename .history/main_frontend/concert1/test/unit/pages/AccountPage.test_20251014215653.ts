@@ -3,21 +3,6 @@ import { mount } from '@vue/test-utils'
 import { createRouter, createMemoryHistory } from 'vue-router'
 import AccountPage from '~/app/pages/AccountPage.vue'
 
-// Mock composables
-vi.mock('~/composables/useAuth', () => ({
-  useAuth: () => ({
-    loadFromStorage: vi.fn(),
-    clearAuth: vi.fn()
-  })
-}))
-
-vi.mock('~/composables/useToast', () => ({
-  useToast: () => ({
-    success: vi.fn(),
-    error: vi.fn()
-  })
-}))
-
 // Mock fetch globally
 global.fetch = vi.fn()
 
