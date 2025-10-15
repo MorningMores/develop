@@ -44,102 +44,102 @@ import java.time.LocalDateTime;
 
     @PrePersist
     protected void onCreate() {
-<span class="nc" id="L47">        createdAt = LocalDateTime.now();</span>
-<span class="nc bnc" id="L48" title="All 2 branches missed.">        if (bookingDate == null) {</span>
-<span class="nc" id="L49">            bookingDate = LocalDateTime.now();</span>
+<span class="fc" id="L47">        createdAt = LocalDateTime.now();</span>
+<span class="fc bfc" id="L48" title="All 2 branches covered.">        if (bookingDate == null) {</span>
+<span class="fc" id="L49">            bookingDate = LocalDateTime.now();</span>
         }
-<span class="nc bnc" id="L51" title="All 2 branches missed.">        if (status == null) {</span>
-<span class="nc" id="L52">            status = &quot;PENDING&quot;;</span>
+<span class="fc bfc" id="L51" title="All 2 branches covered.">        if (status == null) {</span>
+<span class="fc" id="L52">            status = &quot;PENDING&quot;;</span>
         }
-<span class="nc" id="L54">    }</span>
+<span class="fc" id="L54">    }</span>
 
     // Getters and Setters
     public Long getId() {
-<span class="nc" id="L58">        return id;</span>
+<span class="fc" id="L58">        return id;</span>
     }
 
     public void setId(Long id) {
-<span class="nc" id="L62">        this.id = id;</span>
-<span class="nc" id="L63">    }</span>
+<span class="fc" id="L62">        this.id = id;</span>
+<span class="fc" id="L63">    }</span>
 
     public User getUser() {
-<span class="nc" id="L66">        return user;</span>
+<span class="fc" id="L66">        return user;</span>
     }
 
     public void setUser(User user) {
-<span class="nc" id="L70">        this.user = user;</span>
-<span class="nc" id="L71">    }</span>
+<span class="fc" id="L70">        this.user = user;</span>
+<span class="fc" id="L71">    }</span>
 
     public String getEventId() {
-<span class="nc" id="L74">        return eventId;</span>
+<span class="fc" id="L74">        return eventId;</span>
     }
 
     public void setEventId(String eventId) {
-<span class="nc" id="L78">        this.eventId = eventId;</span>
-<span class="nc" id="L79">    }</span>
+<span class="fc" id="L78">        this.eventId = eventId;</span>
+<span class="fc" id="L79">    }</span>
 
     public String getEventTitle() {
-<span class="nc" id="L82">        return eventTitle;</span>
+<span class="fc" id="L82">        return eventTitle;</span>
     }
 
     public void setEventTitle(String eventTitle) {
-<span class="nc" id="L86">        this.eventTitle = eventTitle;</span>
-<span class="nc" id="L87">    }</span>
+<span class="fc" id="L86">        this.eventTitle = eventTitle;</span>
+<span class="fc" id="L87">    }</span>
 
     public String getEventLocation() {
-<span class="nc" id="L90">        return eventLocation;</span>
+<span class="fc" id="L90">        return eventLocation;</span>
     }
 
     public void setEventLocation(String eventLocation) {
-<span class="nc" id="L94">        this.eventLocation = eventLocation;</span>
-<span class="nc" id="L95">    }</span>
+<span class="fc" id="L94">        this.eventLocation = eventLocation;</span>
+<span class="fc" id="L95">    }</span>
 
     public LocalDateTime getEventStartDate() {
-<span class="nc" id="L98">        return eventStartDate;</span>
+<span class="fc" id="L98">        return eventStartDate;</span>
     }
 
     public void setEventStartDate(LocalDateTime eventStartDate) {
-<span class="nc" id="L102">        this.eventStartDate = eventStartDate;</span>
-<span class="nc" id="L103">    }</span>
+<span class="fc" id="L102">        this.eventStartDate = eventStartDate;</span>
+<span class="fc" id="L103">    }</span>
 
     public Integer getQuantity() {
-<span class="nc" id="L106">        return quantity;</span>
+<span class="fc" id="L106">        return quantity;</span>
     }
 
     public void setQuantity(Integer quantity) {
-<span class="nc" id="L110">        this.quantity = quantity;</span>
-<span class="nc" id="L111">    }</span>
+<span class="fc" id="L110">        this.quantity = quantity;</span>
+<span class="fc" id="L111">    }</span>
 
     public Double getTotalPrice() {
-<span class="nc" id="L114">        return totalPrice;</span>
+<span class="fc" id="L114">        return totalPrice;</span>
     }
 
     public void setTotalPrice(Double totalPrice) {
-<span class="nc" id="L118">        this.totalPrice = totalPrice;</span>
-<span class="nc" id="L119">    }</span>
+<span class="fc" id="L118">        this.totalPrice = totalPrice;</span>
+<span class="fc" id="L119">    }</span>
 
     public String getStatus() {
-<span class="nc" id="L122">        return status;</span>
+<span class="fc" id="L122">        return status;</span>
     }
 
     public void setStatus(String status) {
-<span class="nc" id="L126">        this.status = status;</span>
-<span class="nc" id="L127">    }</span>
+<span class="fc" id="L126">        this.status = status;</span>
+<span class="fc" id="L127">    }</span>
 
     public LocalDateTime getBookingDate() {
-<span class="nc" id="L130">        return bookingDate;</span>
+<span class="fc" id="L130">        return bookingDate;</span>
     }
 
     public void setBookingDate(LocalDateTime bookingDate) {
-<span class="nc" id="L134">        this.bookingDate = bookingDate;</span>
-<span class="nc" id="L135">    }</span>
+<span class="fc" id="L134">        this.bookingDate = bookingDate;</span>
+<span class="fc" id="L135">    }</span>
 
     public LocalDateTime getCreatedAt() {
-<span class="nc" id="L138">        return createdAt;</span>
+<span class="fc" id="L138">        return createdAt;</span>
     }
 
     public void setCreatedAt(LocalDateTime createdAt) {
-<span class="nc" id="L142">        this.createdAt = createdAt;</span>
-<span class="nc" id="L143">    }</span>
+<span class="fc" id="L142">        this.createdAt = createdAt;</span>
+<span class="fc" id="L143">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>
