@@ -31,48 +31,48 @@ public class EventController {
     @PostMapping
     public ResponseEntity&lt;EventResponse&gt; createEvent(Authentication authentication,
                                                      @Valid @RequestBody CreateEventRequest request) {
-<span class="nc" id="L34">        User organizer = getCurrentUser(authentication);</span>
-<span class="nc" id="L35">        EventResponse response = eventService.createEvent(organizer, request);</span>
-<span class="nc" id="L36">        return ResponseEntity.ok(response);</span>
+<span class="fc" id="L34">        User organizer = getCurrentUser(authentication);</span>
+<span class="fc" id="L35">        EventResponse response = eventService.createEvent(organizer, request);</span>
+<span class="fc" id="L36">        return ResponseEntity.ok(response);</span>
     }
 
     @GetMapping
     public ResponseEntity&lt;Page&lt;EventResponse&gt;&gt; listEvents(Authentication authentication,
                                                           @RequestParam(defaultValue = &quot;0&quot;) int page,
                                                           @RequestParam(defaultValue = &quot;12&quot;) int size) {
-<span class="nc" id="L43">        Pageable pageable = PageRequest.of(page, size);</span>
-<span class="nc" id="L44">        User currentUser = getUserOrNull(authentication);</span>
-<span class="nc" id="L45">        Page&lt;EventResponse&gt; events = eventService.getUpcomingEvents(pageable, currentUser);</span>
-<span class="nc" id="L46">        return ResponseEntity.ok(events);</span>
+<span class="fc" id="L43">        Pageable pageable = PageRequest.of(page, size);</span>
+<span class="fc" id="L44">        User currentUser = getUserOrNull(authentication);</span>
+<span class="fc" id="L45">        Page&lt;EventResponse&gt; events = eventService.getUpcomingEvents(pageable, currentUser);</span>
+<span class="fc" id="L46">        return ResponseEntity.ok(events);</span>
     }
 
     @GetMapping(&quot;/me&quot;)
     public ResponseEntity&lt;List&lt;EventResponse&gt;&gt; myEvents(Authentication authentication) {
-<span class="nc" id="L51">        User organizer = getCurrentUser(authentication);</span>
-<span class="nc" id="L52">        List&lt;EventResponse&gt; events = eventService.getEventsForOrganizer(organizer);</span>
-<span class="nc" id="L53">        return ResponseEntity.ok(events);</span>
+<span class="fc" id="L51">        User organizer = getCurrentUser(authentication);</span>
+<span class="fc" id="L52">        List&lt;EventResponse&gt; events = eventService.getEventsForOrganizer(organizer);</span>
+<span class="fc" id="L53">        return ResponseEntity.ok(events);</span>
     }
 
     @GetMapping(&quot;/{id}&quot;)
     public ResponseEntity&lt;EventResponse&gt; getEvent(Authentication authentication, @PathVariable Long id) {
-<span class="nc" id="L58">        User currentUser = getUserOrNull(authentication);</span>
-<span class="nc" id="L59">        EventResponse event = eventService.getEvent(id, currentUser);</span>
-<span class="nc" id="L60">        return ResponseEntity.ok(event);</span>
+<span class="fc" id="L58">        User currentUser = getUserOrNull(authentication);</span>
+<span class="fc" id="L59">        EventResponse event = eventService.getEvent(id, currentUser);</span>
+<span class="fc" id="L60">        return ResponseEntity.ok(event);</span>
     }
 
     private User getCurrentUser(Authentication authentication) {
-<span class="nc bnc" id="L64" title="All 4 branches missed.">        if (authentication == null || authentication.getName() == null) {</span>
+<span class="pc bpc" id="L64" title="2 of 4 branches missed.">        if (authentication == null || authentication.getName() == null) {</span>
 <span class="nc" id="L65">            throw new IllegalArgumentException(&quot;Authentication required&quot;);</span>
         }
-<span class="nc" id="L67">        return userRepository.findByUsername(authentication.getName())</span>
-<span class="nc" id="L68">                .orElseThrow(() -&gt; new IllegalArgumentException(&quot;User not found&quot;));</span>
+<span class="fc" id="L67">        return userRepository.findByUsername(authentication.getName())</span>
+<span class="pc" id="L68">                .orElseThrow(() -&gt; new IllegalArgumentException(&quot;User not found&quot;));</span>
     }
 
     private User getUserOrNull(Authentication authentication) {
-<span class="nc bnc" id="L72" title="All 4 branches missed.">        if (authentication == null || authentication.getName() == null) {</span>
-<span class="nc" id="L73">            return null;</span>
+<span class="pc bpc" id="L72" title="1 of 4 branches missed.">        if (authentication == null || authentication.getName() == null) {</span>
+<span class="fc" id="L73">            return null;</span>
         }
-<span class="nc" id="L75">        return userRepository.findByUsername(authentication.getName()).orElse(null);</span>
+<span class="fc" id="L75">        return userRepository.findByUsername(authentication.getName()).orElse(null);</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>
