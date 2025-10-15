@@ -24,6 +24,9 @@ services:
     build: 
       context: ./main_backend
       dockerfile: Dockerfile
+      args:
+        SKIP_TESTS: "true"
+    image: concert-backend:latest
     container_name: concert-backend
     restart: always
     depends_on:
@@ -76,6 +79,7 @@ services:
   frontend:
     image: node:20-alpine
     container_name: concert-frontend
+    restart: always
     working_dir: /app
     environment:
       - NODE_ENV=development
@@ -89,10 +93,17 @@ services:
       - ./main_frontend/concert1:/app
       - frontend_node_modules:/app/node_modules
     depends_on:
-      - backend
+      backend:
+        condition: service_healthy
     networks:
       - concert-network
-    command: ["sh", "-c", "npm install && npm run dev -- --host 0.0.0.0 --port 3000"]
+    command: ["sh", "-c", "npm install --prefer-offline && npm run dev -- --host 0.0.0.0 --port 3000"]
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3000/concert/"]
+      interval: 30s
+      timeout: 10s
+      start_period: 120s
+      retries: 3
 
 volumes:
   mysql_data:

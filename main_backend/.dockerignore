@@ -1,0 +1,43 @@
+# Build outputs
+target/
+!target/*.jar
+
+# IDE files
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+.project
+.classpath
+.settings/
+
+# Version control
+.git/
+.gitignore
+.gitattributes
+
+# Documentation
+*.md
+docs/
+
+# Test files
+src/test/
+cypress-tests/
+
+# Logs
+*.log
+logs/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Maven wrapper (keep mvnw files)
+.mvn/wrapper/maven-wrapper.jar
+
+# Other
+*.swp
+*.swo
+*~
+.cache/

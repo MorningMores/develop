@@ -20,8 +20,9 @@
       {
         "userId": 22,
         "userName": "dijiojasjidai njkscjnk",
-        "ticketCount": 1,
-        "joinedAt": "2025-10-13T13:54:21.937Z"
+        "ticketCount": 2,
+        "joinedAt": "2025-10-13T13:54:21.937Z",
+        "lastBookedAt": "2025-10-15T07:54:24.282Z"
       },
       {
         "userId": 23,
@@ -37,7 +38,7 @@
         "lastBookedAt": "2025-10-13T15:02:44.680Z"
       }
     ],
-    "participantsCount": 59,
+    "participantsCount": 60,
     "updatedAt": "2025-10-13T13:55:21.800Z"
   },
   {
