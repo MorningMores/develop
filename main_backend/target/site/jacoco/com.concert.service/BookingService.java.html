@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>BookingService.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">concert-backend</a> &gt; <a href="index.source.html" class="el_package">com.concert.service</a> &gt; <span class="el_source">BookingService.java</span></div><h1>BookingService.java</h1><pre class="source lang-java linenums">package com.concert.service;
+
+import com.concert.dto.BookingResponse;
+import com.concert.dto.CreateBookingRequest;
+import com.concert.model.Booking;
+import com.concert.model.User;
+import com.concert.repository.BookingRepository;
+import com.concert.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.time.LocalDateTime;
+import java.util.List;
+import java.util.stream.Collectors;
+
+@Service
+public class BookingService {
+
+    private final BookingRepository bookingRepository;
+    private final UserRepository userRepository;
+
+    @Autowired
+<span class="fc" id="L24">    public BookingService(BookingRepository bookingRepository, UserRepository userRepository) {</span>
+<span class="fc" id="L25">        this.bookingRepository = bookingRepository;</span>
+<span class="fc" id="L26">        this.userRepository = userRepository;</span>
+<span class="fc" id="L27">    }</span>
+
+    @Transactional
+    public BookingResponse createBooking(String username, CreateBookingRequest request) {
+<span class="fc" id="L31">        User user = userRepository.findByUsername(username)</span>
+<span class="fc" id="L32">                .orElseThrow(() -&gt; new RuntimeException(&quot;User not found&quot;));</span>
+
+        // Calculate total price
+<span class="fc bfc" id="L35" title="All 2 branches covered.">        Double ticketPrice = request.getTicketPrice() != null ? request.getTicketPrice() : 0.0;</span>
+<span class="fc" id="L36">        Double totalPrice = ticketPrice * request.getQuantity();</span>
+
+        // Create booking with event data from request
+<span class="fc" id="L39">        Booking booking = new Booking();</span>
+<span class="fc" id="L40">        booking.setUser(user);</span>
+<span class="fc" id="L41">        booking.setEventId(request.getEventId());</span>
+<span class="fc" id="L42">        booking.setEventTitle(request.getEventTitle());</span>
+<span class="fc" id="L43">        booking.setEventLocation(request.getEventLocation());</span>
+<span class="fc" id="L44">        booking.setEventStartDate(request.getEventStartDate());</span>
+<span class="fc" id="L45">        booking.setQuantity(request.getQuantity());</span>
+<span class="fc" id="L46">        booking.setTotalPrice(totalPrice);</span>
+<span class="fc" id="L47">        booking.setStatus(&quot;CONFIRMED&quot;);</span>
+<span class="fc" id="L48">        booking.setBookingDate(LocalDateTime.now());</span>
+
+<span class="fc" id="L50">        booking = bookingRepository.save(booking);</span>
+
+<span class="fc" id="L52">        return toResponse(booking);</span>
+    }
+
+    public List&lt;BookingResponse&gt; getUserBookings(String username) {
+<span class="fc" id="L56">        User user = userRepository.findByUsername(username)</span>
+<span class="fc" id="L57">                .orElseThrow(() -&gt; new RuntimeException(&quot;User not found&quot;));</span>
+
+<span class="fc" id="L59">        return bookingRepository.findByUserIdOrderByBookingDateDesc(user.getId())</span>
+<span class="fc" id="L60">                .stream()</span>
+<span class="fc" id="L61">                .map(this::toResponse)</span>
+<span class="fc" id="L62">                .collect(Collectors.toList());</span>
+    }
+
+    public BookingResponse getBookingById(Long id, String username) {
+<span class="fc" id="L66">        Booking booking = bookingRepository.findById(id)</span>
+<span class="fc" id="L67">                .orElseThrow(() -&gt; new RuntimeException(&quot;Booking not found&quot;));</span>
+
+        // Verify ownership
+<span class="fc bfc" id="L70" title="All 2 branches covered.">        if (!booking.getUser().getUsername().equals(username)) {</span>
+<span class="fc" id="L71">            throw new RuntimeException(&quot;Unauthorized access to booking&quot;);</span>
+        }
+
+<span class="fc" id="L74">        return toResponse(booking);</span>
+    }
+
+    @Transactional
+    public void cancelBooking(Long id, String username) {
+<span class="fc" id="L79">        Booking booking = bookingRepository.findById(id)</span>
+<span class="fc" id="L80">                .orElseThrow(() -&gt; new RuntimeException(&quot;Booking not found&quot;));</span>
+
+<span class="fc bfc" id="L82" title="All 2 branches covered.">        if (!booking.getUser().getUsername().equals(username)) {</span>
+<span class="fc" id="L83">            throw new RuntimeException(&quot;Unauthorized access to booking&quot;);</span>
+        }
+
+<span class="fc" id="L86">        booking.setStatus(&quot;CANCELLED&quot;);</span>
+<span class="fc" id="L87">        bookingRepository.save(booking);</span>
+<span class="fc" id="L88">    }</span>
+
+    @Transactional
+    public void cancelAllBookingsForEvent(String eventId) {
+<span class="nc" id="L92">        List&lt;Booking&gt; bookings = bookingRepository.findByEventId(eventId);</span>
+<span class="nc bnc" id="L93" title="All 2 branches missed.">        for (Booking booking : bookings) {</span>
+<span class="nc" id="L94">            booking.setStatus(&quot;CANCELLED&quot;);</span>
+<span class="nc" id="L95">        }</span>
+<span class="nc" id="L96">        bookingRepository.saveAll(bookings);</span>
+<span class="nc" id="L97">    }</span>
+
+    private BookingResponse toResponse(Booking booking) {
+<span class="fc" id="L100">        BookingResponse response = new BookingResponse();</span>
+<span class="fc" id="L101">        response.setId(booking.getId());</span>
+<span class="fc" id="L102">        response.setEventId(booking.getEventId());</span>
+<span class="fc" id="L103">        response.setEventTitle(booking.getEventTitle());</span>
+<span class="fc" id="L104">        response.setQuantity(booking.getQuantity());</span>
+<span class="fc" id="L105">        response.setTotalPrice(booking.getTotalPrice());</span>
+<span class="fc" id="L106">        response.setStatus(booking.getStatus());</span>
+<span class="fc" id="L107">        response.setBookingDate(booking.getBookingDate());</span>
+<span class="fc" id="L108">        response.setEventStartDate(booking.getEventStartDate());</span>
+<span class="fc" id="L109">        response.setEventLocation(booking.getEventLocation());</span>
+
+<span class="fc" id="L111">        return response;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

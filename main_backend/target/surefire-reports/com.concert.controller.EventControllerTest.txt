@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.concert.controller.EventControllerTest
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.308 s - in com.concert.controller.EventControllerTest
