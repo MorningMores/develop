@@ -88,7 +88,7 @@ jobs:
           path: main_backend/target/surefire-reports
 
       - name: Generate JUnit test summary
-        uses: dorny/test-reporter@v1
+        uses: dorny/test-reporter@v2
         if: always()
         continue-on-error: true
         with:
