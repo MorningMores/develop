@@ -21,6 +21,16 @@ db_multi_az            = false
 skip_final_snapshot    = true
 backup_retention_period = 7
 
+# Free Tier Optimization
+enable_alb             = false
+enable_nat_gateway     = false
+enable_multi_az_rds    = false
+enable_rds_iops        = false
+enable_ecs_fargate     = false
+free_tier_mode         = true
+ec2_instance_type      = "t3.micro"
+ec2_root_volume_size   = 20
+
 # ECS Configuration - Backend
 backend_cpu            = 256
 backend_memory         = 512

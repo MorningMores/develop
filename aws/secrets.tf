@@ -1,6 +1,6 @@
 # AWS Secrets Manager secret for RDS password
 resource "aws_secretsmanager_secret" "db_password" {
-  name                    = "${var.project_name}/rds/password"
+  name                    = "${var.project_name}/rds/password-${formatdate("YYYY-MM-DD-hhmm", timestamp())}"
   recovery_window_in_days = 7
 
   tags = {
