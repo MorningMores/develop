@@ -72,3 +72,12 @@ tmp/
 temp/
 *.tmp
 *.bak
+
+# Terraform
+.terraform/
+.terraform.lock.hcl
+terraform.tfvars
+tfplan*
+*.tfstate
+*.tfstate.backup
+crash.log
