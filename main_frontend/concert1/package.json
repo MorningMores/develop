@@ -22,7 +22,7 @@
     "@tailwindcss/vite": "^4.1.12",
     "axios": "^1.12.1",
     "nuxt": "^4.0.3",
-    "tailwindcss": "^4.1.12",
+    "tailwindcss": "^4.1.16",
     "vue": "^3.5.20",
     "vue-router": "^4.5.1"
   },
