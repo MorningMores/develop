@@ -1,0 +1,72 @@
+# ===========================
+# MM Concerts Project (.gitignore)
+# ===========================
+
+# === Backend (Spring Boot) ===
+target/
+logs/
+*.log
+*.tmp
+!.keep
+*.iml
+*.class
+*.jar
+*.war
+*.ear
+
+# === Frontend (Nuxt 4 / Node.js) ===
+node_modules/
+.nuxt/
+.output/
+dist/
+coverage/
+.env
+.env.local
+.nitro/
+.cache/
+
+# === IDE / Editor ===
+.vscode/
+.idea/
+*.swp
+*.swo
+# macOS junk files
+.DS_Store
+# Windows junk files
+Thumbs.db
+
+# === Docker & Container ===
+/mysql_data/
+/db_data/
+*.pid
+*.sock
+
+# === Test / Reports ===
+test-results/
+target/surefire-reports/
+reports/
+coverage/
+cypress/videos/
+cypress/screenshots/
+
+# === OS Specific ===
+ehthumbs.db
+desktop.ini
+
+# === Other Generated Files ===
+*.bak
+*.orig
+*.rej
+
+# Keep README and env example
+!.env.example
+!README.md
+
+# Terraform
+.terraform/
+.terraform.lock.hcl
+terraform.tfstate
+terraform.tfstate.backup
+*.tfplan
+*.tfvars
+.terraform.tfstate.lock.info
