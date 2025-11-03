@@ -38,9 +38,10 @@ public class AwsProperties {
 
     public static class S3Properties {
         @NotBlank(message = "S3 event pictures bucket must be specified")
-        private String eventPicturesBucket = "concert-event-pictures";
-    @NotBlank(message = "S3 user avatars bucket must be specified")
-    private String userAvatarsBucket = "concert-user-avatars";
+        private String eventPicturesBucket = "concert-event-pictures-useast1-161326240347";
+
+        @NotBlank(message = "S3 user avatars bucket must be specified")
+        private String userAvatarsBucket = "concert-user-avatars-useast1-161326240347";
         
         private boolean presignedUrlsEnabled = true;
         private int presignedUrlExpirationMinutes = 60;
