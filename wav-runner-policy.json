@@ -1,0 +1,18 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::161326240347:user/wav"
+            },
+            "Action": [
+                "ec2:DescribeInstances",
+                "ec2:StartInstances",
+                "ec2:StopInstances",
+                "ec2:RebootInstances"
+            ],
+            "Resource": "arn:aws:ec2:ap-southeast-1:161326240347:instance/i-00b60427a419804ef"
+        }
+    ]
+}
