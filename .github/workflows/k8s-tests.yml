@@ -36,7 +36,7 @@ jobs:
 
       - name: Upload test results
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: backend-test-results-eks
           path: main_backend/target/surefire-reports/
@@ -69,7 +69,7 @@ jobs:
 
       - name: Upload test results
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: frontend-test-results-eks
           path: main_frontend/concert1/coverage/
