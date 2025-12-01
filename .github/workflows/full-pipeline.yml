@@ -66,7 +66,7 @@ jobs:
           MAVEN_OPTS: -Xmx1024m
 
       - name: Upload backend artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: backend-jar
           path: main_backend/target/*.jar
@@ -102,7 +102,7 @@ jobs:
           NODE_ENV: production
 
       - name: Upload frontend artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: frontend-dist
           path: main_frontend/concert1/.output
@@ -165,14 +165,14 @@ jobs:
 
       - name: Upload test results
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: backend-test-results
           path: main_backend/target/surefire-reports/
           retention-days: 7
 
       - name: Upload coverage report
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: backend-coverage
           path: main_backend/target/site/jacoco/
@@ -213,7 +213,7 @@ jobs:
 
       - name: Upload test results
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: frontend-test-results
           path: main_frontend/concert1/coverage/
@@ -426,7 +426,7 @@ jobs:
 
       - name: Upload E2E test results
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: e2e-test-results
           path: main_frontend/concert1/coverage/
@@ -434,7 +434,7 @@ jobs:
 
       - name: Upload server logs
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: e2e-server-logs
           path: |
@@ -684,7 +684,7 @@ jobs:
 
       - name: Upload backend image as artifact
         if: steps.docker-push-backend.outcome == 'failure'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: backend-docker-image
           path: /tmp/backend-image.tar
@@ -750,7 +750,7 @@ jobs:
 
       - name: Upload frontend image as artifact
         if: steps.docker-push-frontend.outcome == 'failure'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: frontend-docker-image
           path: /tmp/frontend-image.tar
